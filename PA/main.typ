@@ -11,8 +11,8 @@
   type-of-degree-specification: "Sales & Consulting",
   time-of-thesis: "29.07.2024 - 18.11.2024",
   authors: ((
-    name: "Julian Konz", 
-    student-id: "3468097", 
+    name: "Benjamin Will", 
+    student-id: "5146364", 
     course: "WWI23SCB",
     course-advisor: "Prof. Dr. Frank Koslowski", 
     course-of-studies: "Wirtschaftsinformatik", company: ((
