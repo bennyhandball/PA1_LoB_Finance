@@ -28,9 +28,9 @@
   language: "de", // en, de
   supervisor: (
     company: (
-      name: "Svetlana Rieb",
-      mail-address: "svetlana.rieb@sap.com",
-      phone-number: "+491708555565"), 
+      name: "Nico Rubach",
+      mail-address: "nico.rubach@sap.com",
+      phone-number: "tba"), 
     university: (
       name: "T.B.A.",
       mail-address: "T.B.A",
