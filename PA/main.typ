@@ -7,7 +7,7 @@
 #import "acronyms.typ": acronyms
 
 #show: supercharged-dhbw.with(
-  title: "Erstellung einer Applikation zur Verwaltung von Enterprise Architecture Engagements in der Cloud Transformation Advisory",
+  title: "Projektbudget in SAP S/4HANA: Implementierung und Analyse eines Genehmigungsprozesses mithilfe des SAP Workflow Management Tools auf der Business Technology Platform",
   type-of-degree-specification: "Sales & Consulting",
   time-of-thesis: "29.07.2024 - 18.11.2024",
   authors: ((
@@ -30,10 +30,10 @@
     company: (
       name: "Nico Rubach",
       mail-address: "nico.rubach@sap.com",
-      phone-number: "tba"), 
+      phone-number: "+496227750273"), 
     university: (
-      name: "T.B.A.",
-      mail-address: "T.B.A",
+      name: "Jens Bohrmann",
+      mail-address: "bohrmann@zew.de",
       phone-number: "T.B.A")
     ),
   
