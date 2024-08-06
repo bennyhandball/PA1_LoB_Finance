@@ -4,12 +4,13 @@
 #import "confidentiality-statement.typ": *
 #import "declaration-of-authorship.typ": *
 #import "check-attributes.typ": *
-
+ 
 // Workaround for the lack of an `std` scope.
 #let std-bibliography = bibliography
-
+ 
 #let supercharged-dhbw(
   title: none,
+  short-title: none,
   authors: (:),
   language: none,
   at-university: none,
@@ -92,13 +93,13 @@
     logo-right,
     logo-size-ratio,
   )
-
+ 
   // set the document's basic properties
   set document(title: title, author: authors.map(author => author.name))
   let many-authors = authors.len() > 3
-
+ 
   init-acronyms(acronyms)
-
+ 
   // define logo size with given ration
   let left-logo-height = 2.4cm // left logo is always 2.4cm high
   let right-logo-height = 2.4cm // right logo defaults to 1.2cm but is adjusted below
@@ -106,18 +107,18 @@
   if (logo-ratio.len() == 2) {
     right-logo-height = right-logo-height * (float(logo-ratio.at(1)) / float(logo-ratio.at(0)))
   }
-
+ 
   // save heading and body font families in variables
-  let body-font = "Open Sans"
-  let heading-font = "Montserrat"
+  let body-font = "Times Roman"
+  let heading-font = "Times Roman"
   
   // customize look of figure
   set figure.caption(separator: [ --- ], position: bottom)
-
+ 
   // set body font family
   set text(font: body-font, lang: language, 12pt)
   show heading: set text(weight: "semibold", font: heading-font)
-
+ 
   //heading numbering
   set heading(numbering: "1.")
  
@@ -132,11 +133,11 @@
   
   show heading.where(level: 1): it => {
     pagebreak()
-    v(2em) + it + v(1em)
+    v(1em) + it + v(1em)
   }
   show heading.where(level: 2): it => v(1em) + it + v(0.5em)
   show heading.where(level: 3): it => v(0.5em) + it + v(0.25em)
-
+ 
   titlepage(
     authors,
     date,
@@ -160,45 +161,58 @@
     show-confidentiality-statement,
     confidentiality-marker,
   )
-
   set page(
-    margin: (top: 8em, bottom: 8em),
+    margin: (
+      top: 2.5cm,
+      bottom: 2cm,
+      left: 2cm,
+      right: 4cm),
     header: {
-      if (show-header) {
+        
         grid(
-          columns: (1fr, auto),
-          align: (left, right),
-          gutter: 2em,
-          if (show-title-in-header) {
-            emph(align(center + horizon, text(size: 10pt, title)))
-          },
-          stack(dir: ltr,
-            spacing: 1em,
-            if (show-left-logo-in-header and logo-left != none) {
-              set image(height: left-logo-height / 2)
-              logo-left
-            },
-            if (show-right-logo-in-header and logo-right != none) {
-              set image(height: right-logo-height / 2)
-              logo-right
-            }
+          columns: (auto, 1fr, auto),
+          gutter: 0pt,
+          align(
+            left,
+            image(
+              "sap-logo.png",
+              height: left-logo-height / 2
+            )
+          ),
+          align(
+            center,
+            box[
+              #set par(leading: 0.5em, justify: false)
+              #text(
+                weight: "extralight",
+                style: "italic",
+                size: 12pt,
+                short-title
+              )
+            ]
+          ),
+          align(
+            right,
+            image(
+              "dhbw.svg",
+              height: right-logo-height / 2
+            )
           )
         )
-        v(-0.75em)
-        if (show-header-divider) {
-          line(length: 100%)
-        }
+        v(-0.3em)
+        line(length: 100%)
+        
       }
-    }
+    
   )
-
+ 
   // set page numbering to roman numbering
   set page(
     numbering: "I",
     number-align: numbering-alignment,
   )
   counter(page).update(1)
-
+ 
   if (not at-university and show-confidentiality-statement) {
     confidentiality-statement(
       authors,
@@ -212,7 +226,7 @@
       date-format
     )
   }
-
+ 
   if (show-declaration-of-authorship) {
     declaration-of-authorship(
       authors,
@@ -225,14 +239,14 @@
       date-format
     )
   }
-
+ 
   show outline.entry.where(
     level: 1,
   ): it => {
     v(18pt, weak: true)
     strong(it)
   }
-
+ 
   context {
     let elems = query(figure.where(kind: image), here())
     let count = elems.len()
@@ -248,11 +262,11 @@
       )
     }
   }
-
+ 
   context {
     let elems = query(figure.where(kind: table), here())
     let count = elems.len()
-
+ 
     if (show-list-of-tables and count > 0) {
       outline(
         title: [#heading(level: 3)[#if (language == "de") {
@@ -264,11 +278,11 @@
       )
     }
   }
-
+ 
   context {
     let elems = query(figure.where(kind: raw), here())
     let count = elems.len()
-
+ 
     if (show-code-snippets and count > 0) {
       outline(
         title: [#heading(level: 3)[#if (language == "de") {
@@ -292,10 +306,10 @@
   if (show-acronyms and acronyms != none and acronyms.len() > 0) {
     print-acronyms(language, acronym-spacing)
   }
-
-  set par(justify: true, leading: 1em)
-  set block(spacing: 2em)
-
+ 
+  set par(justify: true, leading: 18pt)
+  // set block(spacing: 2em)
+ 
   if (show-abstract and abstract != none) {
     align(center + horizon, heading(level: 1, numbering: none)[Abstract])
     text(abstract)
@@ -306,26 +320,26 @@
   set page(
     numbering: "1",
     footer: context align(numbering-alignment, numbering(
-    "1 / 1", 
+    "1 / 1",
     ..counter(page).get(),
     ..counter(page).at(<end>),
     ))
   )
   counter(page).update(1)
-
+ 
   body
-
+ 
   [#metadata(none)<end>]
   // reset page numbering and set to alphabetic numbering
   set page(
     numbering: "a",
     footer: context align(numbering-alignment, numbering(
-      "a", 
+      "a",
       ..counter(page).get(),
     ))
   )
   counter(page).update(1)
-
+ 
   // Display bibliography.
   if bibliography != none {
     set std-bibliography(title: [#if (language == "de") {
@@ -335,7 +349,7 @@
     }], style: bib-style)
     bibliography
   }
-
+ 
   if (show-appendix and appendix != none) {
     heading(level: 1, numbering: none)[#if (language == "de") {
       [Anhang]
