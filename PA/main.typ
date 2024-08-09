@@ -52,9 +52,14 @@
 
 == Abgrenzung der Arbeit
 
-= Theoretische Grundlage
+= Grundlagen
 
 == Projektbudgetierung in SAP S/4HANA
+
+// Grundlagen
+//!  Muss gemacht werden
+//? Frage ich nach
+//* Highlight
 
 == Business Technology Platform (BTP)
 
@@ -67,19 +72,30 @@
 
 
 = Methodik
+// Inhaltsananalyse nach Myring
+// Inhaltsanalyse nach Kuckartz
 
-== Anforderungsanalyse mithilfe von  Experteninterviews
+== Experteninterviews
 
-=== Semistrukturierte Leitfadeninterviews
+== Interviewleitfäden
+=== Leitfaden-Entwicklung
+=== Leitfaden-Beratung
+=== Leitfaden-Kunde
+
+//Semistrukturierte Leitfadeninterviews
+
+//Fokusgruppeninterview
+
+== Qualitative Inhaltsanalyse nach Mayring
+
+== Implementierung 
+
+== Evaluierung
 
 
 
-=== Fokusgruppeninterview
 
-=== Brainstorming
-
-
-= Anforderungsanalyse
+= Anforderungserhebung
 
 == Durchführung der Interviews
 
@@ -89,18 +105,21 @@
 
 == Architektur der Applikation
 
-= Implementierung des Proof of Concepts (PoC)
+= Implementierung 
 
-== Praktische Umsetzung
+= Evaluierung
 
 
-== Evaluierung der Ergebnisse 
+
+= Ergebnis
 
 = Zusammenfassung
 
 == Fazit
 
 == Ausblick
+
+== Kritische Reflexion der Arbeit 
 
 = Examples
 
@@ -183,11 +202,3 @@ You can also reference by adding `<ref>` with the desired name after figures or 
 For example this @table references the table on the previous page.
 
 You can also generate footnotes #footnote[https://typst.app/docs/reference/model/footnote/] using #footnote [Text]
-
-= Conclusion
-
-#lorem(100)
-
-#lorem(120)
-
-#lorem(80)
