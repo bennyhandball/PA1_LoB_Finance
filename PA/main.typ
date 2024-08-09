@@ -8,7 +8,7 @@
 
 #show: supercharged-dhbw.with(
   title: "Projektbudget in SAP S/4HANA: Implementierung und Analyse eines Genehmigungsprozesses mithilfe des SAP Workflow Management Tools auf der Business Technology Platform",
-  short-title: "iusdiueh",
+  short-title: "Projektbuget-Genehmigung in SAP S/4HANA ",
   type-of-degree-specification: "Sales & Consulting",
   time-of-thesis: "29.07.2024 - 18.11.2024",
   authors: ((
@@ -50,27 +50,34 @@
 
 == Ziel und Gang
 
+== Abgrenzung der Arbeit
+
 = Theoretische Grundlage
 
-== Enterprise Architecture
+== Projektbudgetierung in SAP S/4HANA
 
-=== TOGAF
+== Business Technology Platform (BTP)
 
-== Microsoft Power Platform
+=== Budget Genehmigungsanfrage
 
-=== Microsoft Power Apps
+=== SAP Workflow Management Tool
+
+=== SAP Build Process Automation
+
+
 
 = Methodik
 
-== Anforderungsanalyse
+== Anforderungsanalyse mithilfe von  Experteninterviews
 
 === Semistrukturierte Leitfadeninterviews
+
+
 
 === Fokusgruppeninterview
 
 === Brainstorming
 
-== inkrementelle Entwicklung mit XP
 
 = Anforderungsanalyse
 
@@ -82,13 +89,12 @@
 
 == Architektur der Applikation
 
-= Entwicklung der Applikation
-
-== Festlegung der Increments
+= Implementierung des Proof of Concepts (PoC)
 
 == Praktische Umsetzung
 
-== Review & Feedback aus der Abteilung
+
+== Evaluierung der Ergebnisse 
 
 = Zusammenfassung
 

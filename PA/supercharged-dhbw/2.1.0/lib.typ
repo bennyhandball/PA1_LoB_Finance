@@ -3,6 +3,7 @@
 #import "titlepage.typ": *
 #import "confidentiality-statement.typ": *
 #import "declaration-of-authorship.typ": *
+#import "gender-equality-notice.typ": *
 #import "check-attributes.typ": *
  
 // Workaround for the lack of an `std` scope.
@@ -21,6 +22,7 @@
   time-of-thesis: none,
   show-confidentiality-statement: false,
   show-declaration-of-authorship: true,
+  show-gender-equality-notice: true,
   show-table-of-contents: true,
   show-acronyms: true,
   show-list-of-figures: true,
@@ -239,6 +241,18 @@
       date-format
     )
   }
+  if (show-gender-equality-notice) {
+    gender-equality-notice(
+      authors,
+      title,
+      date,
+      language,
+      many-authors,
+      at-university,
+      city,
+      date-format
+    )
+  }
  
   show outline.entry.where(
     level: 1,
@@ -308,7 +322,7 @@
   }
  
   set par(justify: true, leading: 18pt)
-  // set block(spacing: 2em)
+  show par: set block(spacing: 2em)
  
   if (show-abstract and abstract != none) {
     align(center + horizon, heading(level: 1, numbering: none)[Abstract])
