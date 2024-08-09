@@ -54,6 +54,10 @@
 
 = Grundlagen
 
+== SAP S/4HANA
+//ERP System nicht zwingend Erklären 
+// SAP S/4 HANA -> ERP-System mit Schnittstellen 
+
 == Projektbudgetierung in SAP S/4HANA
 
 // Grundlagen
