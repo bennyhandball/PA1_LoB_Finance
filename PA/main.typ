@@ -107,7 +107,7 @@
 
 === Fokusgruppeninterviews
 
-== Architektur der Applikation
+== Umsetzung der Quaitativen Inhaltsanalyse nach Mayring
 
 = Implementierung 
 
