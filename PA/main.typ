@@ -45,20 +45,25 @@
 
 // Edit this content to your liking
 = Einleitung
+In einer zunhemend digitalisierten Gesellschaft ist eine effiziente Verwaltung von Projekten innerhalb eines Unternehmens von zentraler Bedeutung. Eine besondere Herausforderung stellt dabei die präzise und transparente Budgetierung von Projekten dar. Unzureichende Kontrolle und fehlende Übersicht über das Projektbudget können zu finanziellen Verlusten führen und die Performance des Unternehmens beeinträchtigen. Die Verwendung moderner Unternehmenssoftware (Enterprise-Rsource-Planning), bietet hier eine entscheidende Unterstützung. 
+
+
 
 == Motivation & Problemstellung
 
-== Ziel und Gang
-
 == Abgrenzung der Arbeit
+== Ziel und Gang
+ 
 
-= Grundlagen
-== Projekt Grundlagen 
-== SAP S/4HANA
+= Theoretische Grundlagen
+== Projektbudgetierung Grundlagen 
 //ERP System nicht zwingend Erklären 
 // SAP S/4 HANA -> ERP-System mit Schnittstellen 
 
-== Projektbudgetierung in SAP S/4HANA
+== SAP S/4HANA
+
+=== Grundlagen S/4HANA 
+=== Grundlagen Projektsystem
 
 // Grundlagen
 //!  Muss gemacht werden
@@ -67,7 +72,8 @@
 
 == Business Technology Platform (BTP)
 
-=== Budget Genehmigungsanfrage
+=== Grundlagen BTP
+// Grundlagen direkt darunter oder extra Kapitel 
 
 === SAP Workflow Management Tool
 
@@ -75,39 +81,43 @@
 
 
 
-= Methodik
+= Wissenschaftliche Methodiken
 // Inhaltsananalyse nach Myring
 // Inhaltsanalyse nach Kuckartz
+// Wichtig: Warum wurden folgende Methoden gewählt 
+Zur methodischen Erarbeitung des vorliegenden Themas kommen verschiedene Vorgehensweisen in Betracht.
+Dazu gehören Experteninterviews, Umfragen, Qualitative Inhaltsanalyse nach Mayring, Literaturrecherche und die Evaluierung.
 
+// Gibt es eine wissenschaftliche Methode zur Implementierung 
+//*Aufzählung möglicher Methoden 
+Ausgewählt wurden dabei die Durchführung von Experteninterviews zur Ermittlung von Informationen rund um die Projektbudgetierung in einem SAP S/4HANA Public Cloud System.  
+
+Zusätzlich werden anhand von Literaturrecherche die theoretischen Grundlagen der Arbeit untersucht. 
+
+== Auswahl der Methodiken 
+//Auswahlkapitel //Umsetzbarkeit Warum die Methode 
 == Experteninterviews
+In 
+//Aufbau einer Frage zeigen (Wie werden solche Fragen in einem Interview aufgebaut )
 
-== Interviewleitfäden
-=== Leitfaden-Entwicklung
-=== Leitfaden-Beratung
-=== Leitfaden-Kunde
+Für die Gewinnung der Informationen zu dieser Arbeit wurden verschiedene Interviews durchgeführt. Dabei wurden verschiedene Funktionsfelder befragt, um mehrere Sichtweisen und Perspektiven zu ermöglichen. Es wurden Experten der Entwicklung also der technischen Sicht der Projektbudgetierungsgenehmigung als auch Berater und Kunden für einen prozessualen Einblick befragt. 
+Die Interviews wiesen dabei einen semistrukturierten Aufbau auf. Das bedeutet, dass die Interviews anhand der Leitfäden geführt wurden, jedoch von diesem je nach Gesprächsverlauf und Fachgebiet abgewichen werden kann.
 
 //Semistrukturierte Leitfadeninterviews
 
-//Fokusgruppeninterview
 
 == Qualitative Inhaltsanalyse nach Mayring
 
-== Implementierung 
-
-== Evaluierung
 
 
 
 
 = Anforderungserhebung
 
-== Durchführung der Interviews
 
-=== Leitfadeninterviews
 
-=== Fokusgruppeninterviews
-
-== Umsetzung der Quaitativen Inhaltsanalyse nach Mayring
+== Auswertung der Experteninterviews
+== Darstellung und Priorisierung der Ergebnisse 
 
 = Implementierung der Standarderweiterung
 
@@ -120,9 +130,10 @@
 
 == Fazit
 
-== Ausblick
 
 == Kritische Reflexion der Arbeit 
+
+== Ausblick
 
 = Examples
 
