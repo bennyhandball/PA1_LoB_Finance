@@ -45,13 +45,12 @@
 
 // Edit this content to your liking
 = Einleitung
-In einer zunhemend digitalisierten Gesellschaft ist eine effiziente Verwaltung von Projekten innerhalb eines Unternehmens von zentraler Bedeutung. Eine besondere Herausforderung stellt dabei die präzise und transparente Budgetierung von Projekten dar. Unzureichende Kontrolle und fehlende Übersicht über das Projektbudget können zu finanziellen Verlusten führen und die Performance des Unternehmens beeinträchtigen. Die Verwendung moderner Unternehmenssoftware (Enterprise-Rsource-Planning), bietet hier eine entscheidende Unterstützung. 
-
-
-
 == Motivation & Problemstellung
+//Struktur der Arbeit
+In einer zunehmend digitalisierten Gesellschaft ist eine effiziente Verwaltung von Projekten innerhalb eines Unternehmens von zentraler Bedeutung. Eine besondere Herausforderung stellt dabei die präzise und transparente Budgetierung von Projekten dar. Unzureichende Kontrolle und fehlende Übersicht über das Projektbudget können zu finanziellen Verlusten führen und die Performance des Unternehmens beeinträchtigen. Die Verwendung moderner Unternehmenssoftware (#acr("ERP")), bietet hier eine entscheidende Unterstützung.
 
 == Abgrenzung der Arbeit
+Gegenstand dieser Arbeit ist die Projektbudgetierung in SAP S/4HANA. Darauffolgende Versionen können nicht berücksichtigt werden. Die beschriebenen Funktionaliäten sind bis auf kleinere Einschränkungen aus SAP S/4HANA Private Cloud übertragbar.
 == Ziel und Gang
  
 
@@ -85,19 +84,20 @@ In einer zunhemend digitalisierten Gesellschaft ist eine effiziente Verwaltung v
 // Inhaltsananalyse nach Myring
 // Inhaltsanalyse nach Kuckartz
 // Wichtig: Warum wurden folgende Methoden gewählt 
-Zur methodischen Erarbeitung des vorliegenden Themas kommen verschiedene Vorgehensweisen in Betracht.
-Dazu gehören Experteninterviews, Umfragen, Qualitative Inhaltsanalyse nach Mayring, Literaturrecherche und die Evaluierung.
 
 // Gibt es eine wissenschaftliche Methode zur Implementierung 
 //*Aufzählung möglicher Methoden 
-Ausgewählt wurden dabei die Durchführung von Experteninterviews zur Ermittlung von Informationen rund um die Projektbudgetierung in einem SAP S/4HANA Public Cloud System.  
-
-Zusätzlich werden anhand von Literaturrecherche die theoretischen Grundlagen der Arbeit untersucht. 
 
 == Auswahl der Methodiken 
+Zur methodischen Erarbeitung des vorliegenden Themas kommen verschiedene Vorgehensweisen in Betracht.
+Dazu gehören Experteninterviews, Umfragen, Qualitative Inhaltsanalyse nach Mayring, Literaturrecherche und die Evaluierung.
+
+Ausgewählt wurden dabei die Durchführung von Experteninterviews zur Ermittlung von Informationen rund um die Projektbudgetierung in einem SAP S/4HANA Public Cloud System.  
+Zusätzlich werden anhand von Literaturrecherche die theoretischen Grundlagen der Arbeit untersucht. 
+//Auswahlkriterien -> quantitative
 //Auswahlkapitel //Umsetzbarkeit Warum die Methode 
 == Experteninterviews
-In 
+
 //Aufbau einer Frage zeigen (Wie werden solche Fragen in einem Interview aufgebaut )
 
 Für die Gewinnung der Informationen zu dieser Arbeit wurden verschiedene Interviews durchgeführt. Dabei wurden verschiedene Funktionsfelder befragt, um mehrere Sichtweisen und Perspektiven zu ermöglichen. Es wurden Experten der Entwicklung also der technischen Sicht der Projektbudgetierungsgenehmigung als auch Berater und Kunden für einen prozessualen Einblick befragt. 
@@ -117,7 +117,7 @@ Die Interviews wiesen dabei einen semistrukturierten Aufbau auf. Das bedeutet, d
 
 
 == Auswertung der Experteninterviews
-== Darstellung und Priorisierung der Ergebnisse 
+== Darstellung und Priorisierung der Experteninterviewergebnisse
 
 = Implementierung der Standarderweiterung
 
