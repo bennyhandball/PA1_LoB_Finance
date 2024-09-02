@@ -53,7 +53,7 @@
 == Abgrenzung der Arbeit
 
 = Grundlagen
-
+== Projekt Grundlagen 
 == SAP S/4HANA
 //ERP System nicht zwingend Erklären 
 // SAP S/4 HANA -> ERP-System mit Schnittstellen 
@@ -109,13 +109,12 @@
 
 == Umsetzung der Quaitativen Inhaltsanalyse nach Mayring
 
-= Implementierung 
+= Implementierung der Standarderweiterung
 
-= Evaluierung
+= Evaluierung der Ergebnisse 
 
 
 
-= Ergebnis
 
 = Zusammenfassung
 
