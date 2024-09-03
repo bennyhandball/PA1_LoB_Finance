@@ -45,6 +45,7 @@
 
 // Edit this content to your liking
 = Einleitung
+
 == Motivation & Problemstellung
 //Struktur der Arbeit
 In einer zunehmend digitalisierten Gesellschaft ist eine effiziente Verwaltung von Projekten innerhalb eines Unternehmens von zentraler Bedeutung. Eine besondere Herausforderung stellt dabei die präzise und transparente Budgetierung von Projekten dar. Unzureichende Kontrolle und fehlende Übersicht über das Projektbudget können zu finanziellen Verlusten führen und die Performance des Unternehmens beeinträchtigen. Die Verwendung moderner Unternehmenssoftware (#acr("ERP")), bietet hier eine entscheidende Unterstützung.
@@ -129,7 +130,6 @@ Die Interviews wiesen dabei einen semistrukturierten Aufbau auf. Das bedeutet, d
 = Zusammenfassung
 
 == Fazit
-
 
 == Kritische Reflexion der Arbeit 
 
