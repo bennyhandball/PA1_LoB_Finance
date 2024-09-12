@@ -72,10 +72,15 @@ Gegenstand dieser Arbeit ist die Projektbudgetierung in SAP S/4HANA. Darauffolge
 
 == Business Technology Platform (BTP)
 
-=== Grundlagen BTP
+=== Grundlagen BTP //BTP Grafik in den Anhang 
 // Grundlagen direkt darunter oder extra Kapitel 
+Die #acr("BTP") der SAP ist eine zentrale Komponente im SAP-Ökosystem. Sie unterstützt Unternehmen bei digitalen Transformationsprozessen und hilft, innovative Geschäftsanwendungen zu entwicklen. Die #acr("BTP") ist eine für SAP-Anwendungen in der Cloud basierte Plattform, welche die Schnittstelle zwischen bestehenden Systemen und der Entwicklung neuer Technologien und Anwendungen darstellt. Die Plattform bietet eine Vielzahl von Technologien, Tools und Diensten, die die Entwicklung von innovativen Anwendungen ermöglichen, Daten zu integrieren und zu analysieren, wie die Geschäftsprozesse optimiert werden können.
+
+Die #acr("BTP") basiert auf einem modularen Konzept und umfasst vier Hauptbereiche: Das Datenbank/Datenmanagement, die Analytik, die Anwendungsentwicklung und Automatisierung, die Integration und Künstliche Intelligenz.
 
 === SAP Workflow Management Tool
+
+
 
 === SAP Build Process Automation
 
