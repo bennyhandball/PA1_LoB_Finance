@@ -40,6 +40,7 @@
   
   university: "Duale Hochschule Baden-Württemberg",
   university-location: "Mannheim",
+  bib-style: "harvard-cite-them-right"
   // for more options check the package documentation (https://typst.app/universe/package/supercharged-dhbw)
 )
 
@@ -57,10 +58,13 @@ Gegenstand dieser Arbeit ist die Projektbudgetierung in SAP S/4HANA. Darauffolge
 
 = Theoretische Grundlagen
 == Projektbudgetierung Grundlagen 
+Das deutsche Institut für Normung (DIN 6990101-5:2009:11, zitiert )
+//Definition von Projekten ()
 //ERP System nicht zwingend Erklären 
 // SAP S/4 HANA -> ERP-System mit Schnittstellen 
 
 == SAP S/4HANA
+// 
 
 === Grundlagen S/4HANA 
 === Grundlagen Projektsystem
@@ -74,11 +78,14 @@ Gegenstand dieser Arbeit ist die Projektbudgetierung in SAP S/4HANA. Darauffolge
 
 === Grundlagen BTP //BTP Grafik in den Anhang 
 // Grundlagen direkt darunter oder extra Kapitel 
-Die #acr("BTP") der SAP ist eine zentrale Komponente im SAP-Ökosystem. Sie unterstützt Unternehmen bei digitalen Transformationsprozessen und hilft, innovative Geschäftsanwendungen zu entwicklen. Die #acr("BTP") ist eine für SAP-Anwendungen in der Cloud basierte Plattform, welche die Schnittstelle zwischen bestehenden Systemen und der Entwicklung neuer Technologien und Anwendungen darstellt. Die Plattform bietet eine Vielzahl von Technologien, Tools und Diensten, die die Entwicklung von innovativen Anwendungen ermöglichen, Daten zu integrieren und zu analysieren, wie die Geschäftsprozesse optimiert werden können.
+Die #acr("BTP") der SAP ist eine Innovationsplattform im SAP-Ökosystem, welche für SAP-Anwendungen in der Cloud optimiert ist.@SAP_BTP Sie unterstützt Unternehmen bei digitalen Transformationsprozessen und hilft, innovative Geschäftsanwendungen zu entwicklen. Dabei stellt die #acr("BTP") eine Schnittstelle zwischen bestehenden Systemen und der Entwicklung neuer Technologien und Anwendungen da. Dabei können Geschäftsprozesse miteinander verbunden, erweitert geplant und integriert werden.@SAP_BTP Durch die Möglichkeit einer Low-Code und Pro-Code Anwendungsentwicklung bietet die #acr("BTP") eine intuitive Entwicklungsumgebung, um die Geschäftsprozesse des Zielunternehmens beschleunigt aber trotzdem kontrolliert (in einer Sicheren Umgebung) zu entwicklen.@SAP_BTP 
+Die #acr("BTP") bietet vorkonfigurierte Datenmodelle, Integrationen von Workflows, APIs (#acr("API")) und #acr("KI") Services.@SAP_BTP Durch diese Dienste können neue Anwendungen bereitgestellt werden, Prozesse integriert, Aufgaben automatisiert, Anwenungen mit Chatbots versehen und Daten und deren Auswirkungen für das gesamte Unternehmen analysiert werden.@SAP_BTP Dadurch können Unternehmen ihre Prozesse optimieren, Innovationen vorantreiben und Wettbewerbsvorteile erlangen, da diese flexibel auf sich ändernde Marktanforderungen reagieren können.
 
-Die #acr("BTP") basiert auf einem modularen Konzept und umfasst vier Hauptbereiche: Das Datenbank/Datenmanagement, die Analytik, die Anwendungsentwicklung und Automatisierung, die Integration und Künstliche Intelligenz.
+Die #acr("BTP") basiert auf einem modularen Konzept und umfasst folgende Hauptbereiche in einer Zentralen Umgebung: Das Datenbank/Datenmanagement darunter auch die Echtzeitsichten von Daten, die Analytik, die Anwendungsentwicklung und Automatisierung, die Integration und Künstliche Intelligenz.@SAP_BTP 
 
 === SAP Workflow Management Tool
+Der Begriff "Workflow Management" wird von der SAP wie folgt definiert.
+Unter einem Workflow versteht man die Definition von aufeinanderfolgenden Prozessschritten, die abgearbeitet werden, sobald die Workflow-Instanz aufgerufen wird.@SAP_Workflow
 
 
 
@@ -213,8 +220,8 @@ project of the Artos Institute.
 
 == References
 
-Cite like this #cite(form: "prose", <iso18004>).
-Or like this @iso18004.
+//Cite like this #cite(form: "prose", <iso18004>).
+//Or like this @iso18004.
 
 You can also reference by adding `<ref>` with the desired name after figures or headings.
 
