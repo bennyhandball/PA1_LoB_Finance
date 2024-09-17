@@ -46,13 +46,22 @@
 
 // Edit this content to your liking
 = Einleitung
+Die SAP SE (#acr("SAP")) mit dem Hauptsitz in Walldorf (Deutschland) ist einer der weltweit führenden Anbieter von Unternehmenssoftware zur Steuerung von Geschäftsprozessen @SAP_Unternehmen. Der Zusatz SE #acr("SE") bezeichnet rechtlich eine Aktiengesellschaft nach EU-Recht @SAP_Unternehmen.
+
+Die ERP (Enterprise Resource Planning)Unternehmenssoftware umfasst alle Kerngeschäftsrelevanten Bereiche wie Beschaffung, Produktion, Materialwirtschaft, Vertrieb, Marketing, Finanzwesen und Personalwesen.
+
+SAP gehört zu den ersten Unternehmen, die standardisierte Softwarelösungen für Unternehmen entwickelt haben, und bietet bis heute moderne, führende ERP-Systeme an.
+
 
 == Motivation & Problemstellung
 //Struktur der Arbeit
-In einer zunehmend digitalisierten Gesellschaft ist eine effiziente Verwaltung von Projekten innerhalb eines Unternehmens von zentraler Bedeutung. Eine besondere Herausforderung stellt dabei die präzise und transparente Budgetierung von Projekten dar. Unzureichende Kontrolle und fehlende Übersicht über das Projektbudget können zu finanziellen Verlusten führen und die Performance des Unternehmens beeinträchtigen. Die Verwendung moderner Unternehmenssoftware (#acr("ERP")), bietet hier eine entscheidende Unterstützung.
+In einer zunehmend digitalisierten Gesellschaft ist eine effiziente Verwaltung von Projekten innerhalb eines Unternehmens von zentraler Bedeutung. Eine besondere Herausforderung stellt dabei die präzise und transparente Budgetierung von Projekten dar. Unzureichende Kontrolle und fehlende Übersicht über das Projektbudget können zu finanziellen Verlusten führen und die Performance des Unternehmens beeinträchtigen. Die Verwendung moderner Unternehmenssoftware (#acr("ERP")), bietet hier eine entscheidende Unterstützung. 
+
+
+
 
 == Abgrenzung der Arbeit
-Gegenstand dieser Arbeit ist die Projektbudgetierung in SAP S/4HANA. Darauffolgende Versionen können nicht berücksichtigt werden. Die beschriebenen Funktionaliäten sind bis auf kleinere Einschränkungen aus SAP S/4HANA Private Cloud übertragbar.
+Gegenstand dieser Arbeit ist die Projektbudgetierung in SAP S/4HANA Public Cloud. Darauffolgende Versionen können nicht berücksichtigt werden. Die beschriebenen Funktionaliäten sind bis auf kleinere Einschränkungen auf SAP S/4HANA Private Cloud übertragbar.
 == Ziel und Gang
  
 
