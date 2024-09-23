@@ -7,7 +7,7 @@
   PSP-Element: "Projektstrukturplan-Element",
   SAP-PS: "SAP Projekt-System (PS)",
   KI: "Künstliche Intelligenz",
-  SAP: "Systemanalyse Programmentwicklung",
+  SAP: "Wird nciht mehr benötigt",
   SE: "Societas Europaea",
 )
 
