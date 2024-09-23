@@ -9,5 +9,6 @@
   KI: "Künstliche Intelligenz",
   SAP: "Wird nciht mehr benötigt",
   SE: "Societas Europaea",
+  SAAS: "Software-as-a-Service",
 )
 

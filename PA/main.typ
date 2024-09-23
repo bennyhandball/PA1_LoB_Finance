@@ -43,25 +43,27 @@
   bib-style: "harvard-cite-them-right"
   // for more options check the package documentation (https://typst.app/universe/package/supercharged-dhbw)
 )
-
+//
 // Edit this content to your liking
 = Einleitung
-Die SAP SE (#acr("SAP")) mit dem Hauptsitz in Walldorf (Deutschland) ist einer der weltweit führenden Anbieter von Unternehmenssoftware zur Steuerung von Geschäftsprozessen @SAP_Unternehmen. Der Zusatz SE #acr("SE") bezeichnet rechtlich eine Aktiengesellschaft nach EU-Recht @SAP_Unternehmen.
+//Besseren Einstieg 
 
-Die ERP (Enterprise Resource Planning)Unternehmenssoftware umfasst alle Kerngeschäftsrelevanten Bereiche wie Beschaffung, Produktion, Materialwirtschaft, Vertrieb, Marketing, Finanzwesen und Personalwesen.
+Wird ein Einkauf eines Produktes, beispielsweise eines Autos, im Namen einer dritten Person getätigt, so ist zunächst die Höhe des zur Verfügung stehenden Budgets zu klären. Kommt es anschließend zu einer Verhandlung zwischen dem Verkäufer und dem Käufer (der das Auto für eine andere Person kaufen möchte), so muss der Käufer, sich zunächt den verhandelten Endpreis vom tatsächlichen Käufer bestätigen lassen. Einen ähnlichen Genehmigungsprozess findet man ebenfalls bei der 
+Genehmigung von Projektbudgets im Unternehmenskontext. Dabei spielt die effiziente Verwaltung von Projekten innerhalb eines Unternehmens in einer zunehmend digitalisierten Gesellschaft eine immer höher Bedeutung.
 
+Eine besondere Herausforderung stellt dabei die präzise und transparente Budgetierung von Projekten dar. Unzureichende Kontrolle und fehlende Übersicht über das Projektbudget können zu finanziellen Verlusten führen und die Performance des Unternehmens beeinträchtigen. Die Verwendung moderner Unternehmenssoftware (#acr("ERP")), bietet hier eine entscheidende Unterstützung, um das Budget entsprechend verwalten zu können.
+
+Die SAP SE mit dem Hauptsitz in Walldorf (Deutschland) ist einer der weltweit führenden Anbieter von Unternehmenssoftware zur Steuerung von Geschäftsprozessen @SAP_Unternehmen. Der Zusatz SE #acr("SE") bezeichnet rechtlich eine Aktiengesellschaft nach EU-Recht @SAP_Unternehmen.
+Die ERP (Enterprise Resource Planning) Unternehmenssoftware umfasst alle Kerngeschäftsrelevanten Bereiche wie Beschaffung, Produktion, Materialwirtschaft, Vertrieb, Marketing, Finanzwesen und Personalwesen.
 SAP gehört zu den ersten Unternehmen, die standardisierte Softwarelösungen für Unternehmen entwickelt haben, und bietet bis heute moderne, führende ERP-Systeme an.
 
 
 == Motivation & Problemstellung
 //Struktur der Arbeit
-In einer zunehmend digitalisierten Gesellschaft ist eine effiziente Verwaltung von Projekten innerhalb eines Unternehmens von zentraler Bedeutung. Eine besondere Herausforderung stellt dabei die präzise und transparente Budgetierung von Projekten dar. Unzureichende Kontrolle und fehlende Übersicht über das Projektbudget können zu finanziellen Verlusten führen und die Performance des Unternehmens beeinträchtigen. Die Verwendung moderner Unternehmenssoftware (#acr("ERP")), bietet hier eine entscheidende Unterstützung. 
-
-
-
+Im SAP Standardpaket S/4HANA Public Cloud ist eine Projektbudget Genehmigung nicht inbegriffen. Wodurch die Verwaltung und Genehmigung von Projektbudgets nur beschränkt möglich ist. Die Verwaltung und Genehmigung von Projektbudgets kann jedoch durch eine Standarderweiterung ermöglicht werden. Dabei wird durch ein Workflow eine Automatisierung ermöglicht.Die Standarderweiterung erfolgt auf der #acr("BTP") durch das Workflow Management Tool. 
 
 == Abgrenzung der Arbeit
-Gegenstand dieser Arbeit ist die Projektbudgetierung in SAP S/4HANA Public Cloud. Darauffolgende Versionen können nicht berücksichtigt werden. Die beschriebenen Funktionaliäten sind bis auf kleinere Einschränkungen auf SAP S/4HANA Private Cloud übertragbar.
+Gegenstand dieser Arbeit ist die Standarderweiterung hinsichtlich der Projektbudgetierung in SAP S/4HANA Public Cloud. Darauffolgende Versionen können nicht berücksichtigt werden. Die beschriebenen Funktionaliäten sind bis auf kleinere Einschränkungen auf SAP S/4HANA Private Cloud übertragbar.
 == Ziel und Gang
  
 
@@ -73,9 +75,16 @@ Das deutsche Institut für Normung (DIN 6990101-5:2009:11, zitiert )
 // SAP S/4 HANA -> ERP-System mit Schnittstellen 
 
 == SAP S/4HANA
-// 
-
 === Grundlagen S/4HANA 
+Mit der Einführung von S/4HANA im Jahr 2015 hat SAP einen bedeutenden Schritt in der Entwicklung von #acr("ERP")-Systemen gemacht. Als Nachfolger der SAP Business Suite aus dem Jahr 2004 und Ablösung von SAP R/3, das erstmals eine Client-Server-Technologie einsetzte, bietet S/4HANA eine Reihe von Innovationen.
+Das Herzstück eines S/4HANA-Systems ist die HANA Datenbank, eine spaltenbasierte In-Memory Datenbank, die im Vergleich zu herkömmlichen Datenbanken einen schnelleren Datenzugriff und bessere Analysezeiten ermöglicht. Durch diese Eigenschaft können Echtzeitanalysen und Berechnungen zur Laufzeit realisiert und ermöglicht werden. Dies ist insbesondere bei der Verarbeitung von Big Data Analysen von großer Bedeutung.
+S/4HANA bietet ebenfalls eine neue Benutzeroberfläche, namens SAP Fiori, die die bisherigen SAP GUI-Oberflächen ablöst. SAP Fiori ist dabei browserbasiert, was bedeutet, dass keine spezielle Software lokal auf dem Gerät installiert werden müssen. Nutzer können SAP Fiori plattformunabhängig und flexibel über gängige Browser wie Google Chrome, Mozialla Firefox oder Safari aufrufen. 
+Unternehmen haben bei SAP S/4HANA verschiedene Bereitstellungsoptionen: On-Premise, Private Cloud oder Public Cloud.
+
+Bei der On-Premise Lösung hosten Unternehmen die Software auf eigenen Servern, während bei der Private-Cloud Lösung die Software auf Servern von Drittanbietern als Single-Tenant betrieben wird. Single-Tentant beschreibt in diesem Kontext, eine dedizierte, isolierte Cloud Umgebung, die nur für den spezifischen Kunden bereitgestellt wird. Im Gegensatz zu einer Multi-Tenant-Umgebung, in der mehrere Kunden (Mandanten) die gleiche Software-Instanz teilen, hat der Kunde in einer Single-Tenant-Lösung seine eigene Instanz der SAP-Software. 
+
+Die beiden eben beschriebenen Varianten bieten eine hohe Flexibilität für Unternehmen, um die Software an ihre individuellen Anforderungen und Geschäftsprozesse anzupassen. 
+Im Gegensatz dazu müssen sich Unternehmen bei der Public-Cloud-Lösung weitesgehend an den Standard des Systems halten, da die Software in einer Multi-Tenant-Architektur läuft und nur bedingt modifiziert werden kann. SAP bietet sowohl die Public- als auch die Private-Cloud-Version als #acr("SAAS") an.
 === Grundlagen Projektsystem
 
 // Grundlagen
