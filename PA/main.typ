@@ -47,6 +47,8 @@
 // Edit this content to your liking
 = Einleitung
 //Besseren Einstieg 
+//Urlaubsantrag muss genehmigt werden
+// Genehmigung einer Bestellung -> Approval 
 
 Wird ein Einkauf eines Produktes, beispielsweise eines Autos, im Namen einer dritten Person getätigt, so ist zunächst die Höhe des zur Verfügung stehenden Budgets zu klären. Kommt es anschließend zu einer Verhandlung zwischen dem Verkäufer und dem Käufer (der das Auto für eine andere Person kaufen möchte), so muss der Käufer, sich zunächt den verhandelten Endpreis vom tatsächlichen Käufer bestätigen lassen. Einen ähnlichen Genehmigungsprozess findet man ebenfalls bei der 
 Genehmigung von Projektbudgets im Unternehmenskontext. Dabei spielt die effiziente Verwaltung von Projekten innerhalb eines Unternehmens in einer zunehmend digitalisierten Gesellschaft eine immer höher Bedeutung.
@@ -56,6 +58,7 @@ Eine besondere Herausforderung stellt dabei die präzise und transparente Budget
 Die SAP SE mit dem Hauptsitz in Walldorf (Deutschland) ist einer der weltweit führenden Anbieter von Unternehmenssoftware zur Steuerung von Geschäftsprozessen @SAP_Unternehmen. Der Zusatz SE #acr("SE") bezeichnet rechtlich eine Aktiengesellschaft nach EU-Recht @SAP_Unternehmen.
 Die ERP (Enterprise Resource Planning) Unternehmenssoftware umfasst alle Kerngeschäftsrelevanten Bereiche wie Beschaffung, Produktion, Materialwirtschaft, Vertrieb, Marketing, Finanzwesen und Personalwesen.
 SAP gehört zu den ersten Unternehmen, die standardisierte Softwarelösungen für Unternehmen entwickelt haben, und bietet bis heute moderne, führende ERP-Systeme an.
+
 
 
 == Motivation & Problemstellung
@@ -76,6 +79,7 @@ Das deutsche Institut für Normung (DIN 6990101-5:2009:11, zitiert )
 
 == SAP S/4HANA
 === Grundlagen S/4HANA 
+
 Mit der Einführung von S/4HANA im Jahr 2015 hat SAP einen bedeutenden Schritt in der Entwicklung von #acr("ERP")-Systemen gemacht. Als Nachfolger der SAP Business Suite aus dem Jahr 2004 und Ablösung von SAP R/3, das erstmals eine Client-Server-Technologie einsetzte, bietet S/4HANA eine Reihe von Innovationen.
 Das Herzstück eines S/4HANA-Systems ist die HANA Datenbank, eine spaltenbasierte In-Memory Datenbank, die im Vergleich zu herkömmlichen Datenbanken einen schnelleren Datenzugriff und bessere Analysezeiten ermöglicht. Durch diese Eigenschaft können Echtzeitanalysen und Berechnungen zur Laufzeit realisiert und ermöglicht werden. Dies ist insbesondere bei der Verarbeitung von Big Data Analysen von großer Bedeutung.
 S/4HANA bietet ebenfalls eine neue Benutzeroberfläche, namens SAP Fiori, die die bisherigen SAP GUI-Oberflächen ablöst. SAP Fiori ist dabei browserbasiert, was bedeutet, dass keine spezielle Software lokal auf dem Gerät installiert werden müssen. Nutzer können SAP Fiori plattformunabhängig und flexibel über gängige Browser wie Google Chrome, Mozialla Firefox oder Safari aufrufen. 
@@ -86,6 +90,15 @@ Bei der On-Premise Lösung hosten Unternehmen die Software auf eigenen Servern, 
 Die beiden eben beschriebenen Varianten bieten eine hohe Flexibilität für Unternehmen, um die Software an ihre individuellen Anforderungen und Geschäftsprozesse anzupassen. 
 Im Gegensatz dazu müssen sich Unternehmen bei der Public-Cloud-Lösung weitesgehend an den Standard des Systems halten, da die Software in einer Multi-Tenant-Architektur läuft und nur bedingt modifiziert werden kann. SAP bietet sowohl die Public- als auch die Private-Cloud-Version als #acr("SAAS") an.
 === Grundlagen Projektsystem
+// Was versteht man unter einem Projekt ?
+Das Projektsystem #acr("PS") ist ein zentraler Bestandteil des #acr("ERP")-Systems von SAP und spielt eine wesentliche Rolle bei der Verwaltung von Projekten. Durch das Projektsystem PS der SAP können die Planung, die Steuerung und die Überwachung von komplexen Geschäftsprojekten erleichtert werden. Zudem können Module wie das #acr("FI"), das #acr("CO") und die #acr("MM") integriert werden. 
+
+Der Ablauf eines Projekts im SAP PS kann in mehrere aufeinander aufbauende Phasen untergliedert werden. 
+Die erste Phase umfasst drei Projektinitialisierung, dabei wird das Projekt definiert und die ersten Planungsdaten erfasst. Dazu wird ein #acr("PSP") erstellt, der die zentralen Meilensteine und Arbeitsblöcke enthält. 
+Anschließend folgt die Projektplanung, wobei der Detaillierungsgrad erhöht wird und mit Ressourcen, Terminen und Kosten kalkuliert wird. 
+Der nächste Schritt umfasst die eigentliche Projektdurchführung. Dabei werden die zuvor erstellten Projektpläne operativ umgesetzt. Um eine effiziente Projektdurchführung zu ermöglichen, werden Aufgaben konkret zugewiesen und Fortschritte überwacht. 
+Über die Gesamte Projektdauer ist das #acr("CO") unerlässlich, da das dieses dabei die Kosten, Termine und die Qualität überwacht. Zudem werden in dieser Phase Abweichungsanalysen und das Risikomanagement durchgeführt.
+Der letzte Schritt ist der Projektabschluss. Dieser erfolgt nach der Fertigstellung des Projekts. In diesem Schritt erfolgt die letztendliche Kontrolle und Abrechnung. Zudem werden alle Ergebnisse dokumentiert und das Projekt wird formal beendet.
 
 // Grundlagen
 //!  Muss gemacht werden
@@ -93,19 +106,26 @@ Im Gegensatz dazu müssen sich Unternehmen bei der Public-Cloud-Lösung weitesge
 //* Highlight
 
 == Business Technology Platform (BTP)
+#figure(caption:
+"SAP cloud applications and SAP BTP"
+, image(width: 10cm,
+"assets/BTP001_2406_U2L2_01.png"
+))
+<sap_portfolio_btp>
 
 === Grundlagen BTP //BTP Grafik in den Anhang 
 // Grundlagen direkt darunter oder extra Kapitel 
-Die #acr("BTP") der SAP ist eine Innovationsplattform im SAP-Ökosystem, welche für SAP-Anwendungen in der Cloud optimiert ist.@SAP_BTP Sie unterstützt Unternehmen bei digitalen Transformationsprozessen und hilft, innovative Geschäftsanwendungen zu entwicklen. Dabei stellt die #acr("BTP") eine Schnittstelle zwischen bestehenden Systemen und der Entwicklung neuer Technologien und Anwendungen da. Dabei können Geschäftsprozesse miteinander verbunden, erweitert geplant und integriert werden.@SAP_BTP Durch die Möglichkeit einer Low-Code und Pro-Code Anwendungsentwicklung bietet die #acr("BTP") eine intuitive Entwicklungsumgebung, um die Geschäftsprozesse des Zielunternehmens beschleunigt aber trotzdem kontrolliert (in einer Sicheren Umgebung) zu entwicklen.@SAP_BTP 
+Die #acr("BTP") der SAP ist eine Innovationsplattform im SAP-Ökosystem, welche für SAP-Anwendungen in der Cloud optimiert ist.@SAP_BTP Sie unterstützt Unternehmen bei digitalen Transformationsprozessen und hilft, innovative Geschäftsanwendungen zu entwicklen. Dabei stellt die #acr("BTP") eine Schnittstelle zwischen bestehenden Systemen und der Entwicklung neuer Technologien und Anwendungen da (@sap_portfolio_btp). Dabei können Geschäftsprozesse miteinander verbunden, erweitert geplant und integriert werden.@SAP_BTP Durch die Möglichkeit einer Low-Code und Pro-Code Anwendungsentwicklung bietet die #acr("BTP") eine intuitive Entwicklungsumgebung, um die Geschäftsprozesse des Zielunternehmens beschleunigt aber trotzdem kontrolliert (in einer Sicheren Umgebung) zu entwicklen.@SAP_BTP 
 Die #acr("BTP") bietet vorkonfigurierte Datenmodelle, Integrationen von Workflows, APIs (#acr("API")) und #acr("KI") Services.@SAP_BTP Durch diese Dienste können neue Anwendungen bereitgestellt werden, Prozesse integriert, Aufgaben automatisiert, Anwenungen mit Chatbots versehen und Daten und deren Auswirkungen für das gesamte Unternehmen analysiert werden.@SAP_BTP Dadurch können Unternehmen ihre Prozesse optimieren, Innovationen vorantreiben und Wettbewerbsvorteile erlangen, da diese flexibel auf sich ändernde Marktanforderungen reagieren können.
 
-Die #acr("BTP") basiert auf einem modularen Konzept und umfasst folgende Hauptbereiche in einer Zentralen Umgebung: Das Datenbank/Datenmanagement darunter auch die Echtzeitsichten von Daten, die Analytik, die Anwendungsentwicklung und Automatisierung, die Integration und Künstliche Intelligenz.@SAP_BTP 
+Die #acr("BTP") basiert auf einem modularen Konzept und umfasst folgende Hauptbereiche in einer Zentralen Umgebung: Das Datenbank/Datenmanagement darunter auch die Echtzeitsichten von Daten, die Analytik, die Anwendungsentwicklung und Automatisierung, die Integration und Künstliche Intelligenz (@sap_portfolio_btp).@SAP_BTP 
 
 === SAP Workflow Management Tool
-Der Begriff "Workflow Management" wird von der SAP wie folgt definiert.
-Unter einem Workflow versteht man die Definition von aufeinanderfolgenden Prozessschritten, die abgearbeitet werden, sobald die Workflow-Instanz aufgerufen wird.@SAP_Workflow
+Der Begriff "Workflow" wird von der SAP wie folgt definiert.
+Unter einem Workflow versteht man die "Abfolge von miteinander verbundenen Aktivitäten oder Aufgaben, die ausgeführt werden, um ein bestimmtes Ergebnis zu erzielen." Definition von aufeinanderfolgenden Prozessschritten, die abgearbeitet werden, sobald die Workflow-Instanz aufgerufen wird.@SAP_Workflow
 
-
+Man unterscheidet zwischen drei unterschiedlichen Arten von Workflows. 
+Die erste Variante beschreibt einen vollständig manuellen Workflow. Dabei werden die einzelnen Schritte händisch abgearbeitet. Beispielsweise wird ein Blatt mit 
 
 === SAP Build Process Automation
 

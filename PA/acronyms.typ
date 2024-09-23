@@ -4,11 +4,14 @@
   REST: "Representational State Transfer",
   ERP : "Enterprise Resource-Planning",
   BTP : "Business Technology Platform",
-  PSP-Element: "Projektstrukturplan-Element",
-  SAP-PS: "SAP Projekt-System (PS)",
+  PSP: "Projektstrukturplan-Element",
+  PS: "SAP Projekt-System (PS)",
   KI: "Künstliche Intelligenz",
   SAP: "Wird nciht mehr benötigt",
   SE: "Societas Europaea",
   SAAS: "Software-as-a-Service",
+  FI: "Finanzwesen",
+  CO: "Controlling",
+  MM: "Materialwirtschaft"
 )
 
