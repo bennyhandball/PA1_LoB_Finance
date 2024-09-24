@@ -50,25 +50,38 @@
 //Urlaubsantrag muss genehmigt werden
 // Genehmigung einer Bestellung -> Approval 
 
-Wird ein Einkauf eines Produktes, beispielsweise eines Autos, im Namen einer dritten Person getätigt, so ist zunächst die Höhe des zur Verfügung stehenden Budgets zu klären. Kommt es anschließend zu einer Verhandlung zwischen dem Verkäufer und dem Käufer (der das Auto für eine andere Person kaufen möchte), so muss der Käufer, sich zunächt den verhandelten Endpreis vom tatsächlichen Käufer bestätigen lassen. Einen ähnlichen Genehmigungsprozess findet man ebenfalls bei der 
-Genehmigung von Projektbudgets im Unternehmenskontext. Dabei spielt die effiziente Verwaltung von Projekten innerhalb eines Unternehmens in einer zunehmend digitalisierten Gesellschaft eine immer höher Bedeutung.
-
-Eine besondere Herausforderung stellt dabei die präzise und transparente Budgetierung von Projekten dar. Unzureichende Kontrolle und fehlende Übersicht über das Projektbudget können zu finanziellen Verlusten führen und die Performance des Unternehmens beeinträchtigen. Die Verwendung moderner Unternehmenssoftware (#acr("ERP")), bietet hier eine entscheidende Unterstützung, um das Budget entsprechend verwalten zu können.
-
-Die SAP SE mit dem Hauptsitz in Walldorf (Deutschland) ist einer der weltweit führenden Anbieter von Unternehmenssoftware zur Steuerung von Geschäftsprozessen @SAP_Unternehmen. Der Zusatz SE #acr("SE") bezeichnet rechtlich eine Aktiengesellschaft nach EU-Recht @SAP_Unternehmen.
-Die ERP (Enterprise Resource Planning) Unternehmenssoftware umfasst alle Kerngeschäftsrelevanten Bereiche wie Beschaffung, Produktion, Materialwirtschaft, Vertrieb, Marketing, Finanzwesen und Personalwesen.
-SAP gehört zu den ersten Unternehmen, die standardisierte Softwarelösungen für Unternehmen entwickelt haben, und bietet bis heute moderne, führende ERP-Systeme an.
-
-
-
 == Motivation & Problemstellung
 //Struktur der Arbeit
-Im SAP Standardpaket S/4HANA Public Cloud ist eine Projektbudget Genehmigung nicht inbegriffen. Wodurch die Verwaltung und Genehmigung von Projektbudgets nur beschränkt möglich ist. Die Verwaltung und Genehmigung von Projektbudgets kann jedoch durch eine Standarderweiterung ermöglicht werden. Dabei wird durch ein Workflow eine Automatisierung ermöglicht.Die Standarderweiterung erfolgt auf der #acr("BTP") durch das Workflow Management Tool. 
+Im Zuge eines Urlaubsantrags beim Arbeitgeber wird in der Regel zunächst ein Antrag an den Manager geschickt, welcher dann den Antrag genehmigen oder ablehnen kann. Dabei wird in der Regel geprüft, ob und wenn wieviele Urlaubstage dem Arbeitnehmer noch zur Verfügung stehen.
+Einen ähnlichen Genehmigungsprozess bezogen auf Projektbudgets findet man ebenfalls bei der 
+Genehmigung von Projektbudgets im Unternehmenskontext. 
+
+Dabei stellt eine präzise und transparente Budgetierung von Projekten dar. Unzureichende Kontrolle und fehlende Übersicht über das Projektbudget können zu finanziellen Verlusten führen und die Performance des Unternehmens beeinträchtigen. Die Verwendung moderner Unternehmenssoftware (#acr("ERP")), bietet hier eine entscheidende Unterstützung, um das Budget entsprechend verwalten zu können.
+
+In der heutzutage präsenten digitalen Transformation stehen viele Unternehmen vor der Umstellung ihrer Systemlandschaft von einem On-Premis auf ein Cloud-System, wie die SAP S/4HANA Public Cloud. Die Cloud-Lösung bietet dabei Vorteile, wie bespielsweise einen Echtzeit-Datenzugriff, was eine transparente und effiziente Verwaltung von Projektbudgets ermöglicht. Jedoch bring die Cloud-Lösung von SAP auch Herausforderungen und Schwierigkeiten mit sich. 
+Im SAP Standardpaket S/4HANA Public Cloud ist eine Projektbudget Genehmigung nicht inbegriffen. Durch diese derzeit fehlende Funktion ist die Verwaltung  Genehmigung von Projektbudgets nur beschränkt möglich. Projektbudgtes müssen daher manuell und systemfern durchgeführt werden, was zu einem erheblichen Arbeitsaufwand führt. Des weiteren ist das Führen von Excel-Dateien aufwändig und inkonsistent.
+Eine weitere Einschränkung stellt die eingeschränkte Möglichkeit der Systemanpassungen in der Public Cloud dar.
+
+Die Verwaltung und Genehmigung von Projektbudgets kann jedoch durch eine Standarderweiterung ermöglicht werden. Dabei wird durch ein Workflow mit dem SAP Workflow Tool auf der #acr("BTP") erstellt, der eine Genehmigungsprozessautomatisierung ermöglicht. Mithilfe von Workflows können Geschäftsprozesse automatisiert, standardisiert und effizienter gestaltet werden. Dabei können Aufgaben, Benachrichtigungen oder Berechtigungen automatisch in einer zuvor definierten Reihenfolge ausgeführt werden. Diese Lösung bietet eine maßgebliche Optimierung des Projektbudget-Genehmigungsprozesses hinsichtlich der Entlastung der Mitarbeiter und der Effizienz. 
+ 
+== Struktur der Arbeit
+Nach der Einführung, in der die Motivation, Problemstellung sowie die Zielsetzung der Arbeit skizziert werden, schließt sich im zweiten Kapitel die Darstellung der theoretischen Grundlagen an. Zunächst werden die Basisaspekte der Projektbudgetierung thematisiert, gefolgt von einer Einführung in SAP S/4HANA. Hierbei werden die wesentlichen Funktionen des SAP-Projektsystems beleuchtet. Ein weiterer Schwerpunkt liegt auf der SAP Business Technology Platform (BTP), wobei insbesondere die Rolle des SAP Workflow Management Tools und der SAP Build Process Automation im Kontext der Budgetfreigabe betrachtet wird.
+
+Das dritte Kapitel widmet sich der angewandten Methodik. Es werden die Auswahl der Methoden sowie die Durchführung der Experteninterviews beschrieben, wobei ein besonderes Augenmerk auf die qualitative Inhaltsanalyse nach Mayring gelegt wird.
+
+Im vierten Kapitel erfolgt die Anforderungserhebung, basierend auf der Analyse der Experteninterviews. Die Ergebnisse werden systematisch dargestellt und priorisiert.
+
+Die Implementierung der Standarderweiterung wird im fünften Kapitel beschrieben. Hier wird die technische Umsetzung der Lösung zur Optimierung des Budgetfreigabeprozesses detailliert erklärt.
+
+Im sechsten Kapitel werden die Resultate der Implementierung bewertet. Dabei erfolgt eine Analyse der Effektivität der Erweiterung im Hinblick auf den Budgetfreigabeprozess. Das Kapitel schließt mit einer kritischen Betrachtung der Resultate.
+
+Im abschließenden siebten Kapitel werden die wesentlichen Erkenntnisse zusammengefasst. Es folgt eine kritische Reflexion der Arbeit sowie ein Ausblick auf mögliche Weiterentwicklungen und künftige Forschungsperspektiven.
+
 
 == Abgrenzung der Arbeit
 Gegenstand dieser Arbeit ist die Standarderweiterung hinsichtlich der Projektbudgetierung in SAP S/4HANA Public Cloud. Darauffolgende Versionen können nicht berücksichtigt werden. Die beschriebenen Funktionaliäten sind bis auf kleinere Einschränkungen auf SAP S/4HANA Private Cloud übertragbar.
 == Ziel und Gang
- 
+Das Ziel dieser Arbeit ist es, durch Experteninterviews und eine folgende qualitative Inhaltsanalyse nach Mayring Anforderungen für den Projektbudget-Genehmigung Workflow abzuleiten. Nach der Implementierung soll eine fundierte Evaluation durchgeführt werden, um zu beurteilen, ob die Standarderweiterung den Anforderungen gerecht wird. 
 
 = Theoretische Grundlagen
 == Projektbudgetierung Grundlagen 
@@ -266,3 +279,8 @@ You can also reference by adding `<ref>` with the desired name after figures or 
 For example this @table references the table on the previous page.
 
 You can also generate footnotes #footnote[https://typst.app/docs/reference/model/footnote/] using #footnote [Text]
+
+
+
+
+//Das Ziel von Workflows, insbesondere in einem SAP-System wie S/4HANA, ist es, Geschäftsprozesse zu automatisieren, standardisieren und effizienter zu gestalten. Durch Workflows können bestimmte Aufgaben, Genehmigungen oder Benachrichtigungen automatisch in einer vordefinierten Reihenfolge an die richtigen Personen oder Abteilungen weitergeleitet werden.
