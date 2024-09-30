@@ -53,24 +53,25 @@
 == Motivation & Problemstellung
 //Struktur der Arbeit
 
-"Ein Ziel ohne Plan ist nur ein Wunsch." -Antoine de Saint-Exupéry.
+"Ein Ziel ohne Plan ist nur ein Wunsch." -Antoine de Saint-Exupéry @Zitat_Einstieg.
 
 Im dynamischen Umfeld moderner Unternehmen sind klare Prozesse und eine präzise Planbarkeit unerlässlich. Dies gilt sowohl für die Verwaltung von Mitarbeiterurlauben als auch für die Genehmigung von Projektbudgets.
 
-Im Rahmen eines Urlaubsantrags beim Arbeitgeber wird meist ein Antrag an den Vorgesetzten gestellt, der diesen anschließend bewilligen oder ablehnen kann. Dabei wird in der Regel geprüft, ob der Mitarbeiter noch über ausreichende Urlaubstage verfügt.
-Ein vergleichbarer Genehmigungsprozess bezogen auf das Projektbudget findet man ebenfalls bei der 
+Im Rahmen eines Urlaubsantragsprozesses beim Arbeitgeber wird meist ein Antrag an den Vorgesetzten gestellt, der diesen anschließend bewilligen oder ablehnen kann. Dabei wird in der Regel geprüft, ob der Mitarbeiter noch über ausreichende Urlaubstage verfügt.
+Einen vergleichbarer Genehmigungsprozess bezogen auf das Projektbudget findet man ebenfalls bei der 
 Genehmigung von Projektbudgets im Unternehmenskontext. 
 
-Eine präzise und transparente Budgetierung von Projekten ist hierbei essenziell. Unzureichende Kontrolle und fehlende Übersicht über das Projektbudget können zu finanziellen Verlusten führen und die Performance des Unternehmens beeinträchtigen. Die Verwendung moderner Unternehmenssoftware (#acr("ERP")), bietet hier eine entscheidende Unterstützung, um das Budget entsprechend verwalten zu können.
+Eine präzise und transparente Budgetierung von Projekten ist hierbei essenziell. Unzureichende Kontrolle und fehlender Überblick über das Projektbudget können zu finanziellen Verlusten führen und die Performance des Unternehmens beeinträchtigen. Die Verwendung moderner Unternehmenssoftware (#acr("ERP")-Software), bietet hier eine entscheidende Unterstützung, um das Budget entsprechend verwalten zu können.
 
-Obwohl Genehmigungsprozesse in verschiedenen Unternehmensbereichen, wie der Urlaubsverwaltung, standardisiert und effizient abgebildet sind, stellt die Projektbudgetierung in SAP S/4HANA eine spezielle Herausforderung dar. Insbesondere in der SAP Public Cloud fehlt eine standardisierte Funktion zur Genehmigung von Projektbudgets.
-Durch diese derzeit fehlende Funktion ist die Verwaltung und Genehmigung von Projektbudgets nur beschränkt möglich. Projektbudgtes müssen daher manuell und systemfern durchgeführt werden, was zu einem erheblichen Arbeitsaufwand führt. Des weiteren ist das Führen von Excel-Dateien aufwändig und inkonsistent.
-
-Eine Cloud-Lösung bietet dabei Vorteile, wie bespielsweise einen Echtzeit-Datenzugriff, was eine transparente und effiziente Datenverwaltung ermöglicht. Jedoch bring die Cloud-Lösung von SAP auch Herausforderungen und Schwierigkeiten mit sich.
-Im SAP Standardpaket S/4HANA Public Cloud ist ein Projektbudget Genehmigungsprozess nicht inbegriffen. Durch diese derzeit fehlende Funktion ist die Verwaltung und Genehmigung von Projektbudgets nur beschränkt möglich. Projektbudgtes müssen daher manuell und systemfern durchgeführt werden, was zu einem erheblichen Arbeitsaufwand führt. Des weiteren ist das Führen von Excel-Dateien aufwändig und inkonsistent.
+Obwohl Genehmigungsprozesse in verschiedenen Unternehmensbereichen, wie der Urlaubsverwaltung, standardisiert und effizient abgebildet sind, stellt die Projektbudgetierung in SAP S/4HANA Public Cloud  eine spezielle Herausforderung dar, da im Standardpaket der SAP S/4HANA Public Cloud keine standardisierte Funktion zur Genehmigung von Projektbudgets vorhanden ist.
+Durch diese derzeit fehlende Funktion ist die Verwaltung und Genehmigung von Projektbudgets nur beschränkt möglich.  
+Projektbudgtes müssen daher manuell und systemfern durchgeführt werden, was zu einem erheblichen Arbeitsaufwand führt. 
 Eine weitere Herausforderung stellt die eingeschränkte Möglichkeit der Systemanpassungen in der Public Cloud dar.
 
-Die Verwaltung und Genehmigung von Projektbudgets kann jedoch durch eine Standarderweiterung ermöglicht werden. Dabei wird durch ein Workflow mit dem SAP Workflow Tool auf der #acr("BTP") erstellt, der eine Genehmigungsprozessautomatisierung ermöglicht. Mithilfe von Workflows können Geschäftsprozesse automatisiert, standardisiert und effizienter gestaltet werden. Dabei können Aufgaben, Benachrichtigungen oder Berechtigungen automatisch in einer zuvor definierten Reihenfolge ausgeführt werden. Diese Lösung bietet eine maßgebliche Optimierung des Projektbudget-Genehmigungsprozesses hinsichtlich der Entlastung der Mitarbeiter und der Effizienz. 
+Die Verwaltung und Genehmigung von Projektbudgets kann jedoch durch eine Standarderweiterung ermöglicht werden. Dabei wird ein Workflow mit dem SAP Workflow Tool auf der #acr("BTP") erstellt, der eine Genehmigungsprozessautomatisierung ermöglicht.
+//Quellen einfügen !!!
+
+Mithilfe von Workflows können Geschäftsprozesse automatisiert, standardisiert und effizienter gestaltet werden. Dabei können Aufgaben, Benachrichtigungen oder Berechtigungen automatisch in einer zuvor definierten Reihenfolge ausgeführt werden. Diese Lösung bietet eine maßgebliche Optimierung des Projektbudget-Genehmigungsprozesses hinsichtlich der Entlastung der Mitarbeiter und der Effizienz. 
  
 == Struktur der Arbeit
  Die vorliegende Arbeit ist in sieben Hauptkapitel gegliedert. Nach der Einleitung, in der die Motivation und Problemstellung dargelegt, sowie der Aufbau und die Zielsetzung der Arbeit beschrieben werden, folgt in Kapitel 2 eine umfassende Darstellung der theoretischen Grundlagen. Hier werden zunächst die allgemeinen Konzepte der Projektbudgetierung erläutert, bevor auf die spezifischen Aspekte des SAP S/4HANA-Systems eingegangen wird. Dazu gehören sowohl die Grundlagen von SAP S/4HANA als auch das Projektsystem. Im Anschluss wird die Business Technology Platform (BTP) als relevante technologische Innovationsplattform für die Automatisierung und das Workflow-Management im Rahmen der Projektbudgetierung vorgestellt.
@@ -135,6 +136,8 @@ Der nächste Schritt umfasst die eigentliche Projektdurchführung. Dabei werden 
 Über die Gesamte Projektdauer ist das #acr("CO") unerlässlich, da das dieses dabei die Kosten, Termine und die Qualität überwacht. Zudem werden in dieser Phase Abweichungsanalysen und das Risikomanagement durchgeführt.
 Der letzte Schritt ist der Projektabschluss. Dieser erfolgt nach der Fertigstellung des Projekts. In diesem Schritt erfolgt die letztendliche Kontrolle und Abrechnung. Zudem werden alle Ergebnisse dokumentiert und das Projekt wird formal beendet.
 
+#pagebreak()
+
 // Grundlagen
 //!  Muss gemacht werden
 //? Frage ich nach
@@ -143,7 +146,7 @@ Der letzte Schritt ist der Projektabschluss. Dieser erfolgt nach der Fertigstell
 == Business Technology Platform (BTP)
 #figure(caption:
 "SAP cloud applications and SAP BTP"
-, image(width: 10cm,
+, image(width: 15cm,
 "assets/BTP001_2406_U2L2_01.png"
 ))
 <sap_portfolio_btp>
@@ -156,12 +159,26 @@ Die #acr("BTP") bietet vorkonfigurierte Datenmodelle, Integrationen von Workflow
 Die #acr("BTP") basiert auf einem modularen Konzept und umfasst folgende Hauptbereiche in einer Zentralen Umgebung: Das Datenbank/Datenmanagement darunter auch die Echtzeitsichten von Daten, die Analytik, die Anwendungsentwicklung und Automatisierung, die Integration und Künstliche Intelligenz (@sap_portfolio_btp).@SAP_BTP 
 
 === SAP Workflow Management Tool
+
+#figure(caption:
+"SAP Workflow Management"
+, image(width: 15cm,
+"assets/workflow-management.png"
+))
+<workflow_management>
+
 Der Begriff "Workflow" wird von der SAP wie folgt definiert.
 Unter einem Workflow versteht man die "Abfolge von miteinander verbundenen Aktivitäten oder Aufgaben, die ausgeführt werden, um ein bestimmtes Ergebnis zu erzielen." Definition von aufeinanderfolgenden Prozessschritten, die abgearbeitet werden, sobald die Workflow-Instanz aufgerufen wird.@SAP_Workflow
 
 Man unterscheidet zwischen drei unterschiedlichen Arten von Workflows. 
 Die erste Variante beschreibt einen vollständig manuellen Workflow. Dabei werden die einzelnen Schritte händisch abgearbeitet. Beispielsweise wird ein Blatt mit 
 
+#figure(caption:
+"SAP Workflow Editor"
+, image(width: 15cm,
+"assets/Workflow-2.png"
+))
+<workflow_editor>
 === SAP Build Process Automation
 
 
