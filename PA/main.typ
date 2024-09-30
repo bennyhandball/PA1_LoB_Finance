@@ -65,12 +65,15 @@ Eine präzise und transparente Budgetierung von Projekten ist hierbei essenziell
 
 Obwohl Genehmigungsprozesse in verschiedenen Unternehmensbereichen, wie der Urlaubsverwaltung, standardisiert und effizient abgebildet sind, stellt die Projektbudgetierung in SAP S/4HANA eine spezielle Herausforderung dar. Insbesondere in der SAP Public Cloud fehlt eine standardisierte Funktion zur Genehmigung von Projektbudgets.
 Durch diese derzeit fehlende Funktion ist die Verwaltung und Genehmigung von Projektbudgets nur beschränkt möglich. Projektbudgtes müssen daher manuell und systemfern durchgeführt werden, was zu einem erheblichen Arbeitsaufwand führt. Des weiteren ist das Führen von Excel-Dateien aufwändig und inkonsistent.
+
+Eine Cloud-Lösung bietet dabei Vorteile, wie bespielsweise einen Echtzeit-Datenzugriff, was eine transparente und effiziente Datenverwaltung ermöglicht. Jedoch bring die Cloud-Lösung von SAP auch Herausforderungen und Schwierigkeiten mit sich.
+Im SAP Standardpaket S/4HANA Public Cloud ist ein Projektbudget Genehmigungsprozess nicht inbegriffen. Durch diese derzeit fehlende Funktion ist die Verwaltung und Genehmigung von Projektbudgets nur beschränkt möglich. Projektbudgtes müssen daher manuell und systemfern durchgeführt werden, was zu einem erheblichen Arbeitsaufwand führt. Des weiteren ist das Führen von Excel-Dateien aufwändig und inkonsistent.
 Eine weitere Herausforderung stellt die eingeschränkte Möglichkeit der Systemanpassungen in der Public Cloud dar.
 
 Die Verwaltung und Genehmigung von Projektbudgets kann jedoch durch eine Standarderweiterung ermöglicht werden. Dabei wird durch ein Workflow mit dem SAP Workflow Tool auf der #acr("BTP") erstellt, der eine Genehmigungsprozessautomatisierung ermöglicht. Mithilfe von Workflows können Geschäftsprozesse automatisiert, standardisiert und effizienter gestaltet werden. Dabei können Aufgaben, Benachrichtigungen oder Berechtigungen automatisch in einer zuvor definierten Reihenfolge ausgeführt werden. Diese Lösung bietet eine maßgebliche Optimierung des Projektbudget-Genehmigungsprozesses hinsichtlich der Entlastung der Mitarbeiter und der Effizienz. 
  
 == Struktur der Arbeit
- Die vorliegende Arbeit ist in sieben Hauptkapitel gegliedert. Nach der Einleitung, in der die Motivation und Problemstellung dargelegt, sowie der Aufbau und die Zielsetzung der Arbeit beschrieben werden, folgt in Kapitel 2 eine umfassende Darstellung der theoretischen Grundlagen. Hier werden zunächst die allgemeinen Konzepte der Projektbudgetierung erläutert, bevor auf die spezifischen Aspekte des SAP S/4HANA-Systems eingegangen wird. Dazu gehören sowohl die Grundlagen von SAP S/4HANA als auch das Projektsystem. Im Anschluss wird die Business Technology Platform (BTP) als relevante technologische Plattform für die Automatisierung und das Workflow-Management im Rahmen der Projektbudgetierung vorgestellt.
+ Die vorliegende Arbeit ist in sieben Hauptkapitel gegliedert. Nach der Einleitung, in der die Motivation und Problemstellung dargelegt, sowie der Aufbau und die Zielsetzung der Arbeit beschrieben werden, folgt in Kapitel 2 eine umfassende Darstellung der theoretischen Grundlagen. Hier werden zunächst die allgemeinen Konzepte der Projektbudgetierung erläutert, bevor auf die spezifischen Aspekte des SAP S/4HANA-Systems eingegangen wird. Dazu gehören sowohl die Grundlagen von SAP S/4HANA als auch das Projektsystem. Im Anschluss wird die Business Technology Platform (BTP) als relevante technologische Innovationsplattform für die Automatisierung und das Workflow-Management im Rahmen der Projektbudgetierung vorgestellt.
 
 In Kapitel 3 werden die angewandten wissenschaftlichen Methoden diskutiert und begründet, warum die vorleigenden Methoden gewählt wurden. Nach der Auswahl der Methoden erfolgt die Durchführung von Experteninterviews, deren qualitative Auswertung nach der Methode von Mayring vorgenommen wird.
 
@@ -83,13 +86,28 @@ Die Arbeit schließt mit einer Zusammenfassung in Kapitel 7 ab. Hier werden nebe
 
 
 == Abgrenzung der Arbeit
-Gegenstand dieser Arbeit ist die Standarderweiterung hinsichtlich der Projektbudgetierung in SAP S/4HANA Public Cloud. Darauffolgende Versionen können nicht berücksichtigt werden. Die beschriebenen Funktionaliäten sind bis auf kleinere Einschränkungen auf SAP S/4HANA Private Cloud übertragbar.
+Gegenstand dieser Arbeit ist die Standarderweiterung hinsichtlich der Projektbudgetierung in SAP S/4HANA Public Cloud. Darauffolgende Versionen können nicht berücksichtigt werden. Die beschriebenen Funktionaliäten sind bis auf kleinere Einschränkungen auf die SAP S/4HANA Private Cloud übertragbar.
 == Ziel und Gang
-Das Ziel dieser Arbeit ist es, durch Experteninterviews und eine folgende qualitative Inhaltsanalyse nach Mayring Anforderungen für den Projektbudget-Genehmigung Workflow abzuleiten. Nach der Implementierung soll eine fundierte Evaluation durchgeführt werden, um zu beurteilen, ob die Standarderweiterung den Anforderungen gerecht wird. 
+Das Ziel dieser Arbeit ist es den Genehmigungsprozess von Projektbudgets in SAP S/4HANA Public Cloud detailliert zu analysieren und zu evaluieren. Dabei soll beurteilt werden, ob die Standarderweiterung den durch Experteninterviews und eine folgende qualitative Inhaltsanalyse nach Mayring erhobenen Anforderungen entspricht. 
+
+Das Ergebnis der Arbeit, soll der Finance-Beratungsabteilung dazu dienen, eine möglichst optimierte, auf die Kundenbedürfnisse abgestimmte Lösung zu entwicklen, und zusätzlich ein Bewusstsein dafür schaffen, wie die Standarderweiterung der Projektbudgetgenehmigung gewinnbringend eingesetzt werden kann.
 
 = Theoretische Grundlagen
 == Projektbudgetierung Grundlagen 
-Das deutsche Institut für Normung (DIN 6990101-5:2009:11, zitiert )
+Betrachtet man die Grundlagen der Projektbudgetierung, so ist zunächst wichtig zu definieren, was man unter einem Projekt versteht. Dabei gibt es keine einheitliche Definition für den Projektbegriff. Deshalb ist es von großer Relevanz, mehrere Definitionen zu nennen und diese zu vergleichen. 
+
+Ein Projekt ist ein Vorhaben, das im Wesentlichen durch Einmaligkeit der Rahmenbedingungen in seiner Gesamtheit und seinen Zusammenhängen gekennzeichnet ist. Die
+Rahmenbedingungen sind @Multiprojektmanagement:
+  - neuartige und komplexe Zielvorgaben 
+  - definierter Zeit- und Kostenrahmen 
+  - multidisziplinäre Aufgabenstellung 
+  - Fachkenntnisse und Aufgabenbereiche 
+  - Risikobehaftet
+
+Das deutsche Institut für Normung (DIN) (zitiert nach @Projektmanagement) definiert ein Projekt als ein "Vorhaben, das im Wesentlichen durch Einmaligkeit der Bedingung in ihrer Gesamtheit gekennzeichnet ist." Die Einmaligkeit der Bedingung kann sich beziehen auf die "Zielvorgabe, zeitlich, finanzielle, personelle oder andere Begrenzungen, projektspezifische Organisation" (DIN 69901-5:2009-01,S.11).
+
+Projekte sind somit zeitlich befristete Vorhaben, die einen festen Kostenrahmen besitzten. 
+
 //Definition von Projekten ()
 //ERP System nicht zwingend Erklären 
 // SAP S/4 HANA -> ERP-System mit Schnittstellen 
