@@ -12,6 +12,8 @@
   SAAS: "Software-as-a-Service",
   FI: "Finanzwesen",
   CO: "Controlling",
-  MM: "Materialwirtschaft"
+  MM: "Materialwirtschaft",
+  BPM: "Business Process Modelling",
+  BPR: "Business Process Reengineering",
 )
 
