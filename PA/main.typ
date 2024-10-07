@@ -61,22 +61,27 @@ Im Rahmen eines Urlaubsantragsprozesses beim Arbeitgeber wird meist ein Antrag a
 Einen vergleichbarer Genehmigungsprozess bezogen auf das Projektbudget findet man ebenfalls bei der 
 Genehmigung von Projektbudgets im Unternehmenskontext. 
 
-Eine präzise und transparente Budgetierung von Projekten ist hierbei essenziell. Unzureichende Kontrolle und fehlender Überblick über das Projektbudget können zu finanziellen Verlusten führen und die Performance des Unternehmens beeinträchtigen. Die Verwendung moderner Unternehmenssoftware (#acr("ERP")-Software), bietet hier eine entscheidende Unterstützung, um das Budget entsprechend verwalten zu können.
+Eine präzise und transparente Budgetierung von Projekten ist hierbei essenziell. Unzureichende Kontrolle und ein fehlender Überblick über das Projektbudget können zu finanziellen Verlusten führen und die Performance des Unternehmens beeinträchtigen. Die Verwendung moderner Unternehmenssoftware (#acr("ERP")-Software), bietet hier eine entscheidende Unterstützung, um das Budget entsprechend verwalten zu können.
 
-Obwohl Genehmigungsprozesse in verschiedenen Unternehmensbereichen, wie der Urlaubsverwaltung, standardisiert und effizient abgebildet sind, stellt die Projektbudgetierung in SAP S/4HANA Public Cloud  eine spezielle Herausforderung dar, da im Standardpaket der SAP S/4HANA Public Cloud keine standardisierte Funktion zur Genehmigung von Projektbudgets vorhanden ist.
+Obwohl Genehmigungsprozesse in verschiedenen Unternehmensbereichen, wie der Urlaubsverwaltung, standardisiert und effizient abgebildet werden können, stellt die Projektbudgetierung in SAP S/4HANA Public Cloud  eine spezielle Herausforderung dar, da im Standardpaket der SAP S/4HANA Public Cloud keine standardisierte Funktion zur Genehmigung von Projektbudgets vorhanden ist.
 Durch diese derzeit fehlende Funktion ist die Verwaltung und Genehmigung von Projektbudgets nur beschränkt möglich.  
 Projektbudgtes müssen daher manuell und systemfern durchgeführt werden, was zu einem erheblichen Arbeitsaufwand führt. 
-Eine weitere Herausforderung stellt die eingeschränkte Möglichkeit der Systemanpassungen in der Public Cloud dar.
 
-Die Verwaltung und Genehmigung von Projektbudgets kann jedoch durch eine Standarderweiterung ermöglicht werden. Dabei wird ein Workflow mit dem SAP Workflow Tool auf der #acr("BTP") erstellt, der eine Genehmigungsprozessautomatisierung ermöglicht.
+Eine weitere Herausforderung stellt die eingeschränkte Anpassungsmöglichkeit der Public Cloud dar, wenn Unternehmen ihre spezifischen Geschäftsanforderungen abbilden möchten. SAP hat diese Problematik erkannt und bietet mit der Clean Core Strategie eine Lösung, welche sowohl die Vorteile der Standartisierung berücksichtigt, aber auch Flexibilität hinsichtlich der individuellen Anpassungen bietet. 
+
+Die Clean Core Strategie von SAP verfolgt das Ziel, die Stabilität, Wartbarkeit und Updatesicherheit von SAP-Systemen zu verbessern. Bei der Clean-Core Strategie geht es darum, den Kern (Core) des SAP-Systems standardisiert und unverändert zu erhalten. Kundenspezifische Anpassungen und Erweiterungen sollen außerhalb des Kernsystems in seperaten Erweiterungsumgebungen (beispielsweise der #acr("BTP")) durchgeführt werden. Durch die Verwendung von definierten Schnittstellen, Erweiterungspunkten und #acr("API")s können Unternehmen ihre SAP-Systeme flexibel an Geschäftsanforderungen anzupassen, ohne den Kern zu verändern. 
+
+Dies ermöglicht eine bessere Wartbarkeit und schnellere Updates, da die Integrität des SAP-Cores erhalten bleibt (@ERP_Clean_Core).
+Durch eine Standarderweiterung auf der #acr("BTP") kann die Verwaltung und Genehmigung ermöglicht werden.
+Dabei wird ein Workflow mit dem SAP Workflow Tool auf der #acr("BTP") erstellt, der eine Genehmigungsprozessautomatisierung ermöglicht.
 //Quellen einfügen !!!
 
 Mithilfe von Workflows können Geschäftsprozesse automatisiert, standardisiert und effizienter gestaltet werden. Dabei können Aufgaben, Benachrichtigungen oder Berechtigungen automatisch in einer zuvor definierten Reihenfolge ausgeführt werden. Diese Lösung bietet eine maßgebliche Optimierung des Projektbudget-Genehmigungsprozesses hinsichtlich der Entlastung der Mitarbeiter und der Effizienz (@Workflow_source). 
  
 == Struktur der Arbeit
- Die vorliegende Arbeit ist in sieben Hauptkapitel gegliedert. Nach der Einleitung, in der die Motivation und Problemstellung dargelegt, sowie der Aufbau und die Zielsetzung der Arbeit beschrieben werden, folgt in Kapitel 2 eine umfassende Darstellung der theoretischen Grundlagen. Hier werden zunächst die allgemeinen Konzepte der Projektbudgetierung erläutert, bevor auf die spezifischen Aspekte des SAP S/4HANA-Systems eingegangen wird. Dazu gehören sowohl die Grundlagen von SAP S/4HANA als auch das Projektsystem. Im Anschluss wird die Business Technology Platform (BTP) als relevante technologische Innovationsplattform für die Automatisierung und das Workflow-Management im Rahmen der Projektbudgetierung vorgestellt.
+Die vorliegende Arbeit ist in sieben Hauptkapitel gegliedert. Nach der Einleitung, in der die Motivation und Problemstellung dargelegt, sowie der Aufbau und die Zielsetzung der Arbeit beschrieben werden, folgt in Kapitel 2 eine umfassende Darstellung der theoretischen Grundlagen. Hier werden zunächst die allgemeinen Konzepte der Projektbudgetierung erläutert, bevor auf die spezifischen Aspekte des SAP S/4HANA-Systems eingegangen wird. Dazu gehören sowohl die Grundlagen von SAP S/4HANA als auch das Projektsystem. Im Anschluss wird die Business Technology Platform (BTP) als relevante technologische Innovationsplattform für die Automatisierung und das Workflow-Management im Rahmen der Projektbudgetierung vorgestellt.
 
-In Kapitel 3 werden die angewandten wissenschaftlichen Methoden diskutiert und begründet, warum die vorleigenden Methoden gewählt wurden. Nach der Auswahl der Methoden erfolgt die Durchführung von Experteninterviews, deren qualitative Auswertung nach der Methode von Mayring vorgenommen wird.
+In Kapitel 3 werden die angewandten wissenschaftlichen Methoden diskutiert und begründet, warum die vorliegenden Methoden gewählt wurden. Nach der Auswahl der Methoden erfolgt die Durchführung von Experteninterviews, deren qualitative Auswertung nach der Methode von Mayring vorgenommen wird.
 
 Im vierten Kapitel wird die Anforderungserhebung basierend auf den Experteninterviews behandelt. Die Ergebnisse werden analysiert und hinsichtlich ihrer Relevanz und Priorität eingeordnet.
 
@@ -91,7 +96,7 @@ Gegenstand dieser Arbeit ist die Standarderweiterung hinsichtlich der Projektbud
 == Ziel und Gang
 Das Ziel dieser Arbeit ist es den Genehmigungsprozess von Projektbudgets in SAP S/4HANA Public Cloud detailliert zu analysieren und zu evaluieren. Dabei soll beurteilt werden, ob die Standarderweiterung den durch Experteninterviews und eine folgende qualitative Inhaltsanalyse nach Mayring erhobenen Anforderungen entspricht. 
 
-Das Ergebnis der Arbeit, soll der Finance-Beratungsabteilung dazu dienen, eine möglichst optimierte, auf die Kundenbedürfnisse abgestimmte Lösung zu entwicklen, und zusätzlich ein Bewusstsein dafür schaffen, wie die Standarderweiterung der Projektbudgetgenehmigung gewinnbringend eingesetzt werden kann.
+Das Ergebnis der Arbeit, soll der Finance-Beratungsabteilung dazu dienen, eine möglichst optimierte, auf die Kundenbedürfnisse abgestimmte Lösung zu entwicklen, und zusätzlich ein Bewusstsein dafür schaffen, wie die Standarderweiterung der Projektbudgetgenehmigung bei Public-Cloud Kunden gewinnbringend eingesetzt werden kann.
 
 = Theoretische Grundlagen
 == Projektbudgetierung Grundlagen 
@@ -124,10 +129,12 @@ Die Projektbudgetierung stellt einen zentralen Bestandteil der Projektplanung da
 == SAP S/4HANA
 === Grundlagen S/4HANA 
 Die SAP SE ist ein 1972 gegründetes deutsches Unternehmen mit dem Hauptsitz in Walldorf (@SAP_1972), welches bezogen auf die Marktkapitalisierung das wertvollste deutsche DAX-Unternehmen ist (Stand: September 2024, @Marktkapitalisierung_SAP).
-Mit der Einführung von S/4HANA im Jahr 2015 hat SAP einen bedeutenden Schritt in der Entwicklung von #acr("ERP")-Systemen gemacht. Als Nachfolger der SAP Business Suite aus dem Jahr 2004 und Ablösung von SAP R/3, das erstmals eine Client-Server-Technologie einsetzte, bietet S/4HANA eine Reihe von Innovationen.
-Das Herzstück eines S/4HANA-Systems ist die HANA Datenbank, eine spaltenbasierte In-Memory Datenbank, die im Vergleich zu herkömmlichen Datenbanken einen schnelleren Datenzugriff und bessere Analysezeiten ermöglicht. Durch diese Eigenschaft können Echtzeitanalysen und Berechnungen zur Laufzeit realisiert und ermöglicht werden. Dies ist insbesondere bei der Verarbeitung von Big Data Analysen von großer Bedeutung.
-S/4HANA bietet ebenfalls eine neue Benutzeroberfläche, namens SAP Fiori, die die bisherigen SAP GUI-Oberflächen ablöst. SAP Fiori ist dabei browserbasiert, was bedeutet, dass keine spezielle Software lokal auf dem Gerät installiert werden müssen. Nutzer können SAP Fiori plattformunabhängig und flexibel über gängige Browser wie Google Chrome, Mozialla Firefox oder Safari aufrufen. 
-Unternehmen haben bei SAP S/4HANA verschiedene Bereitstellungsoptionen: On-Premise, Private Cloud oder Public Cloud.
+Mit der Einführung von S/4HANA im Jahr 2015 hat SAP einen bedeutenden Schritt in der Entwicklung von #acr("ERP")-Systemen gemacht. Als Nachfolger der SAP Business Suite aus dem Jahr 2004 und Ablösung von SAP R/3, das erstmals eine Client-Server-Technologie einsetzte, bietet S/4HANA eine Reihe von Innovationen (@SAP_1972).
+Das Herzstück eines S/4HANA-Systems ist die HANA Datenbank, eine spaltenbasierte In-Memory Datenbank, die im Vergleich zu herkömmlichen Datenbanken einen schnelleren Datenzugriff und bessere Analysezeiten ermöglicht. Durch diese Eigenschaft können Echtzeitanalysen und Berechnungen zur Laufzeit realisiert und ermöglicht werden. Dies ist insbesondere bei der Verarbeitung von Big Data Analysen von großer Bedeutung (@S4HANA_Overview).
+S/4HANA bietet ebenfalls eine neue Benutzeroberfläche, namens SAP Fiori, die die bisherigen SAP GUI-Oberflächen ablöst. SAP Fiori ist dabei browserbasiert, was bedeutet, dass keine spezielle Software lokal auf dem Gerät installiert werden müssen. Nutzer können SAP Fiori plattformunabhängig und flexibel über gängige Browser wie Google Chrome, Mozialla Firefox oder Safari aufrufen. Durch die Nutzung von SAP-Fiori Werkzeugen und -Vorlagen können Apps schnell entwickelt und eine konsistente Benutzererfahrung in den Apps bereit gestellt werden (@SAP_Fiori_Overview).
+
+Grundsätzlich haben Unternehmen bei SAP S/4HANA verschiedene Bereitstellungsoptionen: On-Premise, Private Cloud oder Public Cloud.
+//hier weiter ...
 
 Bei der On-Premise Lösung hosten Unternehmen die Software auf eigenen Servern, während bei der Private-Cloud Lösung die Software auf Servern von Drittanbietern als Single-Tenant betrieben wird. Single-Tentant beschreibt in diesem Kontext, eine dedizierte, isolierte Cloud Umgebung, die nur für den spezifischen Kunden bereitgestellt wird. Im Gegensatz zu einer Multi-Tenant-Umgebung, in der mehrere Kunden (Mandanten) die gleiche Software-Instanz teilen, hat der Kunde in einer Single-Tenant-Lösung seine eigene Instanz der SAP-Software. 
 
