@@ -71,8 +71,6 @@ Eine weitere Herausforderung stellt die eingeschränkte Anpassungsmöglichkeit d
 
 Durch eine Standarderweiterung auf der #acr("BTP") kann die Verwaltung und Genehmigung ermöglicht werden.
 Dabei wird das SAP Build Tool auf der #acr("BTP")  genutzt um mithilfe des SAP Workflow Tools einen Workflow zu erstellen, der eine Genehmigungsprozessautomatisierung ermöglicht @ERP_Clean_Core.
-
-
 Mithilfe von Workflows können Geschäftsprozesse automatisiert, standardisiert und effizienter gestaltet werden. Dabei können Aufgaben, Benachrichtigungen oder Berechtigungen automatisch in einer zuvor definierten Reihenfolge ausgeführt werden. Diese Lösung bietet eine maßgebliche Optimierung des Projektbudget-Genehmigungsprozesses hinsichtlich der Entlastung der Mitarbeiter und der Effizienz (@Workflow_source). 
  
 == Struktur der Arbeit
@@ -81,7 +79,6 @@ Die vorliegende Arbeit ist in sieben Hauptkapitel gegliedert. Nach der Einleitun
 In Kapitel 3 werden die angewandten wissenschaftlichen Methoden diskutiert und begründet, warum die vorliegenden Methoden gewählt wurden. Nach der Auswahl der Methoden erfolgt die Durchführung von Experteninterviews, deren qualitative Auswertung nach der Methode von Mayring vorgenommen wird.
 
 Im vierten Kapitel wird die Anforderungserhebung basierend auf den Experteninterviews behandelt. Die Ergebnisse werden analysiert und hinsichtlich ihrer Relevanz und Priorität eingeordnet.
-
 Kapitel 5 beschreibt die Implementierung der im Rahmen dieser Arbeit vorgeschlagenen Standarderweiterung im SAP S/4HANA-System. Darauf aufbauend wird in Kapitel 6 eine Evaluierung der erzielten Ergebnisse vorgenommen, wobei der Fokus auf der Beurteilung der Effizienz und der Zielerreichung liegt.
 
 Die Arbeit schließt mit einer Zusammenfassung in Kapitel 7 ab. Hier werden neben dem Fazit eine kritische Reflexion der durchgeführten Arbeit, sowie ein Ausblick gegeben.
@@ -92,10 +89,7 @@ Die Arbeit schließt mit einer Zusammenfassung in Kapitel 7 ab. Hier werden nebe
 Gegenstand dieser Arbeit ist die Standarderweiterung hinsichtlich der Projektbudgetierung in SAP S/4HANA Public Cloud. Darauffolgende Versionen können nicht berücksichtigt werden. Die beschriebenen Funktionaliäten sind bis auf kleinere Einschränkungen auf die SAP S/4HANA Private Cloud übertragbar.
 == Ziel und Gang
 Das Ziel dieser Arbeit ist es den Genehmigungsprozess von Projektbudgets in SAP S/4HANA Public Cloud detailliert zu analysieren und zu evaluieren. Dabei soll beurteilt werden, ob die Standarderweiterung den durch Experteninterviews und eine folgende qualitative Inhaltsanalyse nach Mayring erhobenen Anforderungen entspricht. 
-
-Nach der Erhebung und Analyse der Anforderungen soll die Standarderweiterung dann implementiert werden und der Aufwand der Implementierung dokumentiert und dargestellt werden. 
-
-Das Ergebnis der Arbeit soll der Finance-Beratungsabteilung dazu dienen, eine möglichst optimierte, auf die Kundenbedürfnisse abgestimmte Entscheidungsfindung bereitzustellen und zusätzlich ein Bewusstsein dafür zu schaffen, wie die Standarderweiterung der Projektbudgetgenehmigung bei Public-Cloud Kunden gewinnbringend eingesetzt werden kann.
+Nach der Erhebung und Analyse der Anforderungen soll die Standarderweiterung dann implementiert werden und der Aufwand der Implementierung dokumentiert und dargestellt werden.Das Ergebnis der Arbeit soll der Finance-Beratungsabteilung dazu dienen, eine möglichst optimierte, auf die Kundenbedürfnisse abgestimmte Entscheidungsfindung bereitzustellen und zusätzlich ein Bewusstsein dafür zu schaffen, wie die Standarderweiterung der Projektbudgetgenehmigung bei Public-Cloud Kunden gewinnbringend eingesetzt werden kann.
 
 = Theoretische Grundlagen
 == Projektbudgetierung Grundlagen 
@@ -171,9 +165,6 @@ Anschließend folgt die Projektplanung, wobei der Detaillierungsgrad erhöht wir
 Der nächste Schritt umfasst die eigentliche Projektdurchführung. Dabei werden die zuvor erstellten Projektpläne operativ umgesetzt. Um eine effiziente Projektdurchführung zu ermöglichen, werden Aufgaben konkret zugewiesen und Fortschritte überwacht. 
 Über die Gesamte Projektdauer ist das #acr("CO") unerlässlich, da das dieses dabei die Kosten, Termine und die Qualität überwacht. Zudem werden in dieser Phase Abweichungsanalysen und das Risikomanagement durchgeführt.
 Der letzte Schritt ist der Projektabschluss. Dieser erfolgt nach der Fertigstellung des Projekts. In diesem Schritt erfolgt die letztendliche Kontrolle und Abrechnung. Zudem werden alle Ergebnisse dokumentiert und das Projekt wird formal beendet.
-
-#pagebreak()
-
 // Grundlagen
 //!  Muss gemacht werden
 //? Frage ich nach
