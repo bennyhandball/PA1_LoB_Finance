@@ -15,5 +15,6 @@
   MM: "Materialwirtschaft",
   BPM: "Business Process Modelling",
   BPR: "Business Process Reengineering",
+  SaaS: "Software as a Service",
 )
 
