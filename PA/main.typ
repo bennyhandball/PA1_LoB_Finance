@@ -185,9 +185,9 @@ Die #acr("BTP") der SAP ist eine Innovationsplattform im SAP-Ökosystem, welche 
 Die #acr("BTP") stellt das SAP Build Tool bereit, welches mit Hilfe von KI die Entwicklung und Automatisierung von Anwendungen beschleunigt @SAP_Build . 
 
 
-Die #acr("BTP") bietet vorkonfigurierte Datenmodelle, Integrationen von Workflows, APIs (#acr("API")) und #acr("KI") Services.@SAP_BTP Durch diese Dienste können neue Anwendungen bereitgestellt werden, Prozesse integriert, Aufgaben automatisiert, Anwendungen mit Chatbots versehen und Daten und deren Auswirkungen für das gesamte Unternehmen analysiert werden.@SAP_BTP Dadurch können Unternehmen ihre Prozesse optimieren, Innovationen vorantreiben und Wettbewerbsvorteile erlangen, da diese flexibel auf sich ändernde Marktanforderungen reagieren können.
+Die #acr("BTP") bietet vorkonfigurierte Datenmodelle, Integrationen von Workflows, APIs (#acr("API")) und #acr("KI") Services @SAP_BTP. Durch diese Dienste können neue Anwendungen bereitgestellt werden, Prozesse integriert, Aufgaben automatisiert, Anwendungen mit Chatbots versehen und Daten und deren Auswirkungen für das gesamte Unternehmen analysiert werden @SAP_BTP. Dadurch können Unternehmen ihre Prozesse optimieren, Innovationen vorantreiben und Wettbewerbsvorteile erlangen, da diese flexibel auf sich ändernde Marktanforderungen reagieren können.
 
-Die #acr("BTP") basiert auf einem modularen Konzept und umfasst folgende Hauptbereiche in einer Zentralen Umgebung: Das Datenbank/Datenmanagement darunter auch die Echtzeitsichten von Daten, die Analytik, die Anwendungsentwicklung und Automatisierung, die Integration und Künstliche Intelligenz (@sap_portfolio_btp).@SAP_BTP 
+Die #acr("BTP") basiert auf einem modularen Konzept und umfasst folgende Hauptbereiche in einer Zentralen Umgebung: Das Datenbank/Datenmanagement darunter auch die Echtzeitsichten von Daten, die Analytik, die Anwendungsentwicklung und Automatisierung, die Integration und Künstliche Intelligenz (@sap_portfolio_btp)@SAP_BTP. 
 
 === SAP Build Process Automation
 SAP Build bietet unterschiedliche Tools und Werkzeuge auf der #acr("BTP") an, die den Anwender bei der Entwicklung und Automatisierung von Anwendungen unterstützen @SAP_Build.
@@ -200,7 +200,7 @@ Ein zentrales Element ist die Build Process Automation, die als SAP-Lösung zur 
 ))
 <Business_Process_Automation>
 
-Durch die geringe Komplexität werden keine spezialisierten Entwickler benötigt, um Prozesse zu automatisieren, da dies durch die Low-Code/No-Code Entwicklung durch die entsprechenden Fachbereiche entwickelt werden kann. Zudem werden vorkonfigurierte Szenarien bereitgestellt, um Standardabläufe automatisieren zu können @SAP_Build.
+Durch die geringe Komplexität werden keine spezialisierten Entwickler benötigt, um Prozesse zu automatisieren, da dies durch die Low-Code/No-Code Entwicklung durch die entsprechenden Fachbereiche entwickelt werden kann (@Business_Process_Automation). Zudem werden vorkonfigurierte Szenarien bereitgestellt, um Standardabläufe automatisieren zu können @SAP_Build.
 
 === SAP Workflow Management Tool
 Ein weiteres Feature der SAP Business Process Automation ist das SAP Workflow Management Tool @SAP_Build_Workflow. 
@@ -214,13 +214,9 @@ Ein weiteres Feature der SAP Business Process Automation ist das SAP Workflow Ma
 Der Begriff "Workflow" wird von der SAP wie folgt definiert:
 Unter einem Workflow versteht man die "Abfolge von miteinander verbundenen Aktivitäten oder Aufgaben, die ausgeführt werden, um ein bestimmtes Ergebnis zu erzielen" @SAP_Workflow. Aufeinanderfolgende zu bearbeitende Prozessschritten werden sobald die Workflow-Instanz aufgerufen wird abgearbeitet@SAP_Workflow.
 
-Betrachtet man den Begriff Workflow-Mangement so wird dieser als "Prozess der Digitalisierung einzelner Prozesse und die Verwaltung der Ergebnisse definiert" (@SAP_Workflow). 
+Betrachtet man den Begriff Workflow-Mangement so wird dieser als "Prozess der Digitalisierung einzelner Prozesse und die Verwaltung der Ergebnisse definiert" @SAP_Workflow. Die @workflow_management zeigt das Potential des Workflow Managements auf. Dabei stehen auf der linken Seite die Applicationen für welche Workflows zur automatisierung verwendet werden können. Auf der rechten Seite der Abbildung werden die nutzbaren #acr("API")s gezeigt, und welche "Aufgaben" durch Workflows automatisiert werden können (@workflow_management).
 
-Das Feature ermöglicht die Prozessautomatisierung durch die einfache Erstellung eines Workflows mit Hilfe von Drag and Drop - Funktionalitäten. Dabei können Formulare verwaltet, eine Entscheidungslogik verwaltet und Prozessabläufe erstellt, angepasst und organisiert werden @SAP_Build_Workflow. 
-
-
-
-
+Das Feature ermöglicht die Prozessautomatisierung durch die einfache Erstellung eines Workflows mit Hilfe von Drag and Drop - Funktionalitäten (siehe @workflow_editor). Dabei können Formulare verwaltet, eine Entscheidungslogik verwaltet und Prozessabläufe erstellt, angepasst und organisiert werden @SAP_Build_Workflow. 
 
 #figure(caption:
 "SAP Workflow Editor"
@@ -241,7 +237,7 @@ Das Feature ermöglicht die Prozessautomatisierung durch die einfache Erstellung
 Zur methodischen Erarbeitung des vorliegenden Themas kommen verschiedene Vorgehensweisen in Betracht.
 Dazu gehören Experteninterviews, Umfragen, Qualitative Inhaltsanalyse nach Mayring, Literaturrecherche und die Evaluierung.
 
-Ausgewählt wurden dabei die Durchführung von Experteninterviews zur Ermittlung von Informationen rund um die Projektbudgetierung in einem SAP S/4HANA Public Cloud System.  
+Ausgewählt wurden dabei die Durchführung von Experteninterviews zur Ermittlung von Informationen rund um die Projektbudgetierung in einem SAP S/4HANA Public Cloud System. Die qualitative Inhaltsanalyse nach Mayring soll zur Ableitung der Anforerungen an die Standarderweiterung dienen. 
 Zusätzlich werden anhand von Literaturrecherche die theoretischen Grundlagen der Arbeit untersucht. 
 //Auswahlkriterien -> quantitative
 //Auswahlkapitel //Umsetzbarkeit Warum die Methode 
@@ -269,6 +265,24 @@ Die Interviews wiesen dabei einen semistrukturierten Aufbau auf. Das bedeutet, d
 == Darstellung und Priorisierung der Experteninterviewergebnisse
 
 = Implementierung der Standarderweiterung
+Um die Standarderweiterung implementieren zu können, stellt die SAP einen Configuration & User Guide auf dem Business Accelerator Hub zur verfügung (siehe Anhang).//Verlinkung 
+In der Webanwendung "Business Accelerator Hub" der SAP findet man alle #acr("API")s, die für die S/4HANA Cloud öffentlich verfügbar sind @SAP_Accelorrator_Hub. Diese können dabei ermittelt, erkundet und getestet werden @SAP_Accelorrator_Hub. 
+
+== Überblick SAP S/4HANA Extension - Budget Approval 
+#figure(caption:
+"SAP S/4HANA Extension - Budget Approval"
+, image(width: 10cm,
+"assets/BudgetApproval.png"
+))
+<budget_approval>
+
+Die Abbildung zeigt eine Übersicht über den Genehmigungsprozess (@budget_approval). Der Budgetgenehmigungsprozess ermöglicht Kunden Genehmigungen oder Überprüfungen des geplanten Budgets zu automatisieren. //Quelle User Guide 
+Dabei greift der Enduser auf das Fiori Launchpad zu. Das Fiori Launchpad ist der allgemeine Einstiegspunkt zu SAP Fiori-Anwendungen auf mobilden und Dektop-Geräten @SAP_Fiori_Launchpad. 
+
+Der erste Schritt des Budgetgenehmigungsprozesses ist der Geschäftsanwender (Antragssteller) welcher eine Budgetvorlage in Excel hoch lädt und die Genehmigung des Budgets beantragt. //Quelle 
+
+Dabei werden die Genehmigungsgruppen anhand des Genehmigungsbudgets und der Währung bestimmt (siehe )
+
 
 = Evaluierung der Ergebnisse 
 
