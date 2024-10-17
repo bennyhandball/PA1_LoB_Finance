@@ -69,7 +69,6 @@ Eine präzise und transparente Budgetierung von Projekten ist hierbei essenziell
 Obwohl Genehmigungsprozesse in verschiedenen Unternehmensbereichen, wie der Urlaubsverwaltung, standardisiert und effizient abgebildet werden können, stellt die Projektbudgetierung in SAP S/4HANA Public Cloud  eine spezielle Herausforderung dar, da im Standardumfang keine standardisierte Funktion zur Genehmigung von Projektbudgets vorhanden ist.
 Durch diese derzeit fehlende Funktion ist die Verwaltung und Genehmigung von Projektbudgets nur beschränkt möglich.  
 Die Genehmigung der Projektbudgtes muss daher manuell und systemfern durchgeführt werden, was zu einem erheblichen Arbeitsaufwand führt. 
-
 Eine weitere Herausforderung stellt die eingeschränkte Anpassungsmöglichkeit der Public Cloud dar, wenn Unternehmen ihre spezifischen Geschäftsanforderungen abbilden möchten @ERP_Clean_Core. 
 
 Durch eine Standarderweiterung auf der #acr("BTP") kann die Verwaltung und Genehmigung ermöglicht werden.
@@ -346,88 +345,4 @@ Dabei werden die Genehmigungsgruppen anhand des Genehmigungsbudgets und der Wäh
 == Kritische Reflexion der Arbeit 
 
 == Ausblick
-
-= Examples
-
-#lorem(30)
-
-== Acronyms
-
-Use the `acr` function to insert acronyms, which looks like this #acr("HTTP").
-
-#acrlpl("API") are used to define the interaction between different software systems.
-
-#acrs("REST") is an architectural style for networked applications.
-
-== Lists
-
-Create bullet lists or numbered lists.
-
-- These bullet
-- points
-- are colored
-
-+ It also
-+ works with
-+ numbered lists!
-
-== Figures and Tables
-
-Create figures or tables like this:
-
-=== Figures
-
-#figure(caption: "Image Example", image(width: 4cm, "assets/ts.svg"))
-
-=== Tables
-
-#figure(caption: "Table Example", table(
-  columns: (1fr, auto, auto),
-  inset: 10pt,
-  align: horizon,
-  table.header(
-    [], [*Area*], [*Parameters*],
-  ),
-  text("cylinder.svg"),
-  $ pi h (D^2 - d^2) / 4 $,
-  [
-    $h$: height \
-    $D$: outer radius \
-    $d$: inner radius
-  ],
-  text("tetrahedron.svg"),
-  $ sqrt(2) / 12 a^3 $,
-  [$a$: edge length]
-))<table>
-
-== Code Snippets
-
-Insert code snippets like this:
-
-#figure(caption: "Codeblock Example", sourcecode[```typ
-#show "ArtosFlow": name => box[
-  #box(image(
-    "logo.svg",
-    height: 0.7em,
-  ))
-  #name
-]
-
-This report is embedded in the
-ArtosFlow project. ArtosFlow is a
-project of the Artos Institute.
-```])
-
-== References
-
-//Cite like this #cite(form: "prose", <iso18004>).
-//Or like this @iso18004.
-
-You can also reference by adding `<ref>` with the desired name after figures or headings.
-
-For example this @table references the table on the previous page.
-
-You can also generate footnotes #footnote[https://typst.app/docs/reference/model/footnote/] using #footnote [Text]
-
-
 

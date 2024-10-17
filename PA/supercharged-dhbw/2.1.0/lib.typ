@@ -29,7 +29,7 @@
   show-list-of-figures: true,
   show-list-of-tables: true,
   show-code-snippets: true,
-  show-appendix: false,
+  show-appendix: true,
   show-abstract: true,
   show-header: true,
   show-title-in-header: true,
