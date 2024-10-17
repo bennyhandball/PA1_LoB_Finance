@@ -58,13 +58,15 @@
 
 "Ein Ziel ohne Plan ist nur ein Wunsch." - Antoine de Saint-Exupéry @Zitat_Einstieg.
 
-Im dynamischen Umfeld moderner Unternehmen sind klare Prozesse und eine präzise Planbarkeit unerlässlich. Dies gilt z.B. für die Verwaltung von Mitarbeiterurlauben als auch für die Genehmigung von Projektbudgets.
+Im dynamischen Umfeld moderner Unternehmen sind klare Prozesse und eine präzise Planbarkeit unerlässlich #cite(<Prozessmanagement_Book>, supplement: "S. 5"). Dies gilt z.B. für die Verwaltung von Mitarbeiterurlauben als auch für die Genehmigung von Projektbudgets.
 
 Im Rahmen eines Urlaubsantragsprozesses beim Arbeitgeber wird meist ein Antrag an den Vorgesetzten gestellt, der diesen anschließend bewilligen oder ablehnen kann. Dabei wird in der Regel geprüft, ob der Mitarbeiter noch über ausreichende Urlaubstage verfügt.
 Einen vergleichbarer Genehmigungsprozess bezogen auf das Projektbudget findet man ebenfalls bei der 
 Genehmigung von Projektbudgets im Unternehmenskontext. 
 
-Eine präzise und transparente Budgetierung von Projekten ist hierbei essenziell. Unzureichende Kontrolle und ein fehlender Überblick über das Projektbudget können zu finanziellen Verlusten führen und die Performance des Unternehmens beeinträchtigen. Die Verwendung moderner Unternehmenssoftware (#acr("ERP")-Software), bietet hier eine entscheidende Unterstützung, um das Budget entsprechend verwalten zu können.
+Eine präzise und transparente Budgetierung von Projekten ist hierbei essenziell. Unzureichende Kontrolle und ein fehlender Überblick über das Projektbudget können zu finanziellen Verlusten führen und die Performance des Unternehmens beeinträchtigen. Die Verwendung moderner Unternehmens-Anwendungssoftware (#acr("ERP")-Software), bietet hier eine entscheidende Unterstützung, um das Budget entsprechend verwalten und beplanen zu können #cite(<ERP-Systeme_Book_Gronau>, supplement: "S. 182"). Laut Dr. Siar Sarferaz (Chef Software Architekt bei SAP) versteht man unter dem Begriff #acr("ERP")
+"eine Software die mit mehreren Modulen verknüpft ist, um eine Vielzahl von Geschäftsprozessen zu verwalten und zu steuern, die Unternehmen unterstützen. Lagerverwaltung, Produktplanung, Einkauf, Bestandskontrolle, Fertigung, Kundenservice und Auftragsverfolgung können von #acr("ERP")" unterstützt werden" #cite(<ERP-Systeme_Book_Sarferaz>, supplement: "S.3").
+//fehlt hier eine Definition eines ERP Systems ??
 
 Obwohl Genehmigungsprozesse in verschiedenen Unternehmensbereichen, wie der Urlaubsverwaltung, standardisiert und effizient abgebildet werden können, stellt die Projektbudgetierung in SAP S/4HANA Public Cloud  eine spezielle Herausforderung dar, da im Standardumfang keine standardisierte Funktion zur Genehmigung von Projektbudgets vorhanden ist.
 Durch diese derzeit fehlende Funktion ist die Verwaltung und Genehmigung von Projektbudgets nur beschränkt möglich.  
@@ -73,7 +75,7 @@ Eine weitere Herausforderung stellt die eingeschränkte Anpassungsmöglichkeit d
 
 Durch eine Standarderweiterung auf der #acr("BTP") kann die Verwaltung und Genehmigung ermöglicht werden.
 Dabei wird das SAP Build Tool auf der #acr("BTP")  genutzt um mithilfe des SAP Workflow Tools einen Workflow zu erstellen, der eine Genehmigungsprozessautomatisierung ermöglicht @ERP_Clean_Core.
-Mithilfe von Workflows können Geschäftsprozesse automatisiert, standardisiert und effizienter gestaltet werden. Dabei können Aufgaben, Benachrichtigungen oder Berechtigungen automatisch in einer zuvor definierten Reihenfolge ausgeführt werden. Diese Lösung bietet eine maßgebliche Optimierung des Projektbudget-Genehmigungsprozesses hinsichtlich der Entlastung der Mitarbeiter und der Effizienz (@Workflow_source). 
+Mithilfe von Workflows können Geschäftsprozesse automatisiert, standardisiert und effizienter gestaltet werden @SAP_Workflow_Overview. Dabei können Aufgaben, Benachrichtigungen oder Berechtigungen automatisch in einer zuvor definierten Reihenfolge ausgeführt werden @SAP_Workflow_Overview. Diese Lösung bietet eine maßgebliche Optimierung des Projektbudget-Genehmigungsprozesses hinsichtlich der Entlastung der Mitarbeiter und der Effizienz @Workflow_source. 
  
 == Struktur der Arbeit
 Die vorliegende Arbeit ist in sieben Hauptkapitel gegliedert. Nach der Einleitung, in der die Motivation und Problemstellung dargelegt, sowie der Aufbau und die Zielsetzung der Arbeit beschrieben werden, folgt in Kapitel 2 eine umfassende Darstellung der theoretischen Grundlagen. Hier werden zunächst die allgemeinen Konzepte der Projektbudgetierung erläutert, bevor auf die spezifischen Aspekte des SAP S/4HANA-Systems eingegangen wird. Dazu gehören sowohl die Grundlagen von SAP S/4HANA als auch das Projektsystem. Im Anschluss wird die Business Technology Platform (BTP) als relevante technologische Innovationsplattform für die Automatisierung und das Workflow-Management im Rahmen der Projektbudgetierung vorgestellt.
@@ -91,7 +93,7 @@ Die Arbeit schließt mit einer Zusammenfassung in Kapitel 7 ab. Hier werden nebe
 Gegenstand dieser Arbeit ist die Standarderweiterung hinsichtlich der Projektbudgetierung in SAP S/4HANA Public Cloud Version 2408. Darauffolgende Versionen können nicht berücksichtigt werden. Die beschriebenen Funktionaliäten sind bis auf kleinere Einschränkungen auf die SAP S/4HANA Private Cloud übertragbar.
 == Ziel und Gang
 Das Ziel dieser Arbeit ist es den Genehmigungsprozess von Projektbudgets in SAP S/4HANA Public Cloud detailliert zu analysieren und zu evaluieren. Dabei soll beurteilt werden, ob die Standarderweiterung den durch Experteninterviews und eine folgende qualitative Inhaltsanalyse nach Mayring erhobenen Anforderungen entspricht. 
-Nach der Erhebung und Analyse der Anforderungen soll die Standarderweiterung dann implementiert werden und der Aufwand der Implementierung dokumentiert und dargestellt werden.Das Ergebnis der Arbeit soll der Finance-Beratungsabteilung dazu dienen, eine möglichst optimierte, auf die Kundenbedürfnisse abgestimmte Entscheidungsfindung bereitzustellen und zusätzlich ein Bewusstsein dafür zu schaffen, wie die Standarderweiterung der Projektbudgetgenehmigung bei Public-Cloud Kunden gewinnbringend eingesetzt werden kann.
+Nach der Erhebung und Analyse der Anforderungen soll die Standarderweiterung dann implementiert werden und der Aufwand der Implementierung dokumentiert und dargestellt werden. Das Ergebnis der Arbeit soll der Finance-Beratungsabteilung dazu dienen, eine möglichst optimierte, auf die Kundenbedürfnisse abgestimmte Entscheidungsfindung bereitzustellen und zusätzlich ein Bewusstsein dafür zu schaffen, wie die Standarderweiterung der Projektbudgetgenehmigung bei Public-Cloud Kunden gewinnbringend eingesetzt werden kann.
 
 = Theoretische Grundlagen
 == Projektbudgetierung Grundlagen 
@@ -109,16 +111,20 @@ Das deutsche Institut für Normung (DIN) (zitiert nach @Projektmanagement) defin
 
 Vergleicht man die Definitionen, so fällt auf, dass in beiden Definitionen ein Projekt als zeitlich befristete Vorhaben mit einem festen Kostenrahmen definiert wird. Im Gegensatz zu einer Kostenstelle, die dauerhaft anfallende Kosten, nach den Stellen an denen die Kosten anfallen ansammeln @Schnelleinstieg_Controlling. 
 
+//Übergang zur Kostenstelle ?
+
 Zu einem Projekt gehört ebenfalls das Projektbudget, welches ein wichtiges Element zur Steuerung von Projekten ist.
-Unter einem Budget ganz allgemein versteht man unter Budgets "wertmäßige Plangrößen (z.B. Einzahlungen/Auszahlungen, Einnahmen/Ausgaben, Aufwendungen/Erträge, der Kosten/Erlöse)" @Handbuch_Projektmanagement. 
+Unter einem Budget ganz allgemein versteht man "wertmäßige Plangrößen (z.B. Einzahlungen/Auszahlungen, Einnahmen/Ausgaben, Aufwendungen/Erträge, der Kosten/Erlöse)" @Handbuch_Projektmanagement. 
 Hingegen "die Budgetierung bezeichnet den Prozess der Erstellung, Verabschiedung und Kontrolle der Budgets sowie eventuelle Anpassungen" @Handbuch_Projektmanagement.
+
+//Hier fehlen die Quellen du Dummkopf
 
 Im Rahmen der Projektbudgetierung werden für ein Projekt ein Gesamtbudget und Einzelbudgets aufgestellt, aufgeteilt, kontrolliert und evtl.  angepasst.
 Die Projektbudgetierung stellt einen zentralen Bestandteil der Projektplanung dar und spezifiziert den Projektplan im Hinblick auf die erforderlichen Ressourcen. Dabei wird zwischen variablen und fixen Budgetkosten sowie verschiedenen Budgetkostenarten differenziert.  Die Umwandlung fixer in variable Projektkosten führt dabei zu einer gesteigerten Flexibilität während des Projektverlaufs.
 
-Unter fixen Kosten versteht man Kosten, die unabhängig von der Produktionsmenge anfallen. Ein Beispiel für fixe Kosten im Projektrahmen wäre die Miete für die benötigten Büroräume #cite(<Mikroökonomik>, form: "normal", supplement: "S.204"). 
+Unter fixen Kosten versteht man Kosten, die unabhängig von der Produktionsmenge anfallen. Ein Beispiel für fixe Kosten im Projektrahmen wäre die Miete für die benötigten Büroräume #cite(<Mikroökonomik>,  supplement: "S.204"). 
 
-Unter variablen Kosten hingegen versteht man Kosten, die abhängig von der Produktionsmenge sind. Beispielsweise sind die Lohnkosten für projektbezogene Arbeitskräfte variabel(<Mikroökonomik>, form: "normal", supplement: "S.204").
+Unter variablen Kosten hingegen versteht man Kosten, die abhängig von der Produktionsmenge sind. Beispielsweise sind die Lohnkosten für projektbezogene Arbeitskräfte variabel #cite(<Mikroökonomik>, supplement: "S.204").
 Zudem ermöglichen unterschiedliche Projektkostenarten, spezifische Schwerpunkte in der Steuerung des Projekts. Methoden wie die Budgetsimulation, der Soll-Ist-Vergleich und die Abweichungsanalyse sind wesentliche Instrumente, um das Projektbudget präzise zu planen und bei Bedarf anzupassen (@Handbuch_Projektmanagement).
 
 
@@ -128,7 +134,7 @@ Zudem ermöglichen unterschiedliche Projektkostenarten, spezifische Schwerpunkte
 
 == SAP S/4HANA
 === Grundlagen S/4HANA 
-Die SAP SE ist ein 1972 gegründetes deutsches Unternehmen mit dem Hauptsitz in Walldorf @SAP_1972, welches bezogen auf die Marktkapitalisierung das wertvollste deutsche DAX-Unternehmen ist (Stand: September 2024, @Marktkapitalisierung_SAP).
+Die SAP SE ist ein 1972 gegründetes deutsches Unternehmen mit dem Hauptsitz in Walldorf @SAP_1972, welches bezogen auf die Marktkapitalisierung das wertvollste deutsche DAX-Unternehmen ist (Stand: September 2024, @Marktkapitalisierung_SAP) und zudem Stand 2023 Marktführer bei ERP-Systemen ist #cite(<ERP-Systeme_Book_Sarferaz>, supplement: "S.7").
 //
 Mit der Einführung von S/4HANA im Jahr 2015 hat SAP einen bedeutenden Schritt in der Entwicklung von #acr("ERP")-Systemen gemacht. Als Nachfolger der SAP Business Suite aus dem Jahr 2004 und Ablösung von SAP R/3, das erstmals eine Client-Server-Technologie einsetzte, bietet S/4HANA eine Reihe von Innovationen @SAP_1972.
 Das Herzstück eines S/4HANA-Systems ist die HANA Datenbank, eine spaltenbasierte In-Memory Datenbank, die im Vergleich zu herkömmlichen Datenbanken einen schnelleren Datenzugriff und bessere Analysezeiten ermöglicht. Durch diese Eigenschaft können Echtzeitanalysen und Berechnungen zur Laufzeit realisiert und ermöglicht werden. Dies ist insbesondere bei der Verarbeitung von Big Data Analysen von großer Bedeutung @S4HANA_Overview.
@@ -334,9 +340,6 @@ Dabei werden die Genehmigungsgruppen anhand des Genehmigungsbudgets und der Wäh
 
 
 = Evaluierung der Ergebnisse 
-
-
-
 
 = Zusammenfassung
 
