@@ -68,7 +68,7 @@ Eine präzise und transparente Budgetierung von Projekten ist hierbei essenziell
 
 Obwohl Genehmigungsprozesse in verschiedenen Unternehmensbereichen, wie der Urlaubsverwaltung, standardisiert und effizient abgebildet werden können, stellt die Projektbudgetierung in SAP S/4HANA Public Cloud  eine spezielle Herausforderung dar, da im Standardumfang keine standardisierte Funktion zur Genehmigung von Projektbudgets vorhanden ist.
 Durch diese derzeit fehlende Funktion ist die Verwaltung und Genehmigung von Projektbudgets nur beschränkt möglich.  
-Projektbudgtes müssen daher manuell und systemfern durchgeführt werden, was zu einem erheblichen Arbeitsaufwand führt. 
+Die Genehmigung der Projektbudgtes muss daher manuell und systemfern durchgeführt werden, was zu einem erheblichen Arbeitsaufwand führt. 
 
 Eine weitere Herausforderung stellt die eingeschränkte Anpassungsmöglichkeit der Public Cloud dar, wenn Unternehmen ihre spezifischen Geschäftsanforderungen abbilden möchten @ERP_Clean_Core. 
 
@@ -89,7 +89,7 @@ Die Arbeit schließt mit einer Zusammenfassung in Kapitel 7 ab. Hier werden nebe
 
 
 == Abgrenzung der Arbeit
-Gegenstand dieser Arbeit ist die Standarderweiterung hinsichtlich der Projektbudgetierung in SAP S/4HANA Public Cloud. Darauffolgende Versionen können nicht berücksichtigt werden. Die beschriebenen Funktionaliäten sind bis auf kleinere Einschränkungen auf die SAP S/4HANA Private Cloud übertragbar.
+Gegenstand dieser Arbeit ist die Standarderweiterung hinsichtlich der Projektbudgetierung in SAP S/4HANA Public Cloud Version 2408. Darauffolgende Versionen können nicht berücksichtigt werden. Die beschriebenen Funktionaliäten sind bis auf kleinere Einschränkungen auf die SAP S/4HANA Private Cloud übertragbar.
 == Ziel und Gang
 Das Ziel dieser Arbeit ist es den Genehmigungsprozess von Projektbudgets in SAP S/4HANA Public Cloud detailliert zu analysieren und zu evaluieren. Dabei soll beurteilt werden, ob die Standarderweiterung den durch Experteninterviews und eine folgende qualitative Inhaltsanalyse nach Mayring erhobenen Anforderungen entspricht. 
 Nach der Erhebung und Analyse der Anforderungen soll die Standarderweiterung dann implementiert werden und der Aufwand der Implementierung dokumentiert und dargestellt werden.Das Ergebnis der Arbeit soll der Finance-Beratungsabteilung dazu dienen, eine möglichst optimierte, auf die Kundenbedürfnisse abgestimmte Entscheidungsfindung bereitzustellen und zusätzlich ein Bewusstsein dafür zu schaffen, wie die Standarderweiterung der Projektbudgetgenehmigung bei Public-Cloud Kunden gewinnbringend eingesetzt werden kann.
@@ -108,7 +108,7 @@ Rahmenbedingungen sind @Multiprojektmanagement:
 
 Das deutsche Institut für Normung (DIN) (zitiert nach @Projektmanagement) definiert ein Projekt als ein "Vorhaben, das im Wesentlichen durch Einmaligkeit der Bedingung in ihrer Gesamtheit gekennzeichnet ist." Die Einmaligkeit der Bedingung kann sich beziehen auf die "Zielvorgabe, zeitlich, finanzielle, personelle oder andere Begrenzungen, projektspezifische Organisation" (DIN 69901-5:2009-01,S.11).
 
-Vergleicht man die Definitionen, so fällt auf, dass in beiden Definitionen ein Projekt als zeitlich befristete Vorhaben mit einem festen Kostenrahmen definiert wird. Im Gegensatz zu einer Kostenstelle, die dauerhaft anfallende Kosten, nach den Stellen an denen die Kosten anfallen ansammeln (@Schnelleinstieg_Controlling). 
+Vergleicht man die Definitionen, so fällt auf, dass in beiden Definitionen ein Projekt als zeitlich befristete Vorhaben mit einem festen Kostenrahmen definiert wird. Im Gegensatz zu einer Kostenstelle, die dauerhaft anfallende Kosten, nach den Stellen an denen die Kosten anfallen ansammeln @Schnelleinstieg_Controlling. 
 
 Zu einem Projekt gehört ebenfalls das Projektbudget, welches ein wichtiges Element zur Steuerung von Projekten ist.
 Unter einem Budget ganz allgemein versteht man unter Budgets "wertmäßige Plangrößen (z.B. Einzahlungen/Auszahlungen, Einnahmen/Ausgaben, Aufwendungen/Erträge, der Kosten/Erlöse)" @Handbuch_Projektmanagement. 
@@ -117,7 +117,7 @@ Hingegen "die Budgetierung bezeichnet den Prozess der Erstellung, Verabschiedung
 Im Rahmen der Projektbudgetierung werden für ein Projekt ein Gesamtbudget und Einzelbudgets aufgestellt, aufgeteilt, kontrolliert und evtl.  angepasst.
 Die Projektbudgetierung stellt einen zentralen Bestandteil der Projektplanung dar und spezifiziert den Projektplan im Hinblick auf die erforderlichen Ressourcen. Dabei wird zwischen variablen und fixen Budgetkosten sowie verschiedenen Budgetkostenarten differenziert.  Die Umwandlung fixer in variable Projektkosten führt dabei zu einer gesteigerten Flexibilität während des Projektverlaufs.
 
-Unter fixen Kosten versteht man Kosten, die unabhängig von der Produktionsmenge anfallen. Ein Beispiel für fixe Kosten im Projektrahemn wäre die Miete für die benötigten Büroräume #cite(<Mikroökonomik>, form: "normal", supplement: "S.204"). 
+Unter fixen Kosten versteht man Kosten, die unabhängig von der Produktionsmenge anfallen. Ein Beispiel für fixe Kosten im Projektrahmen wäre die Miete für die benötigten Büroräume #cite(<Mikroökonomik>, form: "normal", supplement: "S.204"). 
 
 Unter variablen Kosten hingegen versteht man Kosten, die abhängig von der Produktionsmenge sind. Beispielsweise sind die Lohnkosten für projektbezogene Arbeitskräfte variabel(<Mikroökonomik>, form: "normal", supplement: "S.204").
 Zudem ermöglichen unterschiedliche Projektkostenarten, spezifische Schwerpunkte in der Steuerung des Projekts. Methoden wie die Budgetsimulation, der Soll-Ist-Vergleich und die Abweichungsanalyse sind wesentliche Instrumente, um das Projektbudget präzise zu planen und bei Bedarf anzupassen (@Handbuch_Projektmanagement).
@@ -131,23 +131,23 @@ Zudem ermöglichen unterschiedliche Projektkostenarten, spezifische Schwerpunkte
 === Grundlagen S/4HANA 
 Die SAP SE ist ein 1972 gegründetes deutsches Unternehmen mit dem Hauptsitz in Walldorf @SAP_1972, welches bezogen auf die Marktkapitalisierung das wertvollste deutsche DAX-Unternehmen ist (Stand: September 2024, @Marktkapitalisierung_SAP).
 //
-Mit der Einführung von S/4HANA im Jahr 2015 hat SAP einen bedeutenden Schritt in der Entwicklung von #acr("ERP")-Systemen gemacht. Als Nachfolger der SAP Business Suite aus dem Jahr 2004 und Ablösung von SAP R/3, das erstmals eine Client-Server-Technologie einsetzte, bietet S/4HANA eine Reihe von Innovationen (@SAP_1972).
-Das Herzstück eines S/4HANA-Systems ist die HANA Datenbank, eine spaltenbasierte In-Memory Datenbank, die im Vergleich zu herkömmlichen Datenbanken einen schnelleren Datenzugriff und bessere Analysezeiten ermöglicht. Durch diese Eigenschaft können Echtzeitanalysen und Berechnungen zur Laufzeit realisiert und ermöglicht werden. Dies ist insbesondere bei der Verarbeitung von Big Data Analysen von großer Bedeutung (@S4HANA_Overview).
+Mit der Einführung von S/4HANA im Jahr 2015 hat SAP einen bedeutenden Schritt in der Entwicklung von #acr("ERP")-Systemen gemacht. Als Nachfolger der SAP Business Suite aus dem Jahr 2004 und Ablösung von SAP R/3, das erstmals eine Client-Server-Technologie einsetzte, bietet S/4HANA eine Reihe von Innovationen @SAP_1972.
+Das Herzstück eines S/4HANA-Systems ist die HANA Datenbank, eine spaltenbasierte In-Memory Datenbank, die im Vergleich zu herkömmlichen Datenbanken einen schnelleren Datenzugriff und bessere Analysezeiten ermöglicht. Durch diese Eigenschaft können Echtzeitanalysen und Berechnungen zur Laufzeit realisiert und ermöglicht werden. Dies ist insbesondere bei der Verarbeitung von Big Data Analysen von großer Bedeutung @S4HANA_Overview.
 
 S/4HANA bietet ebenfalls eine neue Benutzeroberfläche, namens SAP Fiori, die die bisherigen SAP GUI-Oberflächen ablöst. SAP Fiori ist dabei browserbasiert, was bedeutet, dass keine spezielle Software lokal auf dem Gerät installiert werden muss. Nutzer können SAP Fiori plattformunabhängig und flexibel über gängige Browser wie Google Chrome, Mozialla Firefox oder Safari aufrufen. Durch die Nutzung von SAP-Fiori Werkzeugen und -Vorlagen können Apps schnell entwickelt und eine konsistente Benutzererfahrung in den Apps bereit gestellt werden @SAP_Fiori_Overview.
 
 Grundsätzlich haben Unternehmen bei SAP S/4HANA verschiedene Bereitstellungsoptionen: On-Premise, Private Cloud oder Public Cloud.
 
 
-Die SAP S/4HANA Public Cloud ist die #acr("SaaS")-Edition der SAP S/4HANA ERP-Systems, dabei handelt es sich um eine gemeinsam genutzte öffentliche Cloud, die von SAP gehostet und betrieben wird. Dieses Modell  wird mit anderen Kunden geteilt und über ein Abonnementsystem zur Verfügung gestellt. 
-Erweiterungen der SAP S/4HANA Cloud werden durch die SAP #acr("BTP")-Extension Suite mit von SAP freigegebenen und verwalteten #acr("API")s("whitelisted APIs") ermöglicht.
+Die SAP S/4HANA Public Cloud ist die #acr("SaaS")-Edition der SAP S/4HANA ERP-Systems, dabei handelt es sich um eine öffentliche Cloud, die von SAP gehostet und betrieben wird. Dieses Modell  wird mit anderen Kunden geteilt und über ein Abonnementsystem zur Verfügung gestellt. Dabei hat jedoch jeder Kunde seine eigene Instanz der Software.
+Erweiterungen der SAP S/4HANA Cloud werden durch die SAP #acr("BTP")-Extension Suite mit von SAP freigegebenen und verwalteten Application Programming Interfaces ("whitelisted APIs") ermöglicht.
 
 Die SAP S/4HANA Private Cloud ermöglicht den Kunden, ihre Deployment-Option genau auf ihre Bedürfnisse abzustimmen.  Diese Option basiert auf dem S/4 On-Premise Solution Stack, der in der private Cloud gehostet und von Hyperscalern verwaltet wird.
 
-Bei der On-Premise Lösung hosten Unternehmen die Software auf eigenen Servern, während bei der Private-Cloud Lösung die Software auf Servern von Drittanbietern (Hyperscalern) als Single-Tenant betrieben wird. Single-Tentant beschreibt in diesem Kontext, eine dedizierte, isolierte Cloud Umgebung, die nur für den spezifischen Kunden bereitgestellt wird. Im Gegensatz zu einer Multi-Tenant-Umgebung, in der mehrere Kunden (Mandanten) die gleiche Software-Instanz teilen, hat der Kunde in einer Single-Tenant-Lösung seine eigene Instanz der SAP-Software (@Multi_Single_Tenant). 
+Bei der On-Premise Lösung hosten Unternehmen die Software auf eigenen Servern, während bei der Private-Cloud Lösung die Software auf Servern von Drittanbietern (Hyperscalern) als Single-Tenant betrieben wird. Single-Tentant beschreibt in diesem Kontext, eine dedizierte, isolierte Cloud Umgebung, die nur für den spezifischen Kunden bereitgestellt wird. Im Gegensatz zu einer Multi-Tenant-Umgebung, in der mehrere Kunden (Mandanten) die gleiche Software-Instanz teilen, hat der Kunde in einer Single-Tenant-Lösung seine eigene Instanz der SAP-Software @Multi_Single_Tenant. 
 
 Die beiden eben beschriebenen Varianten bieten eine hohe Flexibilität für Unternehmen, um die Software an ihre individuellen Anforderungen und Geschäftsprozesse anzupassen. 
-Im Gegensatz dazu müssen sich Unternehmen bei der Public-Cloud-Lösung weitesgehend an den Standard des Systems halten, da die Software in einer Multi-Tenant-Architektur läuft und nur bedingt modifiziert werden kann. Die On-Premise Lösung hingegen wird als Product as a Service unterstützt, jedoch nur noch bedingt vermarktet(@S4HANA_Deployment_Options).
+Im Gegensatz dazu müssen sich Unternehmen bei der Public-Cloud-Lösung weitesgehend an den Standard des Systems halten, da die Software in einer Multi-Tenant-Architektur läuft und nur bedingt modifiziert werden kann. Die On-Premise Lösung hingegen wird als Product as a Service unterstützt, jedoch nur noch bedingt vermarktet @S4HANA_Deployment_Options.
 
 Die bedingte Anpassbarkeit der Public Cloud stellt Unternehmen vor die Herausforderung ihre Prozesse an den Standard anzupassen. 
 
@@ -163,7 +163,7 @@ Innerhalb des Projektmanagements unterscheidet man zwischen fremdfinanzierten (K
 Das #acr("PS") ist ein zentraler Bestandteil des #acr("ERP")-Systems von SAP und spielt eine wesentliche Rolle bei der Verwaltung von Projekten. Durch das Projektsystem PS der SAP können die Planung, die Steuerung und die Überwachung von komplexen Geschäftsprojekten erleichtert werden. Zudem können Module wie das #acr("FI"), das #acr("CO") und die #acr("MM") integriert werden. 
 
 Der Ablauf eines Projekts im SAP PS kann in mehrere aufeinander aufbauende Phasen untergliedert werden. 
-Die erste Phase umfasst die Projektinitialisierung, dabei wird das Projekt definiert und die ersten Planungsdaten erfasst. Dazu wird ein #acr("PSP") erstellt, der die zentralen Meilensteine und Arbeitsblöcke enthält. 
+Die erste Phase umfasst die Projektinitialisierung, dabei wird das Projekt definiert und die ersten Planungsdaten erfasst. Dazu wird ein #acr("PSP") erstellt, der die zentralen Meilensteine und Arbeitsblöcke enthält. Die "Arbeitsblocke" sind die letzendlichen PSP-Elemente, die genuztz werden, um das Projekt zu strukturieren.
 Anschließend folgt die Projektplanung, wobei der Detaillierungsgrad erhöht wird und mit Ressourcen, Terminen und Kosten kalkuliert wird. 
 Der nächste Schritt umfasst die eigentliche Projektdurchführung. Dabei werden die zuvor erstellten Projektpläne operativ umgesetzt. Um eine effiziente Projektdurchführung zu ermöglichen, werden Aufgaben konkret zugewiesen und Fortschritte überwacht. 
 Über die Gesamte Projektdauer ist das #acr("CO") unerlässlich, da das dieses dabei die Kosten, Termine und die Qualität überwacht. Zudem werden in dieser Phase Abweichungsanalysen und das Risikomanagement durchgeführt.
@@ -183,7 +183,7 @@ Der letzte Schritt ist der Projektabschluss. Dieser erfolgt nach der Fertigstell
 
 === Grundlagen BTP //BTP Grafik in den Anhang 
 // Grundlagen direkt darunter oder extra Kapitel 
-Die #acr("BTP") der SAP ist eine Innovationsplattform im SAP-Ökosystem @SAP_BTP, welche für SAP-Anwendungen in der Cloud optimiert ist @SAP_BTP. Sie unterstützt Unternehmen bei digitalen Transformationsprozessen und hilft, innovative Geschäftsanwendungen zu entwicklen @SAP_BTP . Dabei stellt die #acr("BTP") eine Schnittstelle zwischen bestehenden Systemen und der Entwicklung neuer Technologien und Anwendungen da (@sap_portfolio_btp). Dabei können Geschäftsprozesse miteinander verbunden, erweitert geplant und integriert werden @SAP_BTP. Durch die Möglichkeit einer Low-Code und Pro-Code Anwendungsentwicklung bietet die #acr("BTP") eine intuitive Entwicklungsumgebung, um die Geschäftsprozesse des Zielunternehmens beschleunigt aber trotzdem kontrolliert, in einer Sicheren Umgebung, zu entwicklen @SAP_BTP.
+Die #acr("BTP") der SAP ist eine Innovationsplattform im SAP-Ökosystem @SAP_BTP, welche für SAP-Anwendungen in der Cloud optimiert ist @SAP_BTP. Sie unterstützt Unternehmen bei digitalen Transformationsprozessen und hilft, innovative Geschäftsanwendungen zu entwicklen @SAP_BTP . Dabei stellt die #acr("BTP") eine Schnittstelle zwischen bestehenden Systemen und der Entwicklung neuer Technologien und Anwendungen dar (@sap_portfolio_btp). Dabei können Geschäftsprozesse miteinander verbunden, erweitert geplant und integriert werden @SAP_BTP. Durch die Möglichkeit einer Low-Code und Pro-Code Anwendungsentwicklung bietet die #acr("BTP") eine intuitive Entwicklungsumgebung, um die Geschäftsprozesse des Zielunternehmens beschleunigt aber trotzdem kontrolliert, in einer Sicheren Umgebung, zu entwicklen @SAP_BTP.
 
 Die #acr("BTP") stellt das SAP Build Tool bereit, welches mit Hilfe von KI die Entwicklung und Automatisierung von Anwendungen beschleunigt @SAP_Build . 
 
@@ -208,12 +208,12 @@ Durch die geringe Komplexität werden keine spezialisierten Entwickler benötigt
 === SAP Workflow Management Tool
 Ein weiteres Feature der SAP Business Process Automation ist das SAP Workflow Management Tool @SAP_Build_Workflow. 
 
+
 #figure(caption:
-"SAP Workflow Management"
-, image(width: 15cm,
-"assets/workflow-management.png"
-))
-<workflow_management>
+[SAP Workflow Management #cite(<Workflow_Management_Abbildung>)]
+, image(width: 15cm, "assets/workflow-management.png"
+))<workflow_management>
+
 Der Begriff "Workflow" wird von der SAP wie folgt definiert:
 Unter einem Workflow versteht man die "Abfolge von miteinander verbundenen Aktivitäten oder Aufgaben, die ausgeführt werden, um ein bestimmtes Ergebnis zu erzielen" @SAP_Workflow. Aufeinanderfolgende zu bearbeitende Prozessschritten werden sobald die Workflow-Instanz aufgerufen wird abgearbeitet@SAP_Workflow.
 
@@ -221,6 +221,7 @@ Betrachtet man den Begriff Workflow-Mangement so wird dieser als "Prozess der Di
 
 Das Feature ermöglicht die Prozessautomatisierung durch die einfache Erstellung eines Workflows mit Hilfe von Drag and Drop - Funktionalitäten (siehe @workflow_editor). Dabei können Formulare verwaltet, eine Entscheidungslogik verwaltet und Prozessabläufe erstellt, angepasst und organisiert werden @SAP_Build_Workflow. 
 
+//Link/Quelle einfügen
 #figure(caption:
 "SAP Workflow Editor"
 , image(width: 15cm,
@@ -240,8 +241,13 @@ Das Feature ermöglicht die Prozessautomatisierung durch die einfache Erstellung
 Zur methodischen Erarbeitung des vorliegenden Themas kommen verschiedene Vorgehensweisen in Betracht.
 Dazu gehören Experteninterviews, Umfragen, Qualitative Inhaltsanalyse nach Mayring, Literaturrecherche und die Evaluierung.
 
-Ausgewählt wurden dabei die Durchführung von Experteninterviews zur Ermittlung von Informationen rund um die Projektbudgetierung in einem SAP S/4HANA Public Cloud System. Die qualitative Inhaltsanalyse nach Mayring soll zur Ableitung der Anforerungen an die Standarderweiterung dienen. 
+Ausgewählt wurden dabei die Durchführung von Experteninterviews zur Ermittlung von Informationen und Anforderungen rund um die Projektbudgetierung in einem SAP S/4HANA Public Cloud System. Die qualitative Inhaltsanalyse nach Mayring soll zur Ableitung der Anforerungen an die Standarderweiterung dienen. 
 Zusätzlich werden anhand von Literaturrecherche die theoretischen Grundlagen der Arbeit untersucht. 
+
+
+Das erste Auswahlkriterium war die Frage nach einer qualitativen Vorgehensweise, da eine quantitative Vorgehensweise bei einer sehr neuen Standraderweiterung nur wenig Grundlage findet. 
+
+Die Literaturrecherche eignet sich im Grundlagenteil der Arbeit dazu, relevante Informationen an die Standarderweiterung zu erarbeiten. Als weiterer methodischer Ansatz wurden die 
 //Auswahlkriterien -> quantitative
 //Auswahlkapitel //Umsetzbarkeit Warum die Methode 
 == Experteninterviews
@@ -253,6 +259,41 @@ Die Interviews wiesen dabei einen semistrukturierten Aufbau auf. Das bedeutet, d
 
 //Semistrukturierte Leitfadeninterviews
 
+*Fragenkatalog Berater*
+- Können Sie bitte Ihre berufliche Rolle und Aufgabe beschreiben ?
+
+- Welche Relevanz hat ein Projektgenehmigungstool bei den Kunden ? 
+
+- Gibt es viele Kunden die Nachfrage nach einem Projektgenehmigungstool haben ?
+
+- Welche Vorteile bietet ein Projektgenehmigungstool Ihrer Meinung nach für Ihre Kunden
+
+- Welche Anforderungen haben Sie das Projektbudgetgenehmigungstool ?
+
+*Fragenkatalog Kunde*
+- Können Sie bitte Ihre berufliche Rolle und Aufgabe beschreiben ?
+
+- Nutzt ihr Unternehmen ein Projektgenehmigungstool um Budgets zu genehmigen ? 
+
+- Welche Herausforderungen haben Sie aktuell im Genehmigungsprozess für Projektbudgets in Ihrem Unternehmen?
+
+- Welche Vorteile bietet ein Projektgenehmigungstool Ihrer Meinung nach für Ihr Unternehmen
+
+- Welche Anforderungen haben Sie das Projektbudgetgenehmigungstool ?
+
+*Fragenkatalog Entwickler*
+- Können Sie bitte Ihre berufliche Rolle und Aufgabe beschreiben ?
+
+
+
+
+
+
+- Welche Anforderungen haben Sie/Ihre Kunden an das Projektgenehmigungstool ?
+
+
+
+ 
 
 == Qualitative Inhaltsanalyse nach Mayring
 
@@ -268,16 +309,18 @@ Die Interviews wiesen dabei einen semistrukturierten Aufbau auf. Das bedeutet, d
 == Darstellung und Priorisierung der Experteninterviewergebnisse
 
 = Implementierung der Standarderweiterung
-Um die Standarderweiterung implementieren zu können, stellt die SAP einen Configuration & User Guide auf dem Business Accelerator Hub zur verfügung (siehe Anhang).//Verlinkung 
+Um die Standarderweiterung implementieren zu können, stellt die SAP einen Configuration & User Guide auf dem Business Accelerator Hub zur verfügung @SAP_Guide. 
 In der Webanwendung "Business Accelerator Hub" der SAP findet man alle #acr("API")s, die für die S/4HANA Cloud öffentlich verfügbar sind @SAP_Accelorrator_Hub. Diese können dabei ermittelt, erkundet und getestet werden @SAP_Accelorrator_Hub. 
 
 == Überblick SAP S/4HANA Extension - Budget Approval 
 #figure(caption:
-"SAP S/4HANA Extension - Budget Approval"
-, image(width: 10cm,
+[SAP S/4HANA Extension - Budget Approval #cite(<SAP_Guide>)],
+image(width: 10cm,
 "assets/BudgetApproval.png"
 ))
 <budget_approval>
+
+
 
 Die Abbildung zeigt eine Übersicht über den Genehmigungsprozess (@budget_approval). Der Budgetgenehmigungsprozess ermöglicht Kunden Genehmigungen oder Überprüfungen des geplanten Budgets zu automatisieren. //Quelle User Guide 
 Dabei greift der Enduser auf das Fiori Launchpad zu. Das Fiori Launchpad ist der allgemeine Einstiegspunkt zu SAP Fiori-Anwendungen auf mobilden und Dektop-Geräten @SAP_Fiori_Launchpad. 
