@@ -155,9 +155,7 @@ SAP hat diese Problematik erkannt und bietet mit der Clean Core Strategie eine L
 
 //Hier weiter 
 
-Die Clean Core Strategie von SAP verfolgt das Ziel, die Stabilität, Wartbarkeit und Updatesicherheit von SAP-Systemen zu verbessern @ERP_Clean_Core. Bei der Clean-Core Strategie geht es darum, den Kern (Core) des SAP-Systems standardisiert und unverändert zu erhalten @ERP_Clean_Core. Kundenspezifische Anpassungen und Erweiterungen sollen außerhalb des Kernsystems in seperaten Erweiterungsumgebungen, beispielsweise der #acr("BTP") durchgeführt werden. Durch die Verwendung von definierten Schnittstellen, Erweiterungspunkten und #acr("API")s können Unternehmen ihre SAP-Systeme flexibel an Geschäftsanforderungen anzupassen, ohne den Kern zu verändern. 
-
-
+Die Clean Core Strategie von SAP verfolgt das Ziel, die Stabilität, Wartbarkeit und Updatesicherheit von SAP-Systemen zu verbessern @ERP_Clean_Core. Bei der Clean-Core Strategie geht es darum, den Kern (Core) des SAP-Systems standardisiert und unverändert zu erhalten @ERP_Clean_Core. Kundenspezifische Anpassungen und Erweiterungen sollen außerhalb des Kernsystems in seperaten Erweiterungsumgebungen, beispielsweise der #acr("BTP") durchgeführt werden @ERP_Clean_Core. Durch die Verwendung von definierten Schnittstellen, Erweiterungspunkten und #acr("API")s können Unternehmen ihre SAP-Systeme flexibel an Geschäftsanforderungen anzupassen, ohne den Kern zu verändern @ERP_Clean_Core. 
 
 Dies ermöglicht eine bessere Wartbarkeit und schnellere Updates, da die Integrität des SAP-Cores erhalten bleibt @ERP_Clean_Core.
 === Grundlagen Projektsystem (PS)
