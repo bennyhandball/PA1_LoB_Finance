@@ -43,7 +43,8 @@
   
   university: "Duale Hochschule Baden-Württemberg",
   university-location: "Mannheim",
-  bib-style: "harvard-cite-them-right"
+  bib-style :"elsevier-harvard",
+
   // for more options check the package documentation (https://typst.app/universe/package/supercharged-dhbw)
 )
 //
