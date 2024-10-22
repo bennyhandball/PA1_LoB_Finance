@@ -167,11 +167,11 @@ Das #acr("PS") ist ein zentraler Bestandteil des #acr("ERP")-Systems von SAP und
 //hier weiter
 
 Der Ablauf eines Projekts im SAP PS kann in mehrere aufeinander aufbauende Phasen untergliedert werden. 
-Die erste Phase umfasst die Projektinitialisierung, dabei wird das Projekt definiert und die ersten Planungsdaten erfasst. Dazu wird ein #acr("PSP") erstellt, der die zentralen Meilensteine und Arbeitsblöcke enthält. Die "Arbeitsblocke" sind die letzendlichen PSP-Elemente, die genuztz werden, um das Projekt zu strukturieren.
-Anschließend folgt die Projektplanung, wobei der Detaillierungsgrad erhöht wird und mit Ressourcen, Terminen und Kosten kalkuliert wird. 
-Der nächste Schritt umfasst die eigentliche Projektdurchführung. Dabei werden die zuvor erstellten Projektpläne operativ umgesetzt. Um eine effiziente Projektdurchführung zu ermöglichen, werden Aufgaben konkret zugewiesen und Fortschritte überwacht. 
-Über die Gesamte Projektdauer ist das #acr("CO") unerlässlich, da das dieses dabei die Kosten, Termine und die Qualität überwacht. Zudem werden in dieser Phase Abweichungsanalysen und das Risikomanagement durchgeführt.
-Der letzte Schritt ist der Projektabschluss. Dieser erfolgt nach der Fertigstellung des Projekts. In diesem Schritt erfolgt die letztendliche Kontrolle und Abrechnung. Zudem werden alle Ergebnisse dokumentiert und das Projekt wird formal beendet.
+Die erste Phase umfasst die Projektinitialisierung, dabei wird das Projekt definiert und die ersten Planungsdaten erfasst @Projektsystem_1NT_Process_Navigator. Dazu wird ein #acr("PSP") erstellt, der die zentralen Meilensteine und Arbeitsblöcke enthält @Projektsystem_1NT_Process_Navigator. Die "Arbeitsblocke" sind die letzendlichen PSP-Elemente, die genutzt werden, um das Projekt zu strukturieren @Projektsystem_1NT_Process_Navigator.
+Anschließend folgt die Projektplanung, wobei der Detaillierungsgrad erhöht wird und mit Ressourcen, Terminen und Kosten kalkuliert wird @Projektsystem_1NT_Process_Navigator. 
+Der nächste Schritt umfasst die eigentliche Projektdurchführung. Dabei werden die zuvor erstellten Projektpläne operativ umgesetzt @Projektsystem_1NT_Process_Navigator. Um eine effiziente Projektdurchführung zu ermöglichen, werden Aufgaben konkret zugewiesen und Fortschritte überwacht @Projektsystem_1NT_Process_Navigator. 
+Über die Gesamte Projektdauer ist das #acr("CO") unerlässlich, da das dieses dabei die Kosten, Termine und die Qualität überwacht @Projektsystem_1NT_Process_Navigator. Zudem werden in dieser Phase Abweichungsanalysen und das Risikomanagement durchgeführt.
+Der letzte Schritt ist der Projektabschluss @Projektsystem_1NT_Process_Navigator. Dieser erfolgt nach der Fertigstellung des Projekts @Projektsystem_1NT_Process_Navigator. In diesem Schritt erfolgt die letztendliche Kontrolle und Abrechnung. Zudem werden alle Ergebnisse dokumentiert und das Projekt wird formal beendet @Projektsystem_1NT_Process_Navigator.
 
 
 // Grundlagen
