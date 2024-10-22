@@ -194,7 +194,7 @@ Die #acr("BTP") der SAP ist eine Innovationsplattform im SAP-Ökosystem @SAP_BTP
 Die #acr("BTP") stellt das SAP Build Tool bereit, welches mit Hilfe von KI die Entwicklung und Automatisierung von Anwendungen beschleunigt @SAP_Build. 
 
 
-Die #acr("BTP") bietet vorkonfigurierte Datenmodelle, Integrationen von Workflows, #acr("API")s und #acr("KI") Services @SAP_BTP. Durch diese Dienste können neue Anwendungen bereitgestellt werden, Prozesse integriert, Aufgaben automatisiert, Anwendungen mit Chatbots versehen und Daten und deren Auswirkungen für das gesamte Unternehmen analysiert werden @SAP_BTP. Dadurch können Unternehmen ihre Prozesse optimieren, Innovationen vorantreiben und Wettbewerbsvorteile erlangen, da diese flexibel auf sich ändernde Marktanforderungen reagieren können.
+Die #acr("BTP") bietet vorkonfigurierte Datenmodelle, Integrationen von Workflows, #acr("API")s und #acr("KI") Services @SAP_BTP. Durch diese Dienste können neue Anwendungen bereitgestellt werden, Prozesse integriert, Aufgaben automatisiert, Anwendungen mit Chatbots versehen und Daten und deren Auswirkungen für das gesamte Unternehmen analysiert werden @SAP_BTP. Dadurch können Unternehmen ihre Prozesse optimieren, Innovationen vorantreiben und Wettbewerbsvorteile erlangen, da diese flexibel auf sich ändernde Marktanforderungen reagieren können @SAP_BTP.
 
 Die #acr("BTP") basiert auf einem modularen Konzept und umfasst folgende Hauptbereiche in einer zentralen Umgebung: Das Datenbank/Datenmanagement darunter auch die Echtzeitsichten von Daten, die Analytik, die Anwendungsentwicklung und Automatisierung, die Integration und Künstliche Intelligenz (@sap_portfolio_btp)@SAP_BTP. 
 
