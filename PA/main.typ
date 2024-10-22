@@ -162,8 +162,9 @@ Dies ermöglicht eine bessere Wartbarkeit und schnellere Updates, da die Integri
 // Was versteht man unter einem Projekt ?
 
 Innerhalb des Projektmanagements unterscheidet man zwischen fremdfinanzierten (Kundenprojekte) und eigenfinanzierten Projekten (Gemeinkostenprojekte oder Investitionsprojekte) @Projektsystem_SAP_Help. Unter Gemeinkosten allgemein versteht man Kosten , die nicht direkt einem Produkt zugeordnet werden können #cite(<Handbuch_Erfolgsrechnung_Wertsteigerung>, supplement: "S. 257").
-//hier weiter 
-Das #acr("PS") ist ein zentraler Bestandteil des #acr("ERP")-Systems von SAP und spielt eine wesentliche Rolle bei der Verwaltung von Projekten @Projektsystem_SAP_Help. Durch das Projektsystem PS der SAP können die Planung, die Steuerung und die Überwachung von komplexen Geschäftsprojekten erleichtert werden @Projektsystem_SAP_Help. Zudem können Module wie das #acr("FI"), das #acr("CO") und die #acr("MM") integriert werden. 
+Das #acr("PS") ist ein zentraler Bestandteil des #acr("ERP")-Systems von SAP und spielt eine wesentliche Rolle bei der Verwaltung von Projekten @Projektsystem_SAP_Help. Durch das Projektsystem PS der SAP können die Planung, die Steuerung und die Überwachung von komplexen Geschäftsprojekten erleichtert werden @Projektsystem_SAP_Help. Zudem können Module wie das #acr("FI"), das #acr("CO") und die #acr("MM") integriert werden @Projektsystem_Integration. Ein Projekt in SAP ERP-Systemen besteht aus einer Projektdefinition, einem Projektstrukturplan und Netzplänen #cite(<SAP_ERP-Praxishandbuch_Projektmanagement>, supplement: "S.95"). Dabei bildet die Projektdefinition den allgemeinen organisatorischen Rahmen ab, der Projektstrukturplan bildet den Aufbau des Projekts ab und die Netzplänen den Ablauf #cite(<SAP_ERP-Praxishandbuch_Projektmanagement>, supplement: "S.95"). Die Projektdefinition besteht aus keinem, einem oder beliebig vielen Teilprojekten, den sogenannten PSP-Elementen #cite(<SAP_ERP-Praxishandbuch_Projektmanagement>, supplement: "S.95").
+
+//hier weiter
 
 Der Ablauf eines Projekts im SAP PS kann in mehrere aufeinander aufbauende Phasen untergliedert werden. 
 Die erste Phase umfasst die Projektinitialisierung, dabei wird das Projekt definiert und die ersten Planungsdaten erfasst. Dazu wird ein #acr("PSP") erstellt, der die zentralen Meilensteine und Arbeitsblöcke enthält. Die "Arbeitsblocke" sind die letzendlichen PSP-Elemente, die genuztz werden, um das Projekt zu strukturieren.
@@ -171,6 +172,8 @@ Anschließend folgt die Projektplanung, wobei der Detaillierungsgrad erhöht wir
 Der nächste Schritt umfasst die eigentliche Projektdurchführung. Dabei werden die zuvor erstellten Projektpläne operativ umgesetzt. Um eine effiziente Projektdurchführung zu ermöglichen, werden Aufgaben konkret zugewiesen und Fortschritte überwacht. 
 Über die Gesamte Projektdauer ist das #acr("CO") unerlässlich, da das dieses dabei die Kosten, Termine und die Qualität überwacht. Zudem werden in dieser Phase Abweichungsanalysen und das Risikomanagement durchgeführt.
 Der letzte Schritt ist der Projektabschluss. Dieser erfolgt nach der Fertigstellung des Projekts. In diesem Schritt erfolgt die letztendliche Kontrolle und Abrechnung. Zudem werden alle Ergebnisse dokumentiert und das Projekt wird formal beendet.
+
+
 // Grundlagen
 //!  Muss gemacht werden
 //? Frage ich nach
@@ -277,26 +280,30 @@ Die Interviews wiesen dabei einen semistrukturierten Aufbau auf. Das bedeutet, d
 
 + Können Sie bitte Ihre berufliche Rolle und Aufgabe beschreiben ?
 
-+ Welche Relevanz hat ein Projektgenehmigungstool bei den Kunden ? 
++ Wie genehmigen Unternehmen typischerweise das Projektbudget ohne ein Projektbudget-Genehmigungstool ?
 
-+ Gibt es viele Kunden die Nachfrage nach einem Projektgenehmigungstool haben ?
++ Welche Herausforderungen treten bei der aktuellen Handhabung der Projektbudgets auf ?
 
-+ Welche Anforderungen haben Sie das Projektbudgetgenehmigungstool ?
++ Welche Relevanz hat ein digitales Projektgenehmigungstool bei Ihren Kunden ? 
 
-+ Welche Vorteile bietet ein Projektgenehmigungstool für Ihre Kunden ?
++ Welche Anforderungen/Kriterien sehen Sie bei Kunden für die Implementierung eines neuen Budgetgenehmigungsprozesses in SAP S/4HANA?
+
+
 
 
 *Interviewleitfaden Kunde*
 
 + Können Sie bitte Ihre berufliche Rolle und Aufgabe beschreiben ?
 
-+ Nutzt ihr Unternehmen ein Projektgenehmigungstool um Budgets zu genehmigen ? 
++ Wie erfolgt aktuell die Genehmigung von Projektbudgets in Ihrem Unternehmen und welche Herausforderungen gibt es dabei ?
 
-+ Welche Herausforderungen haben Sie aktuell im Genehmigungsprozess für Projektbudgets in Ihrem Unternehmen?
++ Welche Relevanz hat ein digitales Projektgenehmigungstool bei Ihnen ? 
 
-+ Welche Vorteile bietet ein Projektgenehmigungstool Ihrer Meinung nach für Ihr Unternehmen ?
++ Welche Herausforderungen/Anforderungen haben Sie an einen Genehmigungsprozess für Projektbudgets ?
 
-+ Welche Anforderungen haben Sie an das Projektbudgetgenehmigungstool ?
++ Wer wird in Ihrem Unternehmen das Projektbudget genehmigen, welche Stakeholder sind am Genehmigungsprozess beteiligt ?
+
+
 == Auswertung der Experteninterviews
 == Darstellung und Priorisierung der Experteninterviewergebnisse
 
