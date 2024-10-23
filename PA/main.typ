@@ -247,11 +247,17 @@ Das Feature ermöglicht die Prozessautomatisierung durch die einfache Erstellung
 Zur methodischen Erarbeitung des vorliegenden Themas kommen verschiedene Vorgehensweisen in Betracht.
 Dazu gehören Experteninterviews, Umfragen, Qualitative Inhaltsanalyse nach Mayring, Literaturrecherche und die Evaluierung.
 
+Das erste Auswahlkriterium war die Frage nach einer qualitativen Vorgehensweise, da eine quantitative Vorgehensweise bei einer sehr neuen Standarderweiterung nur wenig Grundlage findet. 
+
+
+
+
+
 Ausgewählt wurden dabei die Durchführung von Experteninterviews zur Ermittlung von Informationen und Anforderungen rund um die Projektbudgetierung in einem SAP S/4HANA Public Cloud System. Die qualitative Inhaltsanalyse nach Mayring soll zur Ableitung der Anforerungen an die Standarderweiterung dienen. 
 Zusätzlich werden anhand von Literaturrecherche die theoretischen Grundlagen der Arbeit untersucht. 
 
 
-Das erste Auswahlkriterium war die Frage nach einer qualitativen Vorgehensweise, da eine quantitative Vorgehensweise bei einer sehr neuen Standraderweiterung nur wenig Grundlage findet. 
+
 
 Die Literaturrecherche eignet sich im Grundlagenteil der Arbeit dazu, relevante Informationen an die Standarderweiterung zu erarbeiten. Als weiterer methodischer Ansatz wurden die 
 //Auswahlkriterien -> quantitative
