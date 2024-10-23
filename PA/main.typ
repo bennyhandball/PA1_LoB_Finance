@@ -260,8 +260,10 @@ Die Literaturrecherche eignet sich im Grundlagenteil der Arbeit dazu, relevante 
 
 //Aufbau einer Frage zeigen (Wie werden solche Fragen in einem Interview aufgebaut )
 
-Für die Gewinnung der Informationen zu dieser Arbeit wurden verschiedene Interviews durchgeführt. Dabei wurden verschiedene Funktionsfelder befragt, um mehrere Sichtweisen und Perspektiven zu ermöglichen. Es wurden Experten der Entwicklung also der technischen Sicht der Projektbudgetierungsgenehmigung als auch Berater und Kunden für einen prozessualen Einblick befragt. 
-Die Interviews wiesen dabei einen semistrukturierten Aufbau auf. Das bedeutet, dass die Interviews anhand der Leitfäden geführt wurden, jedoch von diesem je nach Gesprächsverlauf und Fachgebiet abgewichen werden kann.
+Für die Gewinnung der Informationen zu dieser Arbeit wurden verschiedene Interviews durchgeführt. Dabei wurden verschiedene Funktionsfelder befragt, um mehrere Sichtweisen und Perspektiven zu ermöglichen. Es wurden Experten der Beratung für einen prozessualen Einblick und Kunden für eine Kundenperspektive befragt.
+Experteninterviews lassen sich in drei Typen gliedern: strukturiert, semistrukturiert und unstrukturiert. //Quelle
+Nach S.Wassermann (2015) ist ein semistrukturiertes, also leitfdengestütztes offenes Interview als Erhebungsinstrument zu empfehlen, da die zuvor definierten Fragen beantworten werden können, jedoch die Frieheit und Flexibilität besteht, weitere Nachfragen stellen zu können. 
+Die Interviews weisen dabei einen semistrukturierten Aufbau auf. Das bedeutet, dass die Interviews anhand der Leitfäden geführt wurden, jedoch von diesem je nach Gesprächsverlauf und Fachgebiet abgewichen worden ist.
  
 //Semistrukturierte Leitfadeninterviews
 
