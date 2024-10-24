@@ -245,42 +245,24 @@ Das Feature ermöglicht die Prozessautomatisierung durch die einfache Erstellung
 
 == Auswahl der Methodiken 
 Zur methodischen Erarbeitung des vorliegenden Themas kommen verschiedene Vorgehensweisen in Betracht.
-Dazu gehören Experteninterviews, Umfragen, Qualitative Inhaltsanalyse nach Mayring, Literaturrecherche und die Evaluierung.
+Dazu gehören Experteninterviews, Umfragen, Qualitative Inhaltsanalyse nach Mayring, Anforderungsanalyse, Literaturrecherche und die Evaluierung.
 
+Um die theoretischen Grundlagen der Arbeit wurden anhand von einer Literaturrecherche ermittelt.
+Die Literaturrecherche eignet sich im Grundlagenteil der Arbeit dazu, relevante Informationen an die Standarderweiterung zu erarbeiten. 
+
+Des weiteren wurde eine Methodik für die eigentliche Anforderungserhebung benötigt.
 Das erste Auswahlkriterium war die Frage nach einer qualitativen Vorgehensweise, da eine quantitative Vorgehensweise bei einer sehr neuen Standarderweiterung nur wenig Grundlage findet. 
+Ausgewählt wurde dabei die Durchführung von Experteninterviews zur Ermittlung von Anforderungen rund um die Projektbudgetierung in einem SAP S/4HANA Public Cloud System. Experteninterviews zählen zu den qualitativen Forschungsmethoden #cite(<Experteninterviews>, supplement : "S.23"). Die gewonnenen Anforderungen wurden anschließend mit Hilfe einer Anforderungsanalyse herausgearbeitet. Eine Inhaltsanalyse nach Mayring wurde für die Bestimmung der Anforderungen nicht gewählt, da dafür mehrere Texte benötigt werden, um Übereinstimmungen und ein representatives Ergebnis herbeiführen zu können. Nachdem die Anforderungen bestimmt wurden, wurde die Standarderweiterung implementiert und anschließend evaluiert, ob die Standarderweiterung die Anforderungen erfüllt oder nicht. 
 
-
-
-
-
-Ausgewählt wurden dabei die Durchführung von Experteninterviews zur Ermittlung von Informationen und Anforderungen rund um die Projektbudgetierung in einem SAP S/4HANA Public Cloud System. Die qualitative Inhaltsanalyse nach Mayring soll zur Ableitung der Anforerungen an die Standarderweiterung dienen. 
-Zusätzlich werden anhand von Literaturrecherche die theoretischen Grundlagen der Arbeit untersucht. 
-
-
-
-
-Die Literaturrecherche eignet sich im Grundlagenteil der Arbeit dazu, relevante Informationen an die Standarderweiterung zu erarbeiten. Als weiterer methodischer Ansatz wurden die 
-//Auswahlkriterien -> quantitative
-//Auswahlkapitel //Umsetzbarkeit Warum die Methode 
 == Experteninterviews
 
 //Aufbau einer Frage zeigen (Wie werden solche Fragen in einem Interview aufgebaut )
 
-Für die Gewinnung der Informationen zu dieser Arbeit wurden verschiedene Interviews durchgeführt. Dabei wurden verschiedene Funktionsfelder befragt, um mehrere Sichtweisen und Perspektiven zu ermöglichen. Es wurden Experten der Beratung für einen prozessualen Einblick und Kunden für eine Kundenperspektive befragt.
+Für die Gewinnung der Informationen zu dieser Arbeit wurden verschiedene Interviews durchgeführt. Dabei wurden zwei verschiedene Funktionsfelder befragt, um mehrere Sichtweisen und Perspektiven zu ermöglichen. Es wurden Experten der Beratung für einen prozessualen Einblick und Kunden für eine Kundenperspektive befragt.
 Experteninterviews lassen sich in drei Typen gliedern: strukturiert, semistrukturiert und unstrukturiert. //Quelle
-Nach S.Wassermann (2015) ist ein semistrukturiertes, also leitfdengestütztes offenes Interview als Erhebungsinstrument zu empfehlen, da die zuvor definierten Fragen beantworten werden können, jedoch die Frieheit und Flexibilität besteht, weitere Nachfragen stellen zu können. 
-Die Interviews weisen dabei einen semistrukturierten Aufbau auf. Das bedeutet, dass die Interviews anhand der Leitfäden geführt wurden, jedoch von diesem je nach Gesprächsverlauf und Fachgebiet abgewichen worden ist.
+Nach S.Wassermann (2015) ist ein semistrukturiertes, also leitfdengestütztes offenes Interview als Erhebungsinstrument zu empfehlen, da die zuvor definierten Fragen beantworten werden können, jedoch die Freiheit und Flexibilität besteht, weitere Nachfragen stellen zu können. //Zitat einfügen
+Die Interviews in dieser Arbeit weisen dabei einen semistrukturierten Aufbau auf. 
  
-//Semistrukturierte Leitfadeninterviews
-
-
-== Qualitative Inhaltsanalyse nach Mayring
-
-
-
-
-
-= Anforderungserhebung
 
 
 == Interviewleitfäden
@@ -296,9 +278,6 @@ Die Interviews weisen dabei einen semistrukturierten Aufbau auf. Das bedeutet, d
 
 + Welche Anforderungen/Kriterien sehen Sie bei Kunden für die Implementierung eines neuen Budgetgenehmigungsprozesses in SAP S/4HANA?
 
-
-
-
 *Interviewleitfaden Kunde*
 
 + Können Sie bitte Ihre berufliche Rolle und Aufgabe beschreiben ?
@@ -311,6 +290,7 @@ Die Interviews weisen dabei einen semistrukturierten Aufbau auf. Das bedeutet, d
 
 + Wer wird in Ihrem Unternehmen das Projektbudget genehmigen, welche Stakeholder sind am Genehmigungsprozess beteiligt ?
 
+= Anforderungsanalyse
 
 == Auswertung der Experteninterviews
 == Darstellung und Priorisierung der Experteninterviewergebnisse
