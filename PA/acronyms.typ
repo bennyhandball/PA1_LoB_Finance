@@ -11,5 +11,6 @@
   CO: "Controlling",
   MM: "Materialwirtschaft",
   SaaS: "Software as a Service",
+  RE: "Requirement Engineering",
 )
 

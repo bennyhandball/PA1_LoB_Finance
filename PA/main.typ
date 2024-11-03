@@ -43,7 +43,7 @@
   
   university: "Duale Hochschule Baden-Württemberg",
   university-location: "Mannheim",
-  bib-style :"elsevier-harvard",
+  bib-style :"ieee",
 
   // for more options check the package documentation (https://typst.app/universe/package/supercharged-dhbw)
 )
@@ -56,6 +56,8 @@
 
 == Motivation & Problemstellung
 //Struktur der Arbeit
+
+//FORSCHUNGSFRAGE
 
 "Ein Ziel ohne Plan ist nur ein Wunsch." - Antoine de Saint-Exupéry @Zitat_Einstieg.
 
@@ -214,7 +216,7 @@ Durch die geringe Komplexität werden keine spezialisierten Entwickler benötigt
 === SAP Workflow Management Tool
 Ein weiteres Feature der SAP Business Process Automation ist das SAP Workflow Management Tool @SAP_Build_Workflow. 
 
-
+//Grafik vereinfachen 
 #figure(caption:
 [SAP Workflow Management #cite(<Workflow_Management_Abbildung>)]
 , image(width: 15cm, "assets/workflow-management.png"
@@ -247,23 +249,33 @@ Das Feature ermöglicht die Prozessautomatisierung durch die einfache Erstellung
 Zur methodischen Erarbeitung des vorliegenden Themas kommen verschiedene Vorgehensweisen in Betracht.
 Dazu gehören Experteninterviews, Umfragen, Qualitative Inhaltsanalyse nach Mayring, Anforderungsanalyse, Literaturrecherche und die Evaluierung.
 
-Um die theoretischen Grundlagen der Arbeit wurden anhand von einer Literaturrecherche ermittelt.
-Die Literaturrecherche eignet sich im Grundlagenteil der Arbeit dazu, relevante Informationen an die Standarderweiterung zu erarbeiten. 
+Die theoretischen Grundlagen der Arbeit wurden anhand von einer systematischen Literaturrecherche ermittelt. Die Literaturrecherche eignet sich im Theorieteil der Arbeit dazu, relevante Grundlagen für die Standarderweiterung zu erarbeiten. Bei der Literaturrecherche unterscheidet man zwischen der unsystematischen Literaturrecherche und der systematischen Literaturrecherche. Bei der unsystematischen Literaturrecherche ist das Ziel, sich einen Überblick über ein Thema zu verschaffen, wenn noch keine konkrete Fragestellung entwickelt wurde @Literaturrecherche. 
+Im Gegensatz dazu eignet sich die systematische Literaturrecherche bei einer bereits entwickelten Fragestellung und damit bei einer Suche nach spezifischer Literatur zu einem konkreten Thema @Literaturrecherche. 
 
-Des weiteren wurde eine Methodik für die eigentliche Anforderungserhebung benötigt.
+Des Weiteren wurde eine Methodik für die eigentlichen Anforderungserhebung benötigt.
 Das erste Auswahlkriterium war die Frage nach einer qualitativen Vorgehensweise, da eine quantitative Vorgehensweise bei einer sehr neuen Standarderweiterung nur wenig Grundlage findet. 
-Ausgewählt wurde dabei die Durchführung von Experteninterviews zur Ermittlung von Anforderungen rund um die Projektbudgetierung in einem SAP S/4HANA Public Cloud System. Experteninterviews zählen zu den qualitativen Forschungsmethoden #cite(<Experteninterviews>, supplement : "S.23"). Die gewonnenen Anforderungen wurden anschließend mit Hilfe einer Anforderungsanalyse herausgearbeitet. Eine Inhaltsanalyse nach Mayring wurde für die Bestimmung der Anforderungen nicht gewählt, da dafür mehrere Texte benötigt werden, um Übereinstimmungen und ein representatives Ergebnis herbeiführen zu können. Nachdem die Anforderungen bestimmt wurden, wurde die Standarderweiterung implementiert und anschließend evaluiert, ob die Standarderweiterung die Anforderungen erfüllt oder nicht. 
+Ausgewählt wurde dabei die Durchführung von Experteninterviews zur Ermittlung von Anforderungen rund um die Projektbudgetierung in einem SAP S/4HANA Public Cloud System. Experteninterviews zählen dabei zu den qualitativen Forschungsmethoden #cite(<Experteninterviews>, supplement : "S.23"). Die gewonnenen Anforderungen wurden anschließend mit Hilfe einer Anforderungsanalyse herausgearbeitet.
+
+
+ Nachdem die Anforderungen bestimmt wurden, wurde die Standarderweiterung implementiert und anschließend evaluiert, ob die Anforderungen an die Standarderweiterung erfüllt werden oder nicht.
 
 == Experteninterviews
 
 //Aufbau einer Frage zeigen (Wie werden solche Fragen in einem Interview aufgebaut )
+Experteninterviews lassen sich in drei Typen gliedern: strukturiert, semistrukturiert und unstrukturiert @Experteninterviews_Semistrukturiert. 
+Nach #cite(<Experteninterview_Wassermann>) ist ein semistrukturiertes, also leitfdengestütztes offenes Interview als Erhebungsinstrument zu empfehlen, da die zuvor definierten Fragen beantworten werden können, jedoch die Freiheit und Flexibilität besteht, weitere Nachfragen stellen zu können #cite(<Experteninterview_Wassermann>, supplement: "S.57"). 
+Hieran orientiert sich auch diese wissenschaftliche Arbeit. Dabei wurden Interviewleitfäden zur Orientierung definiert, von denen während des Gesprächs abgewichen werden kann. 
 
-Für die Gewinnung der Informationen zu dieser Arbeit wurden verschiedene Interviews durchgeführt. Dabei wurden zwei verschiedene Funktionsfelder befragt, um mehrere Sichtweisen und Perspektiven zu ermöglichen. Es wurden Experten der Beratung für einen prozessualen Einblick und Kunden für eine Kundenperspektive befragt.
-Experteninterviews lassen sich in drei Typen gliedern: strukturiert, semistrukturiert und unstrukturiert. //Quelle
-Nach S.Wassermann (2015) ist ein semistrukturiertes, also leitfdengestütztes offenes Interview als Erhebungsinstrument zu empfehlen, da die zuvor definierten Fragen beantworten werden können, jedoch die Freiheit und Flexibilität besteht, weitere Nachfragen stellen zu können. //Zitat einfügen
-Die Interviews in dieser Arbeit weisen dabei einen semistrukturierten Aufbau auf. 
- 
+Für die Gewinnung der Informationen zu dieser Arbeit wurden verschiedene Interviews durchgeführt. Dabei wurden zwei verschiedene Funktionsfelder befragt, um multiple Sichtweisen und Perspektiven zu ermöglichen. 
+Es wurden Experten der Beratung für einen betriebswirtschaftlichen prozessualen Einblick und Kunden für eine Kundenperspektive befragt. Für diesen Zweck wurden zwei unterschiedliche Fragebögen erstellt, die eine Schnittmenge haben, jedoch einen anderen Fokus legen. Alle Fragen dienen dabei zur Unterstützung zur Beantwortung der Forschungsfrage. 
 
+
+Vor den Interviews wurden die Experten via E-Mail konkatiert und nach Ihrem Interesse, an einem Experteninterview, zum Thema dieser Arbeit befragt. Die Fragen wurden den Experten erst während des Interviews gestellt und waren im Vorhinein unbekannt. Die eigentliche Durchführung der Interviews wurde über die Kommunikationsplattform Microsoft Teams abgehalten. Die Interviews wurden für eine anschließende Transkription des Dialogs aufgezeichnet. 
+
+Nach #cite(<Experteninterview_Wassermann>)verfügen Experten "für bestimmte Wissensgebiete und einzelne Realitätsausschnitte über ein detailliertes und spezialisiertes Sonderwissen, das sie als Experten auszeichnet" #cite(<Experteninterview_Wassermann>, supplement: "S.16").
+Bei den befragten Personen handelt es sich um Experten, da diese über ein detailliertes und spezialisiertes Sonderwissen im Bereich Finance und Controlling verfügen.
+
+Zur besseren Lesbarkeit der Interviewtexte wurden Füllwörter entfernt und unstrukturierte Aussagen in ganze Sätze überführt, wobei der Inhalt unverändert bleibt. 
 
 == Interviewleitfäden
 *Interviewleitfaden Berater*
@@ -291,14 +303,22 @@ Die Interviews in dieser Arbeit weisen dabei einen semistrukturierten Aufbau auf
 + Wer wird in Ihrem Unternehmen das Projektbudget genehmigen, welche Stakeholder sind am Genehmigungsprozess beteiligt ?
 
 = Anforderungsanalyse
+Um eine Anforderungsanalyse durchführen zu können ist zunächst relevant zu definieren, was man unter einer Anforderung versteht. Nach #cite(<pohl2015basiswissenRE>, supplement: "Kapitel 1.1.2" ) versteht man unter einer Anforderung "eine Bedingung oder Fähigkeit, die von einem Benutzer (Person oder System) zur Lösung eines Problems oder zur Erreichung eines Ziels benötigt wird". 
+
+Um im folgenden evaluieren zu können, ob die Standarderweiterung auf der #acr("BTP") den Anforderungen der Kunden und Berater entspricht, werden in diesem Kapitel Anforderungen aus den Experteninterviews abgeleitet und nach Relevanz priorisiert. 
+Unterteilt wird die Anforderungsanalyse für die Projektbudget-Genehmigung in Kunden und SAP-Anforderungen. 
+
 
 == Auswertung der Experteninterviews
-== Darstellung und Priorisierung der Experteninterviewergebnisse
+
 
 = Implementierung der Standarderweiterung
 Um die Standarderweiterung implementieren zu können, stellt die SAP einen Configuration & User Guide auf dem Business Accelerator Hub zur verfügung @SAP_Guide. 
-In der Webanwendung "Business Accelerator Hub" der SAP findet man alle #acr("API")s, die für die S/4HANA Cloud öffentlich verfügbar sind @SAP_Accelorrator_Hub. Diese können dabei ermittelt, erkundet und getestet werden @SAP_Accelorrator_Hub. 
+In diesem Configuration & User Guide findet man eine Schritt für Schritt Anleitung, um die Standarderweiterung implementieren zu können. 
 
+Um die Standarderweiterung wie im User Guide beschrieben implementieren zu können, ist ein SAP S/4HANA Public Cloud sowie ein Account auf der #acr("BTP") nötig. 
+
+//soll ich hier nochmal nennen, was nötig ist für die Standarderweiterung ??
 == Überblick SAP S/4HANA Extension - Budget Approval 
 #figure(caption:
 [SAP S/4HANA Extension - Budget Approval #cite(<SAP_Guide>)],
@@ -307,14 +327,32 @@ image(width: 10cm,
 ))
 <budget_approval>
 
+Die Abbildung zeigt eine Übersicht über den Genehmigungsprozess (@budget_approval). Der Budgetgenehmigungsprozess ermöglicht Kunden Genehmigungen oder Überprüfungen des geplanten Budgets zu transparent und flexibel zu automatisieren @SAP_Guide. Dabei können mehrere Geschäftsanwender aus unterschiedlichen Organisationen beteiligt sein, bevor das eigentliche Budget im S/4HANA-System gepostet wird @SAP_Guide. 
 
 
-Die Abbildung zeigt eine Übersicht über den Genehmigungsprozess (@budget_approval). Der Budgetgenehmigungsprozess ermöglicht Kunden Genehmigungen oder Überprüfungen des geplanten Budgets zu automatisieren. //Quelle User Guide 
-Dabei greift der Enduser auf das Fiori Launchpad zu. Das Fiori Launchpad ist der allgemeine Einstiegspunkt zu SAP Fiori-Anwendungen auf mobilden und Dektop-Geräten @SAP_Fiori_Launchpad. 
+Der erste Schritt des Budgetgenehmigungsprozesses ist der Geschäftsanwender (Antragssteller) welcher eine Budgetvorlage in Excel hoch lädt und die Genehmigung des Budgets beantragt @SAP_Guide. Dabei ist der Einstiegspunkt das Fiori Launchpad, welches der zentrale Einsteigspunkt für Apps auf mobilen und Dektop-Geräten darstellt @SAP_Launchpad.
 
-Der erste Schritt des Budgetgenehmigungsprozesses ist der Geschäftsanwender (Antragssteller) welcher eine Budgetvorlage in Excel hoch lädt und die Genehmigung des Budgets beantragt. //Quelle 
+//Über welche App kann die Excel hochgeladen werden ??
 
-Dabei werden die Genehmigungsgruppen anhand des Genehmigungsbudgets und der Währung bestimmt (siehe )
+Nachdem der Geschäftsanwender die Excel hochgeladen hat und die Genehmigung angefragt hat, 
+
+
+#figure(caption:
+[SAP Budget Approval Decision Table #cite(<SAP_Guide>)],
+image(width: 15cm,
+"assets/Entscheidungstabelle.png"
+))
+<Decision_Table>
+Die "Genehmigungsgruppen" werden anhand dem Gesamtbudget und der Währung festgelegt. In der  @Decision_Table ist eine gerade beschriebene Entscheidungstabelle zu sehen. Dabei wird die Währung festegelgt, gefolgt von der Höhe des angefragten Budgets. Dabei werden Budget-Intervalle festgelegt und anschließend die unterschiedlichen Genehimgungsgruppen oder Genehmigungspersonen definiert. 
+
+Die definierten Genehmigungsgruppen greifen anschließend auf ihren Posteingang zu, um die Projektbudgetanfrage zu überprüfen und eine der folgenden Entscheidungen treffen zu können. Die erste Möglichkeit stellt die Genehmigung des Projektbudgets dar. Wird das Projektbudget genehmigt, so wird dieser Schritt als vollständig abgeschlossen und der nächste Genehmigungsschritt (wenn nötig) wird eingeleitet. 
+
+Wird der Projektbudget-Antrag abgelehnt, so wird der Antragsteller per E-Mail über die Ablehnung des Antrags benachrichtigt und der Vorgang der Genehmigung wird beendet. 
+
+Trifft der Fall ein, dass die Anfrage von allen Genehmigungsgruppen oder Genehmigungspersonen akzeptiert wird, so wird eine Bestätigungsmail an den Antragsteller verschickt, mit der Nachricht, dass die Anfrage von allen Genehmigungsgruppen akzeptiert wurde. Zusätzlich wird der Prozess als vollständig abgeschlossen. 
+
+
+
 
 //ASXRgrQRAPXlMk>VXTfida9scAoXJtgAunyAvRmc
 //https://my300470-api.s4hana.ondemand.com
