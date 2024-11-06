@@ -94,6 +94,8 @@ Gegenstand dieser Arbeit ist die Standarderweiterung hinsichtlich der Projektbud
 Das Ziel dieser Arbeit ist es den Genehmigungsprozess von Projektbudgets in SAP S/4HANA Public Cloud detailliert zu analysieren und zu evaluieren. Dabei soll beurteilt werden, ob die Standarderweiterung den durch Experteninterviews und eine folgende qualitative Inhaltsanalyse nach Mayring erhobenen Anforderungen entspricht. 
 Nach der Erhebung und Analyse der Anforderungen soll die Standarderweiterung dann implementiert werden und der Aufwand der Implementierung dokumentiert und dargestellt werden. Das Ergebnis der Arbeit soll der Finance-Beratungsabteilung dazu dienen, eine möglichst optimierte, auf die Kundenbedürfnisse abgestimmte Entscheidungsfindung bereitzustellen und zusätzlich ein Bewusstsein dafür zu schaffen, wie die Standarderweiterung der Projektbudgetgenehmigung bei Public-Cloud Kunden gewinnbringend eingesetzt werden kann.
 
+//Forschungsfrage + Anpassen
+
 = Theoretische Grundlagen
 == Projektbudgetierung Grundlagen 
 Betrachtet man die Grundlagen der Projektbudgetierung, so ist zunächst wichtig zu definieren, was man unter einem Projekt versteht. Dabei gibt es keine einheitliche Definition für den Projektbegriff. Deshalb ist es von großer Relevanz, mehrere Definitionen zu nennen und diese zu vergleichen. 
