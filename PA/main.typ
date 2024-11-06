@@ -43,19 +43,15 @@
   
   university: "Duale Hochschule Baden-Württemberg",
   university-location: "Mannheim",
-  bib-style :"ieee",
+  bib-style :"elsevier-harvard",
 
   // for more options check the package documentation (https://typst.app/universe/package/supercharged-dhbw)
 )
 //
 // Edit this content to your liking
 = Einleitung
-//Besseren Einstieg 
-//Urlaubsantrag muss genehmigt werden
-// Genehmigung einer Bestellung -> Approval 
 
 == Motivation & Problemstellung
-//Struktur der Arbeit
 
 //FORSCHUNGSFRAGE
 
@@ -213,7 +209,9 @@ Ein zentrales Element ist die Build Process Automation, die als SAP-Lösung zur 
 
 Durch die geringe Komplexität werden keine spezialisierten Entwickler benötigt, um Prozesse zu automatisieren, da dies durch die Low-Code/No-Code Entwicklung durch die entsprechenden Fachbereiche entwickelt werden kann (@Business_Process_Automation). Zudem werden vorkonfigurierte Szenarien bereitgestellt, um Standardabläufe automatisieren zu können @SAP_Build.
 
-=== SAP Workflow Management Tool
+//Wichtig: erklären, warum Workflow Management Tool und Warum SAP Build Process Automation 
+
+=== SAP Workflow Management Tool 
 Ein weiteres Feature der SAP Business Process Automation ist das SAP Workflow Management Tool @SAP_Build_Workflow. 
 
 //Grafik vereinfachen 
@@ -290,6 +288,8 @@ Zur besseren Lesbarkeit der Interviewtexte wurden Füllwörter entfernt und unst
 
 + Welche Anforderungen/Kriterien sehen Sie bei Kunden für die Implementierung eines neuen Budgetgenehmigungsprozesses in SAP S/4HANA?
 
+
+
 *Interviewleitfaden Kunde*
 
 + Können Sie bitte Ihre berufliche Rolle und Aufgabe beschreiben ?
@@ -298,16 +298,14 @@ Zur besseren Lesbarkeit der Interviewtexte wurden Füllwörter entfernt und unst
 
 + Welche Relevanz hat ein digitales Projektgenehmigungstool bei Ihnen ? 
 
-+ Welche Herausforderungen/Anforderungen haben Sie an einen Genehmigungsprozess für Projektbudgets ?
++ Welche Anforderungen haben Sie an einen Genehmigungsprozess für Projektbudgets ?
 
 + Wer wird in Ihrem Unternehmen das Projektbudget genehmigen, welche Stakeholder sind am Genehmigungsprozess beteiligt ?
 
 = Anforderungsanalyse
 Um eine Anforderungsanalyse durchführen zu können ist zunächst relevant zu definieren, was man unter einer Anforderung versteht. Nach #cite(<pohl2015basiswissenRE>, supplement: "Kapitel 1.1.2" ) versteht man unter einer Anforderung "eine Bedingung oder Fähigkeit, die von einem Benutzer (Person oder System) zur Lösung eines Problems oder zur Erreichung eines Ziels benötigt wird". 
 
-Um im folgenden evaluieren zu können, ob die Standarderweiterung auf der #acr("BTP") den Anforderungen der Kunden und Berater entspricht, werden in diesem Kapitel Anforderungen aus den Experteninterviews abgeleitet und nach Relevanz priorisiert. 
-Unterteilt wird die Anforderungsanalyse für die Projektbudget-Genehmigung in Kunden und SAP-Anforderungen. 
-
+Um im folgenden evaluieren zu können, ob die Standarderweiterung auf der #acr("BTP") den Anforderungen der Kunden und Berater entspricht um dann eine Handlungsempfehlung zu nennen, werden in diesem Kapitel Anforderungen aus den Experteninterviews abgeleitet und nach Relevanz priorisiert.
 
 == Auswertung der Experteninterviews
 
@@ -316,23 +314,52 @@ Unterteilt wird die Anforderungsanalyse für die Projektbudget-Genehmigung in Ku
 Um die Standarderweiterung implementieren zu können, stellt die SAP einen Configuration & User Guide auf dem Business Accelerator Hub zur verfügung @SAP_Guide. 
 In diesem Configuration & User Guide findet man eine Schritt für Schritt Anleitung, um die Standarderweiterung implementieren zu können. 
 
-Um die Standarderweiterung wie im User Guide beschrieben implementieren zu können, ist ein SAP S/4HANA Public Cloud sowie ein Account auf der #acr("BTP") nötig. 
+Um die Standarderweiterung wie im User Guide beschrieben implementieren zu können, ist ein SAP S/4HANA Public Cloud System, sowie ein Subaccount auf der #acr("BTP") nötig. Über das #acr("BTP")-Cockpit kann der Subaccount verwaltet und konfiguriert werden. Um die Standarderweiterung implementieren und nutzen zu können sind folgende Services und Applikationen notwendig: 
 
-//soll ich hier nochmal nennen, was nötig ist für die Standarderweiterung ??
-== Überblick SAP S/4HANA Extension - Budget Approval 
+#figure(caption: "Anforderungen BTP - In Anlehnung an den Konfigurationsguide", table(
+  columns: (auto),
+  inset: 11pt,
+  align: left,
+  text("SAP Application Runtime Service"),
+  text("SAP Workflow Management or SAP Build Process Automation"),
+  text("SAP Cloud Portal Service / SAP Launchpad Service"),
+  text("SAP Document Management Service, Integration option"),
+  text("SAP Cloud Identity Services - Identity Authentication (optional)"),
+))<btp-voraussetzungen>
+
+== Übersicht SAP S/4HANA Extension - Budget Approval 
 #figure(caption:
 [SAP S/4HANA Extension - Budget Approval #cite(<SAP_Guide>)],
-image(width: 10cm,
+image(width: 15cm,
 "assets/BudgetApproval.png"
 ))
 <budget_approval>
+In diesem Kapitel soll der Prozess der Projektbudgetgenehmigung beschrieben werden. Die Abbildung zeigt die Zielarchitektur für den Genehmigungsprozess (@budget_approval). 
+Dabei wird auf der linken Seite der Abbildung begonnen. Der zentrale Einstiegspunkt für Apps, auf mobilen und Desktop-Geräten in einem SAP-System, stellt das Fiori Launchpad dar @SAP_FLP_Einstiegspunkt. //Quelle 
 
-Die Abbildung zeigt eine Übersicht über den Genehmigungsprozess (@budget_approval). Der Budgetgenehmigungsprozess ermöglicht Kunden Genehmigungen oder Überprüfungen des geplanten Budgets zu transparent und flexibel zu automatisieren @SAP_Guide. Dabei können mehrere Geschäftsanwender aus unterschiedlichen Organisationen beteiligt sein, bevor das eigentliche Budget im S/4HANA-System gepostet wird @SAP_Guide. 
+Über den Connectivity Service der #acr("BTP") wird die Verbindung mit dem Business Objekt im S/4HANA Public Cloud System hergestellt (@budget_approval). Dabei wird über #acr("API")s mit dem System kommuniziert um den Datentransfer zu ermöglichen. Der Identity Authentication Service sorgt dabei für eine sichere Verbindung über die Firewall des Systems.
+//Was versteht man unter einer Firewall ??
+ Unter einer Firewall versteht man 
+
+Als Einstiegspunkt für den Anwender dient das Fiori Launchpad. 
+//Was versteht man unter dem Fiori Launchpad ?
+Die Voraussetzung für den Projektbudgetgenehmigungsprozess ist das Anlegen eines Projektes im SAP S/4-Systems. Um ein Projekt anlegen zu können müssen folgende Daten angegeben werden. 
+Der erste Schritt in dem Genehmigungsprozess ist der Download eines Excel-Dokuments 
+Auf dem Fiori Launchpad kann der End User in der App "Import Financial Plan Data" 
 
 
-Der erste Schritt des Budgetgenehmigungsprozesses ist der Geschäftsanwender (Antragssteller) welcher eine Budgetvorlage in Excel hoch lädt und die Genehmigung des Budgets beantragt @SAP_Guide. Dabei ist der Einstiegspunkt das Fiori Launchpad, welches der zentrale Einsteigspunkt für Apps auf mobilen und Dektop-Geräten darstellt @SAP_Launchpad.
+ Der Budgetgenehmigungsprozess ermöglicht Kunden Genehmigungen oder Überprüfungen des geplanten Budgets transparent und flexibel zu automatisieren @SAP_Guide. Dabei können mehrere Geschäftsanwender aus unterschiedlichen Organisationen beteiligt sein, bevor das eigentliche Budget im S/4HANA-System gepostet wird @SAP_Guide. 
 
-//Über welche App kann die Excel hochgeladen werden ??
+== Implementierung Budget Approval
+Basierend auf dem User Guide zur Umsetzung der Projektbudgetgenehmigung, erklärt das folgende Kapitel in verkürzter Form die Implementierung der Standarderweiterung. Der User Guide befindet sich im Anhang der Arbeit. 
+Um die Standarderweiterung umzusetzen, werden im folgenden die erforderlichen Schritte aufgezeigt. Zunächst muss eine Verbindung zwischen der #acr("BTP") und dem S/4HANA Public Cloud Zielsystem hergestellt werden. Im #acr("BTP")-Cockpit gibt es die Möglichkeit "Destinations" anzulegen. Legt man eine Destination erfolgreich an, so stellt dies die Verbindung zu einem bestimmten Endpunkt dar. Dabei werden die benötigten Informationen und Einstellungen in der "Destination" gespeichert. 
+//Voraussetzungen definieren -> Projekt anlegen; Wie sieht das im System aus
+
+Der erste Schritt des Budgetgenehmigungsprozesses ist der Geschäftsanwender (Antragssteller) welcher eine Budgetvorlage in Excel hoch lädt und die Genehmigung des Budgets beantragt @SAP_Guide.
+//Excel beschreiben -> wie sieht das Template aus 
+ Dabei ist der Einstiegspunkt das Fiori Launchpad, welches der zentrale Einsteigspunkt für Apps auf mobilen und Dektop-Geräten darstellt @SAP_Launchpad.
+
+//Über welche App kann die Excel hochgeladen werden ?? -> Import Financial Data -> App Als CSV Datei hochladen 
 
 Nachdem der Geschäftsanwender die Excel hochgeladen hat und die Genehmigung angefragt hat, 
 
@@ -355,7 +382,9 @@ Trifft der Fall ein, dass die Anfrage von allen Genehmigungsgruppen oder Genehmi
 
 
 //ASXRgrQRAPXlMk>VXTfida9scAoXJtgAunyAvRmc
-//https://my300470-api.s4hana.ondemand.com
+//https://my300470.s4hana.ondemand.com
+
+//Vorgaben, die festgelegt wurden (von der Abteilung vorgegeben -> Experiment unter den Rahmenbedingungen (Erweiterbar) bewertet //werden muss und das wird im Laufe des Experiments überprüft"
 
 
 
@@ -364,8 +393,11 @@ Trifft der Fall ein, dass die Anfrage von allen Genehmigungsgruppen oder Genehmi
 = Zusammenfassung
 
 == Fazit
+Die vorliegende Arbeit und die Forschungsfrage zeilen darauf ab, eine Handlungsempfehlung zu treffen und zu evaluieren, ob die Anforderungen aus den Experteninterviews durch die Standardeweiterung erfüllt 
 
 == Kritische Reflexion der Arbeit 
 
+
 == Ausblick
+Da eine Projektbudgetgenehmigung im Standardumfang des S/4HANA Public Cloud Systems nicht vorhanden ist, bietet die vorliegende Standarderweiterung eine technische Lösung, um die Funktion einer Projektbudgetgenehmigung in einem S/4HANA Public Cloud System zu implementieren. Die Standarderweiterung kann jedoch nicht alle Anforderungen der Kunden und Berater erfüllen, jedoch bietet die Standarderweiterung ein Konzept, das genutzt werden kann, um eine Projektbudgetgenehmigung 
 
