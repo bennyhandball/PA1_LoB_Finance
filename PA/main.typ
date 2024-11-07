@@ -9,7 +9,7 @@
 
 
 #show: supercharged-dhbw.with(
-  title: "Projektbudget in SAP S/4HANA: Implementierung und Analyse eines Genehmigungsprozesses mithilfe des SAP Workflow Management Tools auf der Business Technology Platform",
+  title: "Projektbudget in SAP S/4HANA: Implementierung und Analyse eines Genehmigungsprozesses mithilfe des SAP Build Process Automation Tool auf der Business Technology Platform",
   short-title: "Projektbuget-Genehmigung in SAP S/4HANA ",
   type-of-degree-specification: "Sales & Consulting",
   time-of-thesis: "29.07.2024 - 18.11.2024",
@@ -195,8 +195,11 @@ Die #acr("BTP") basiert auf einem modularen Konzept und umfasst folgende Hauptbe
 === SAP Build Process Automation
 SAP Build bietet unterschiedliche Tools und Werkzeuge auf der #acr("BTP") an, die den Anwender bei der Entwicklung und Automatisierung von Anwendungen unterstützen @SAP_Build.
 Ein zentrales Element ist die Build Process Automation, die als SAP-Lösung zur Prozessautomatisierung dient. Sie unterstützt dabei Workflows und Bots, sowohl für SAP- als auch für Fremdsysteme @SAP_Build.
-Für die vorliegende Arbeit ist der Begriff Workflow relevant. 
 
+Das Vorgängertool zu der SAP Build Process Automation war das Workflow-Management Tool auf der #acr("BTP"). //QUELLE
+Die Funktionen des Workflow-Management Tools wurden dann in den Funktionsumfang des SAP Build Process Automation Tools übernommen. Jedoch werden bestimmte Funktionen und Apps nicht mehr untersützt. 
+//Quellen 
+Für die vorliegende Arbeit ist der Begriff Workflow relevant. 
 Der Begriff "Workflow" wird von der SAP wie folgt definiert:
 Unter einem Workflow versteht man die "Abfolge von miteinander verbundenen Aktivitäten oder Aufgaben, die ausgeführt werden, um ein bestimmtes Ergebnis zu erzielen" @SAP_Workflow. Aufeinanderfolgende zu bearbeitende Prozessschritten werden sobald die Workflow-Instanz aufgerufen wird abgearbeitet @SAP_Workflow.
 
@@ -254,7 +257,7 @@ Nach #cite(<Experteninterview_Wassermann>)verfügen Experten "für bestimmte Wis
 Bei den befragten Personen handelt es sich um Experten, da diese über ein detailliertes und spezialisiertes Sonderwissen im Bereich Finance und Controlling verfügen.
 
 Zur besseren Lesbarkeit der Interviewtexte wurden Füllwörter entfernt und unstrukturierte Aussagen in ganze Sätze überführt, wobei der Inhalt unverändert bleibt. Da bei der SAP eine Duzen innerhalb und oftmals auch auf den Projekten verbreitet ist, wurden auch die Interviewpartner/Interviewpartnerinnen per "Du" angesprochen. Die Interviewleitfäden befinden sich dabei im Anhang.
-//Interviewleitfäden in den Anhang 
+
 
 
 = Anforderungsanalyse
@@ -289,72 +292,84 @@ image(width: 15cm,
 "assets/BudgetApproval.png"
 ))
 <budget_approval>
-In diesem Kapitel soll der Prozess der Projektbudgetgenehmigung genauer erläutert werden. Die Abbildung zeigt die Zielarchitektur für den Genehmigungsprozess (@budget_approval). 
-Dabei wird auf der linken Seite der Abbildung begonnen. Der zentrale Einstiegspunkt für Apps, auf mobilen und Desktop-Geräten in einem SAP-System, stellt das Fiori Launchpad dar @SAP_FLP_Einstiegspunkt (@Einstiegspunkt_FLP_ED). 
-Im Fiori Launchpad stehen dem Enduser verschiedene Apps zur Verfügung. Die App, welche den Einstieg in die Projektbudget-Genehmigungsprozess darstellt, heißt "Import Financial Data, Submit for Approval".
+In diesem Kapitel soll der Prozess der Projektbudgetgenehmigung genauer erläutert werden. Die Abbildung zeigt die Zielarchitektur für den Genehmigungsprozess (@budget_approval). Der zentrale Einstiegspunkt für Apps, auf mobilen und Desktop-Geräten in einem SAP-System, stellt das Fiori Launchpad dar @SAP_FLP_Einstiegspunkt (@Einstiegspunkt_FLP_ED). 
+Im Fiori Launchpad stehen dem Enduser verschiedene Apps zur Verfügung. Die App, welche den Einstieg in den Projektbudget-Genehmigungsprozess darstellt, heißt "Import Financial Data, Submit for Approval".
 #figure(caption:
-[Fiori Launchpad Import Financial Data - Budget Approval (Eigene Darstellung)],
+[Fiori Launchpad Import Financial Data - Budget Approval (Screenshot aus dem SAP S/4HANA Public Cloud System)],
 image(width: 15cm,
 "assets/Fiori_Launchpad_Upload_Excel.jpg"
 ))
 
-Die Voraussetzung, dass ein Projekt überhaupt budgetiert werden kann, ist die eigentliche Erstellung eines Projektes mit #acr("PSP")-Elementen, wie es im Kapitel 2.2.2 Grundlagen Projektsystem (PS) beschrieben wurde. Nachdem der Enduser die App "Import Financial Data, Submit for Approval" geöffnet hat kann dieser eine Templatedatei downloaden, um diese im Anschluss ausgefüllt hochladen zu können, um den eigentlichen Workflow des Genehmigungsprozesses zu starten. 
+Die Voraussetzung, dass ein Projekt überhaupt budgetiert werden kann, ist die eigentliche Erstellung eines Projektes mit #acr("PSP")-Elementen, wie es im Kapitel 2.2.2 Grundlagen Projektsystem (PS) beschrieben wurde. Nachdem der Enduser die App "Import Financial Data, Submit for Approval" geöffnet hat kann dieser eine Templatedatei downloaden, um diese im Anschluss ausgefüllt hochladen zu können, um den eigentlichen Workflow des Genehmigungsprozesses zu starten (@CSV_Template). 
 #figure(caption:
-[Download Template - Budget Approval (Eigene Darstellung)],
+[Download Template - Budget Approval (Screenshot aus dem SAP S/4HANA Public Cloud System)],
 image(width: 15cm,
 "assets/Download_Template.jpg"
 ))
-In dem Template müssen folgende Daten angegeben werden: 
 
-
-
-
-
-
-
-
-Über den Connectivity Service der #acr("BTP") wird die Verbindung mit dem Business Objekt im S/4HANA Public Cloud System hergestellt (@budget_approval). Dabei wird über #acr("API")s mit dem System kommuniziert um den Datentransfer zu ermöglichen. Der Identity Authentication Service sorgt dabei für eine sichere Verbindung über die Firewall des Systems.
-//Was versteht man unter einer Firewall ??
- Unter einer Firewall versteht man 
-
-
-
-
-
-
-
-
-
- Der Budgetgenehmigungsprozess ermöglicht Kunden Genehmigungen oder Überprüfungen des geplanten Budgets transparent und flexibel zu automatisieren @SAP_Guide. Dabei können mehrere Geschäftsanwender aus unterschiedlichen Organisationen beteiligt sein, bevor das eigentliche Budget im S/4HANA-System gepostet wird @SAP_Guide. 
-
-== Implementierung Budget Approval
-Basierend auf dem User Guide zur Umsetzung der Projektbudgetgenehmigung, erklärt das folgende Kapitel in verkürzter Form die Implementierung der Standarderweiterung. Der User Guide befindet sich im Anhang der Arbeit. 
-Um die Standarderweiterung umzusetzen, werden im folgenden die erforderlichen Schritte aufgezeigt. Zunächst muss eine Verbindung zwischen der #acr("BTP") und dem S/4HANA Public Cloud Zielsystem hergestellt werden. Im #acr("BTP")-Cockpit gibt es die Möglichkeit "Destinations" anzulegen. Legt man eine Destination erfolgreich an, so stellt dies die Verbindung zu einem bestimmten Endpunkt dar. Dabei werden die benötigten Informationen und Einstellungen in der "Destination" gespeichert. 
-//Voraussetzungen definieren -> Projekt anlegen; Wie sieht das im System aus
-
-Der erste Schritt des Budgetgenehmigungsprozesses ist der Geschäftsanwender (Antragssteller) welcher eine Budgetvorlage in Excel hoch lädt und die Genehmigung des Budgets beantragt @SAP_Guide.
-//Excel beschreiben -> wie sieht das Template aus 
- Dabei ist der Einstiegspunkt das Fiori Launchpad, welches der zentrale Einsteigspunkt für Apps auf mobilen und Dektop-Geräten darstellt @SAP_Launchpad.
- 
-
-//Über welche App kann die Excel hochgeladen werden ?? -> Import Financial Data -> App Als CSV Datei hochladen 
-
-Nachdem der Geschäftsanwender die Excel hochgeladen hat und die Genehmigung angefragt hat, 
-
+//Was versteht man unter der Plankategorie ?
+In der Template CSV-Datei (Comma-seperated values) müssen folgende Daten angegeben werden, die Plankategorie, die xyz bestimmt, das Hauptbuchsgeschäftsjahr, der Buchungszeitraum (Monat), die Projektdefinition (ID-Nummer), das zu budgetierende PSP-Element (ID-Nummer), die Kontonummer, der zu budgetierende Wert, die Globale Währung und der Buchungskreis. 
+Diese Informationen müssen in die Excel eingepflegt werden. Anschließend kann die Excel in der App "Import Financial Data, Submit for Approval" hochgeladen werden. Dabei wird die Excel auf Vollständigkeit und Korrektheit geprüft. 
 
 #figure(caption:
-[SAP Budget Approval Decision Table #cite(<SAP_Guide>)],
+[Download Template - Budget Approval (Screenshot aus dem SAP S/4HANA Public Cloud System)],
 image(width: 15cm,
-"assets/Entscheidungstabelle.png"
+"assets/Send_Approval (1).jpg"
 ))
-<Decision_Table>
-Die "Genehmigungsgruppen" werden anhand dem Gesamtbudget und der Währung festgelegt. In der  @Decision_Table ist eine gerade beschriebene Entscheidungstabelle zu sehen. Dabei wird die Währung festegelgt, gefolgt von der Höhe des angefragten Budgets. Dabei werden Budget-Intervalle festgelegt und anschließend die unterschiedlichen Genehimgungsgruppen oder Genehmigungspersonen definiert. 
 
-Die definierten Genehmigungsgruppen greifen anschließend auf ihren Posteingang zu, um die Projektbudgetanfrage zu überprüfen und eine der folgenden Entscheidungen treffen zu können. Die erste Möglichkeit stellt die Genehmigung des Projektbudgets dar. Wird das Projektbudget genehmigt, so wird dieser Schritt als vollständig abgeschlossen und der nächste Genehmigungsschritt (wenn nötig) wird eingeleitet. 
+Mit dem Absenden "Send for Approval" wird der Workflow getriggert 
+und die Projektbudgetanfrage an die im Workflow hinterlegte verantwortliche Person oder Personengruppe geschickt (@budget_approval). In der Abbildung (@budget_approval) wird dieser Schritt durch das Piktogramm mit den Business Rules verdeutlicht. Die verantworliche Person oder Personengruppe wird dabei vorher in einer Entscheidungstabelle festgelegt (@Entscheidungstabelle_Budget_Approver). Dabei werden Budget-Intervalle des zu genehmigenden Budgets bestimmt und die Genehmigungsgruppe oder Person definiert und hinterlegt.
+Die definierten Genehmigungsgruppen greifen anschließend auf ihren Posteingang (Inbox (@Inbox_Screenshot)) zu, um die Projektbudgetanfrage zu überprüfen und eine der folgenden Entscheidungen treffen zu können.
+#figure(caption:
+[Inbox - Budget Approval (Screenshot aus dem SAP S/4HANA Public Cloud System)],
+image(width: 15cm,
+"assets/Picture_Inbox.jpg"
+))<Inbox_Screenshot>
+
+ Die erste Möglichkeit stellt die Genehmigung des Projektbudgets dar. Wird das Projektbudget genehmigt, so wird dieser Schritt als vollständig abgeschlossen und der nächste Genehmigungsschritt (wenn nötig) wird eingeleitet. 
 
 Wird der Projektbudget-Antrag abgelehnt, so wird der Antragsteller per E-Mail über die Ablehnung des Antrags benachrichtigt und der Vorgang der Genehmigung wird beendet. 
 
-Trifft der Fall ein, dass die Anfrage von allen Genehmigungsgruppen oder Genehmigungspersonen akzeptiert wird, so wird eine Bestätigungsmail an den Antragsteller verschickt, mit der Nachricht, dass die Anfrage von allen Genehmigungsgruppen akzeptiert wurde. Zusätzlich wird der Prozess als vollständig abgeschlossen. 
+Trifft der Fall ein, dass die Anfrage von allen Genehmigungsgruppen oder Genehmigungspersonen akzeptiert wird, so wird eine Bestätigungsmail an den Antragsteller verschickt, mit der Nachricht, dass die Anfrage von allen Genehmigungsgruppen akzeptiert wurde. Zusätzlich wird der Prozess als vollständig abgeschlossen und das Budget im System gepostet.
+
+#figure(caption:
+[Inbox - Budget Approval (Screenshot aus dem SAP S/4HANA Public Cloud System)],
+image(width: 15cm,
+"assets/Overview_Budget_Approval_Accept (1).jpg"
+))
+
+Im User-Guide wird dem Anwender die Wahl zwischen dem Workflow-Managementtool und dem SAP Build Process Automation Tool gelassen, jedoch wird bei dem vorliegenden Workflow ab dem Absenden des Dokuments nur das Workflow-UI unterstützt, da das SAP Build Process Automation UI dort nicht untersützt wird. Dies geht jedoch nicht aus dem User Guide hervor und wurde bei der Implementierung festgestellt. Aus diesem Grund unterscheidet sich das UI ab dem eigentlichen Triggern des Workflows zu dem vorherigen Prozess. 
+
+
+Um die Verbindung zwischen der #acr("BTP") und dem Business Objekt im S/4HANA Public Cloud System herzustellen, wird der Connectivity Service der #acr("BTP") genutzt (@budget_approval). Dabei wird über #acr("API")s zwischen der #acr("BTP") und dem S/4HANA System kommuniziert um den Datentransfer zu ermöglichen. Der Identity Authentication Service sorgt dabei für eine sichere Verbindung.Um den Prozess möglichst transparent zu gestalten, gibt es eine App namens "Process Visibility", über welche man den aktuellen Stand der Projektbudgetgenehmigung tracken kann (@budget_approval). 
+
+
+== Implementierung Budget Approval
+Basierend auf dem User Guide zur Umsetzung der Projektbudgetgenehmigung, erklärt das folgende Kapitel in verkürzter Form die Implementierung der Standarderweiterung. Der User Guide befindet sich dabei im Anhang der Arbeit. 
+Um die Standarderweiterung umzusetzen, werden im folgenden die erforderlichen Schritte aufgezeigt.Im #acr("BTP")-Cockpit gibt es die Möglichkeit "Destinations" anzulegen. Legt man eine Destination erfolgreich an, so stellt dies die Verbindung zu einem bestimmten Endpunkt dar. Dabei werden die benötigten Informationen und Einstellungen in der "Destination" gespeichert. Um die Standarderweiterung nutzen zu können sind drei grundlegende Destinations notwendig. 
+
+Zunächst muss eine Verbindung zwischen der #acr("BTP") und dem S/4HANA Public Cloud Zielsystem hergestellt werden. Da es sich hierbei um eine Verbindung über das Internet handelt, wird hier das #acr("HTTP")-Protokoll benutzt. 
+Eine beispielhafte Konfiguration einer Destination kann aus (@BTP_Destination) entnommen werden. Für diese Destination ist ein spezieller technischer User zur Authentifizierung mit Name und Passwort nötig. Dafür wurde innerhalb des SAP S/4HANA Public Cloud Systems ein "Communication Arrangement (Kommunikationsvereinbarung)", als Gegenstürck zu dem #acr("BTP")-Endpunkt eingerichtet. Diese Konfigurationseinheit ist für die Kommunikation zwischen Systemen verantwortlich. //Quelle
+Das Communication Arrangement ist eine zentrale Stelle, an denen die Einstellungen für den Austausch und Zugriff von Daten zwischen Systemen vorgenommen werden. Dafür steht ein spezielles "Communication Scenario" zur Verfügung, welches die Zigriffsrollen und die Freigabe der Endpunkte steuert und beinhaltet. 
+
+Eine weitere Verbindung muss zu dem SAP Build Process Automation Service aufgebaut werden. Da es sich hierbei um ebenfalls um eine Verbindung über das Internet handelt, wird auch hier das #acr("HTTP") genutzt. Die Verbindung wird dabei zwischen der #acr("BTP") und dem SAP Build Process Automation #acr("API")-Endpunkt aufgebaut.
+
+Die letzte der drei Destinations 
+
+
+Wurden alle relevanten Destinations eingerichetet und alle sonstigen Anforderungen aus dem User-Guide erfüllt sind,so kann das Content-Package aus dem SAP Build Process Automation Store heruntergeladen und in SAP Build Process Automation als Projekt angelegt werden werden. Bei dem Package handelt es sich um ein ready-to-use Package, welches einen "Rule-Service" beinhaltet, indem die Projekt Budget-Genehmiger Gruppen festgelegt werden können. Dies erfolgt wie bereits beschreiben in Form einer Entscheidungstabelle (@Entscheidungstabelle_Budget_Approver). Des weiteren beinhaltet das Package den eigentlichen Workflow, der die Prozessautomatisierung ermöglicht,ein Projekt Budget Dashboard, und das Projektbudgetgenehmigungs-UI. Diese Applikation muss anschließend heruntergeladen und entpackt werden, um diese dann in der App "Business Application Studio" zu öffnen und innerhalb der Cloud Foundry Umgebung bereitzustellen. Sobald der Deploy-Prozess abgeschlossen ist, kann der Zugriff über die App Build Workzone hergestellt werden.  
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
