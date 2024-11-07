@@ -2,7 +2,43 @@
   //figure(image("assets/Business Process Automation.jpg", width: 80%), caption: [Bildgenerator Aktivierung (Eigene Darstellung)])
   //Bilder im Anhang 
 
-    #figure(image("../../assets/Business Process Automation.jpg", width: 110%), caption: [Verrechnungen Verwalten1])
+    #figure(image("/PA/assets/Fiori Launchpad_Image.gif", width: 100%), caption: [Einstiegspunkt Fiori-Launchpad (Eigene Darstellung)]) <Einstiegspunkt_FLP_ED>
+    #figure(image("/PA/assets/Project_structured_PSP (1).jpg", width: 110%), caption: [Projektbeispiel mit PSP-Elementen (Eigene Darstellung)]) <Projektsystem_PSP-Elemente>
+
+#v(1em)
+#figure(
+strong("Interviewleitfaden Berater"), kind: raw,  supplement: "Interviewleitfaden"
+)<InterviewLeitfaden_Berater>
+#text("
+•	Können Sie bitte Ihre berufliche Rolle und Aufgabe beschreiben ?
+
+•	Wie genehmigen Unternehmen typischerweise das Projektbudget ohne ein Projektbudget-Genehmigungstool ?
+
+•	Welche Herausforderungen treten bei der aktuellen Handhabung der Projektbudgets auf ?
+
+•	Welche Relevanz hat ein digitales Projektgenehmigungstool bei Ihren Kunden ? 
+
+•	Welche Anforderungen/Kriterien sehen Sie bei Kunden für die Implementierung eines neuen Budgetgenehmigungsprozesses in SAP S/4HANA ?"
+)
+
+#v(1em)
+#figure(
+strong("Interviewleitfaden Anoymisierter Kunde"), kind: raw,  supplement: "Interviewleitfaden"
+)<InterviewLeitfaden_Kunde>
+#text("
+•  Können Sie bitte Ihre berufliche Rolle und Aufgabe beschreiben ?
+
+•	 Wie erfolgt aktuell die Genehmigung von Projektbudgets in Ihrem Unternehmen und welche Herausforderungen gibt es dabei ?
+
+•	Welche Relevanz hat ein digitales Projektgenehmigungstool bei Ihnen ? 
+
+•	Welche Anforderungen haben Sie an einen Genehmigungsprozess für Projektbudgets ?
+
+•	Wer wird in Ihrem Unternehmen das Projektbudget genehmigen, welche Stakeholder sind am Genehmigungsprozess beteiligt ?
+")
+
+
+
 
 #v(1em)
 #figure(
