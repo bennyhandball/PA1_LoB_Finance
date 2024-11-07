@@ -73,7 +73,7 @@ Die Genehmigung der Projektbudgtes muss daher manuell und systemfern durchgefüh
 Eine weitere Herausforderung stellt die eingeschränkte Anpassungsmöglichkeit der Public Cloud dar, wenn Unternehmen ihre spezifischen Geschäftsanforderungen abbilden möchten @ERP_Clean_Core. 
 
 Durch eine Standarderweiterung auf der #acr("BTP") kann die Verwaltung und Genehmigung ermöglicht werden @SAP_Guide.
-Dabei wird das SAP Build Tool auf der #acr("BTP")  genutzt um mithilfe des SAP Workflow Tools einen Workflow zu erstellen, der eine Genehmigungsprozessautomatisierung ermöglicht @ERP_Clean_Core.
+Dabei wird das SAP Build Process Automation Tool auf der #acr("BTP")  genutzt um mithilfe eines Workflows eine Genehmigungsprozessautomatisierung zu ermöglichen @ERP_Clean_Core.
 Mithilfe von Workflows können Geschäftsprozesse automatisiert, standardisiert und effizienter gestaltet werden @SAP_Workflow_Overview. Dabei können Aufgaben, Benachrichtigungen oder Berechtigungen automatisch in einer zuvor definierten Reihenfolge ausgeführt werden @SAP_Workflow_Overview. Diese Lösung bietet eine maßgebliche Optimierung des Projektbudget-Genehmigungsprozesses hinsichtlich der Entlastung der Mitarbeiter und der Effizienz @Workflow_source. 
  
 == Struktur der Arbeit
@@ -91,10 +91,7 @@ Die Arbeit schließt mit einer Zusammenfassung in Kapitel 7 ab. Hier werden nebe
 == Abgrenzung der Arbeit
 Gegenstand dieser Arbeit ist die Standarderweiterung hinsichtlich der Projektbudgetierung in SAP S/4HANA Public Cloud Version 2408. Darauffolgende Versionen können nicht berücksichtigt werden. Die beschriebenen Funktionaliäten sind bis auf kleinere Einschränkungen auf die SAP S/4HANA Private Cloud übertragbar.
 == Ziel und Gang
-Das Ziel dieser Arbeit ist es den Genehmigungsprozess von Projektbudgets in SAP S/4HANA Public Cloud detailliert zu analysieren und zu evaluieren. Dabei soll beurteilt werden, ob die Standarderweiterung den durch Experteninterviews und eine folgende qualitative Inhaltsanalyse nach Mayring erhobenen Anforderungen entspricht. 
-Nach der Erhebung und Analyse der Anforderungen soll die Standarderweiterung dann implementiert werden und der Aufwand der Implementierung dokumentiert und dargestellt werden. Das Ergebnis der Arbeit soll der Finance-Beratungsabteilung dazu dienen, eine möglichst optimierte, auf die Kundenbedürfnisse abgestimmte Entscheidungsfindung bereitzustellen und zusätzlich ein Bewusstsein dafür zu schaffen, wie die Standarderweiterung der Projektbudgetgenehmigung bei Public-Cloud Kunden gewinnbringend eingesetzt werden kann.
-
-//Forschungsfrage + Anpassen -> keine Inhaltsanalyse nach Mayring
+Das Ziel dieser Arbeit ist es den Genehmigungsprozess von Projektbudgets in SAP S/4HANA Public Cloud detailliert zu analysieren und zu evaluieren. Dabei soll beurteilt werden, ob die Standarderweiterung den durch Experteninterviews und eine folgende Anforderungsanalyse erhobenen Anforderungen entspricht. Um die Forschungsfrage, hinsichtlich der Anforderungen, beantworten zu können und eine Handlungsempfehlung abgeben zu können soll nach der Erhebung und Analyse der Anforderungen die Standarderweiterung dann implementiert werden und die Implementierung dokumentiert und dargestellt werden. Das Ergebnis der Arbeit soll der Finance-Beratungsabteilung dazu dienen, eine möglichst optimierte, auf die Kundenbedürfnisse abgestimmte Entscheidungsfindung bereitzustellen und zusätzlich ein Bewusstsein dafür zu schaffen, wie die Standarderweiterung der Projektbudgetgenehmigung bei Public-Cloud Kunden gewinnbringend eingesetzt werden kann.
 
 = Theoretische Grundlagen
 == Projektbudgetierung Grundlagen 
@@ -117,8 +114,6 @@ Vergleicht man die Definitionen, so fällt auf, dass in beiden Definitionen ein 
 Zu einem Projekt gehört ebenfalls das Projektbudget, welches ein wichtiges Element zur Steuerung von Projekten ist #cite(<Handbuch_Projektmanagement>, supplement: "S. 337").
 Unter einem Budget ganz allgemein versteht man "wertmäßige Plangrößen (z.B. Einzahlungen/Auszahlungen, Einnahmen/Ausgaben, Aufwendungen/Erträge, der Kosten/Erlöse)" #cite(<Handbuch_Projektmanagement>,supplement: "S. 337"). 
 Hingegen "die Budgetierung bezeichnet den Prozess der Erstellung, Verabschiedung und Kontrolle der Budgets sowie eventuelle Anpassungen" #cite(<Handbuch_Projektmanagement>,supplement: "S. 338").
-
-//Hier fehlen die Quellen du Dummkopf
 
 Im Rahmen der Projektbudgetierung werden für ein Projekt ein Gesamtbudget und Einzelbudgets aufgestellt, aufgeteilt, kontrolliert und evtl.  angepasst #cite(<Handbuch_Projektmanagement>,supplement: "S. 337").
 Die Projektbudgetierung stellt einen zentralen Bestandteil der Projektplanung dar und spezifiziert den Projektplan im Hinblick auf die erforderlichen Ressourcen #cite(<Handbuch_Projektmanagement>,supplement: "S. 337"). Dabei wird zwischen variablen und fixen Budgetkosten sowie verschiedenen Budgetkostenarten differenziert #cite(<Handbuch_Projektmanagement>,supplement: "S. 337").  Die Umwandlung fixer in variable Projektkosten führt dabei zu einer gesteigerten Flexibilität während des Projektverlaufs #cite(<Handbuch_Projektmanagement>,supplement: "S. 337").
@@ -164,14 +159,14 @@ Dies ermöglicht eine bessere Wartbarkeit und schnellere Updates, da die Integri
 Innerhalb des Projektmanagements unterscheidet man zwischen fremdfinanzierten (Kundenprojekte) und eigenfinanzierten Projekten (Gemeinkostenprojekte oder Investitionsprojekte) @Projektsystem_SAP_Help. Unter Gemeinkosten allgemein versteht man Kosten , die nicht direkt einem Produkt zugeordnet werden können #cite(<Handbuch_Erfolgsrechnung_Wertsteigerung>, supplement: "S. 257").
 Das #acr("PS") ist ein zentraler Bestandteil des #acr("ERP")-Systems von SAP und spielt eine wesentliche Rolle bei der Verwaltung von Projekten @Projektsystem_SAP_Help. Durch das Projektsystem PS der SAP können die Planung, die Steuerung und die Überwachung von komplexen Geschäftsprojekten erleichtert werden @Projektsystem_SAP_Help. Zudem können Module wie das #acr("FI"), das #acr("CO") und die #acr("MM") integriert werden @Projektsystem_Integration. Ein Projekt in SAP ERP-Systemen besteht aus einer Projektdefinition, einem Projektstrukturplan und Netzplänen #cite(<SAP_ERP-Praxishandbuch_Projektmanagement>, supplement: "S.95"). Dabei bildet die Projektdefinition den allgemeinen organisatorischen Rahmen ab, der Projektstrukturplan bildet den Aufbau des Projekts ab und die Netzplänen den Ablauf #cite(<SAP_ERP-Praxishandbuch_Projektmanagement>, supplement: "S.95"). Die Projektdefinition besteht aus keinem, einem oder beliebig vielen Teilprojekten, den sogenannten PSP-Elementen #cite(<SAP_ERP-Praxishandbuch_Projektmanagement>, supplement: "S.95").
 
-//hier weiter
+In der Abbildung (@Projektsystem_PSP-Elemente) ist ein Projekt mit dem Projektnamen SAP Implementierung dargestellt. Dieses Projekt ist in mehrere #acr("PSP")-Elemente untergliedert und strukturiert. Die einzelnen #acr("PSP")-Elemente werden dann budgetiert. 
 
 Der Ablauf eines Projekts im SAP PS kann in mehrere aufeinander aufbauende Phasen untergliedert werden. 
 Die erste Phase umfasst die Projektinitialisierung, dabei wird das Projekt definiert und die ersten Planungsdaten erfasst @Projektsystem_1NT_Process_Navigator. Dazu wird ein #acr("PSP") erstellt, der die zentralen Meilensteine und Arbeitsblöcke enthält @Projektsystem_1NT_Process_Navigator. Die "Arbeitsblocke" sind die letzendlichen PSP-Elemente, die genutzt werden, um das Projekt zu strukturieren @Projektsystem_1NT_Process_Navigator.
 Anschließend folgt die Projektplanung, wobei der Detaillierungsgrad erhöht wird und mit Ressourcen, Terminen und Kosten kalkuliert wird @Projektsystem_1NT_Process_Navigator. 
 Der nächste Schritt umfasst die eigentliche Projektdurchführung. Dabei werden die zuvor erstellten Projektpläne operativ umgesetzt @Projektsystem_1NT_Process_Navigator. Um eine effiziente Projektdurchführung zu ermöglichen, werden Aufgaben konkret zugewiesen und Fortschritte überwacht @Projektsystem_1NT_Process_Navigator. 
 Über die Gesamte Projektdauer ist das #acr("CO") unerlässlich, da das dieses dabei die Kosten, Termine und die Qualität überwacht @Projektsystem_1NT_Process_Navigator. Zudem werden in dieser Phase Abweichungsanalysen und das Risikomanagement durchgeführt.
-Der letzte Schritt ist der Projektabschluss @Projektsystem_1NT_Process_Navigator. Dieser erfolgt nach der Fertigstellung des Projekts @Projektsystem_1NT_Process_Navigator. In diesem Schritt erfolgt die letztendliche Kontrolle und Abrechnung. Zudem werden alle Ergebnisse dokumentiert und das Projekt wird formal beendet @Projektsystem_1NT_Process_Navigator.
+Der letzte Schritt ist der Projektabschluss @Projektsystem_1NT_Process_Navigator. Dieser erfolgt nach der Fertigstellung des Projekts @Projektsystem_1NT_Process_Navigator. In diesem Schritt erfolgt die letztendliche Kontrolle und Abrechnung. Zudem werden alle Ergebnisse dokumentiert und das Projekt wird formal beendet @Projektsystem_1NT_Process_Navigator. 
 
 
 // Grundlagen
@@ -188,11 +183,10 @@ Der letzte Schritt ist der Projektabschluss @Projektsystem_1NT_Process_Navigator
 <sap_portfolio_btp>
 
 === Grundlagen BTP //BTP Grafik in den Anhang 
-// Grundlagen direkt darunter oder extra Kapitel 
+
 Die #acr("BTP") der SAP ist eine Innovationsplattform im SAP-Ökosystem @SAP_BTP, welche für SAP-Anwendungen in der Cloud optimiert ist @SAP_BTP. Sie unterstützt Unternehmen bei digitalen Transformationsprozessen und hilft, innovative Geschäftsanwendungen zu entwicklen @SAP_BTP . Dabei stellt die #acr("BTP") eine Schnittstelle zwischen bestehenden Systemen und der Entwicklung neuer Technologien und Anwendungen dar (@sap_portfolio_btp). Dabei können Geschäftsprozesse miteinander verbunden, erweitert geplant und integriert werden @SAP_BTP. Durch die Möglichkeit einer Low-Code und Pro-Code Anwendungsentwicklung bietet die #acr("BTP") eine intuitive Entwicklungsumgebung, um die Geschäftsprozesse des Zielunternehmens beschleunigt aber trotzdem kontrolliert, in einer Sicheren Umgebung, zu entwicklen @SAP_BTP.
 
-Die #acr("BTP") stellt das SAP Build Tool bereit, welches mit Hilfe von KI die Entwicklung und Automatisierung von Anwendungen beschleunigt @SAP_Build. 
-
+Die #acr("BTP") stellt das SAP Build Tool bereit, welches mit Hilfe von KI die Entwicklung und Automatisierung von Anwendungen beschleunigt @SAP_Build.
 
 Die #acr("BTP") bietet vorkonfigurierte Datenmodelle, Integrationen von Workflows, #acr("API")s und #acr("KI") Services @SAP_BTP. Durch diese Dienste können neue Anwendungen bereitgestellt werden, Prozesse integriert, Aufgaben automatisiert, Anwendungen mit Chatbots versehen und Daten und deren Auswirkungen für das gesamte Unternehmen analysiert werden @SAP_BTP. Dadurch können Unternehmen ihre Prozesse optimieren, Innovationen vorantreiben und Wettbewerbsvorteile erlangen, da diese flexibel auf sich ändernde Marktanforderungen reagieren können @SAP_BTP.
 
@@ -200,7 +194,16 @@ Die #acr("BTP") basiert auf einem modularen Konzept und umfasst folgende Hauptbe
 
 === SAP Build Process Automation
 SAP Build bietet unterschiedliche Tools und Werkzeuge auf der #acr("BTP") an, die den Anwender bei der Entwicklung und Automatisierung von Anwendungen unterstützen @SAP_Build.
-Ein zentrales Element ist die Build Process Automation, die als SAP-Lösung zur Prozessautomatisierung dient. Sie unterstützt dabei Workflows und Bots, sowohl für SAP- als auch für Fremdsysteme @SAP_Build. Die Plattform ermöglicht es, Prozesse grafisch darzustellen und über einen KI-gestützten Editor, der Drag-and-Drop-Funktionalitäten bietet, Automatisierungen ohne Programmierkenntnisse zu erstellen und anzupassen @SAP_Build.
+Ein zentrales Element ist die Build Process Automation, die als SAP-Lösung zur Prozessautomatisierung dient. Sie unterstützt dabei Workflows und Bots, sowohl für SAP- als auch für Fremdsysteme @SAP_Build.
+Für die vorliegende Arbeit ist der Begriff Workflow relevant. 
+
+Der Begriff "Workflow" wird von der SAP wie folgt definiert:
+Unter einem Workflow versteht man die "Abfolge von miteinander verbundenen Aktivitäten oder Aufgaben, die ausgeführt werden, um ein bestimmtes Ergebnis zu erzielen" @SAP_Workflow. Aufeinanderfolgende zu bearbeitende Prozessschritten werden sobald die Workflow-Instanz aufgerufen wird abgearbeitet @SAP_Workflow.
+
+Betrachtet man den Begriff Workflow-Management so wird dieser als "Prozess der Digitalisierung einzelner Prozesse und die Verwaltung der Ergebnisse definiert" @SAP_Workflow. 
+
+Das Feature ermöglicht die Prozessautomatisierung durch die einfache Erstellung eines Workflows mit Hilfe von Drag and Drop - Funktionalitäten (siehe @Business_Process_Automation). Dabei können Formulare verwaltet, eine Entscheidungslogik verwaltet und Prozessabläufe erstellt, angepasst und organisiert werden @SAP_Build_Workflow. 
+ Die Plattform ermöglicht es, Prozesse grafisch darzustellen und über einen KI-gestützten Editor, der Drag-and-Drop-Funktionalitäten bietet, Automatisierungen ohne Programmierkenntnisse zu erstellen und anzupassen @SAP_Build. 
 
 #figure(caption:
 "SAP Business Process Automation Editor"
@@ -210,32 +213,6 @@ Ein zentrales Element ist die Build Process Automation, die als SAP-Lösung zur 
 <Business_Process_Automation>
 
 Durch die geringe Komplexität werden keine spezialisierten Entwickler benötigt, um Prozesse zu automatisieren, da dies durch die Low-Code/No-Code Entwicklung durch die entsprechenden Fachbereiche entwickelt werden kann (@Business_Process_Automation). Zudem werden vorkonfigurierte Szenarien bereitgestellt, um Standardabläufe automatisieren zu können @SAP_Build.
-
-//Wichtig: erklären, warum Workflow Management Tool und Warum SAP Build Process Automation 
-
-=== SAP Workflow Management Tool 
-Ein weiteres Feature der SAP Business Process Automation ist das SAP Workflow Management Tool @SAP_Build_Workflow. 
-
-//Grafik vereinfachen 
-#figure(caption:
-[SAP Workflow Management #cite(<Workflow_Management_Abbildung>)]
-, image(width: 15cm, "assets/workflow-management.png"
-))<workflow_management>
-
-Der Begriff "Workflow" wird von der SAP wie folgt definiert:
-Unter einem Workflow versteht man die "Abfolge von miteinander verbundenen Aktivitäten oder Aufgaben, die ausgeführt werden, um ein bestimmtes Ergebnis zu erzielen" @SAP_Workflow. Aufeinanderfolgende zu bearbeitende Prozessschritten werden sobald die Workflow-Instanz aufgerufen wird abgearbeitet @SAP_Workflow.
-
-Betrachtet man den Begriff Workflow-Mangement so wird dieser als "Prozess der Digitalisierung einzelner Prozesse und die Verwaltung der Ergebnisse definiert" @SAP_Workflow. Die @workflow_management zeigt das Potential des Workflow Managements auf. Dabei stehen auf der linken Seite die Applicationen für welche Workflows zur automatisierung verwendet werden können. Auf der rechten Seite der Abbildung werden die nutzbaren #acr("API")s gezeigt, und welche "Aufgaben" durch Workflows automatisiert werden können (@workflow_management).
-
-Das Feature ermöglicht die Prozessautomatisierung durch die einfache Erstellung eines Workflows mit Hilfe von Drag and Drop - Funktionalitäten (siehe @workflow_editor). Dabei können Formulare verwaltet, eine Entscheidungslogik verwaltet und Prozessabläufe erstellt, angepasst und organisiert werden @SAP_Build_Workflow. 
-
-//Link/Quelle einfügen
-#figure(caption:
-"SAP Workflow Editor"
-, image(width: 15cm,
-"assets/Workflow-2.png"
-))
-<workflow_editor>
 
 = Wissenschaftliche Methodiken
 // Inhaltsananalyse nach Myring
@@ -247,13 +224,14 @@ Das Feature ermöglicht die Prozessautomatisierung durch die einfache Erstellung
 
 == Auswahl der Methodiken 
 Zur methodischen Erarbeitung des vorliegenden Themas kommen verschiedene Vorgehensweisen in Betracht.
-Dazu gehören Experteninterviews, Umfragen, Qualitative Inhaltsanalyse nach Mayring, Anforderungsanalyse, Literaturrecherche und die Evaluierung.
+//Dazu gehören Experteninterviews, Umfragen, Qualitative Inhaltsanalyse nach Mayring, Anforderungsanalyse, Literaturrecherche und die Evaluierung.
+Ausgewählt wurden dabei die Literaturrecherche, Experteninterviews, die Anforderungsanalyse, die Implementierung und die Evaluierung. 
 
 Die theoretischen Grundlagen der Arbeit wurden anhand von einer systematischen Literaturrecherche ermittelt. Die Literaturrecherche eignet sich im Theorieteil der Arbeit dazu, relevante Grundlagen für die Standarderweiterung zu erarbeiten. Bei der Literaturrecherche unterscheidet man zwischen der unsystematischen Literaturrecherche und der systematischen Literaturrecherche. Bei der unsystematischen Literaturrecherche ist das Ziel, sich einen Überblick über ein Thema zu verschaffen, wenn noch keine konkrete Fragestellung entwickelt wurde @Literaturrecherche. 
 Im Gegensatz dazu eignet sich die systematische Literaturrecherche bei einer bereits entwickelten Fragestellung und damit bei einer Suche nach spezifischer Literatur zu einem konkreten Thema @Literaturrecherche. 
 
 Des Weiteren wurde eine Methodik für die eigentlichen Anforderungserhebung benötigt.
-Das erste Auswahlkriterium war die Frage nach einer qualitativen Vorgehensweise, da eine quantitative Vorgehensweise bei einer sehr neuen Standarderweiterung nur wenig Grundlage findet. 
+Das erste Auswahlkriterium war die Frage nach einer qualitativen Vorgehensweise, da eine quantitative Vorgehensweise bei einer spezifischen Standarderweiterung nur wenig Grundlage findet. 
 Ausgewählt wurde dabei die Durchführung von Experteninterviews zur Ermittlung von Anforderungen rund um die Projektbudgetierung in einem SAP S/4HANA Public Cloud System. Experteninterviews zählen dabei zu den qualitativen Forschungsmethoden #cite(<Experteninterviews>, supplement : "S.23"). Die gewonnenen Anforderungen wurden anschließend mit Hilfe einer Anforderungsanalyse herausgearbeitet.
 
 
@@ -275,34 +253,9 @@ Vor den Interviews wurden die Experten via E-Mail konkatiert und nach Ihrem Inte
 Nach #cite(<Experteninterview_Wassermann>)verfügen Experten "für bestimmte Wissensgebiete und einzelne Realitätsausschnitte über ein detailliertes und spezialisiertes Sonderwissen, das sie als Experten auszeichnet" #cite(<Experteninterview_Wassermann>, supplement: "S.16").
 Bei den befragten Personen handelt es sich um Experten, da diese über ein detailliertes und spezialisiertes Sonderwissen im Bereich Finance und Controlling verfügen.
 
-Zur besseren Lesbarkeit der Interviewtexte wurden Füllwörter entfernt und unstrukturierte Aussagen in ganze Sätze überführt, wobei der Inhalt unverändert bleibt. 
+Zur besseren Lesbarkeit der Interviewtexte wurden Füllwörter entfernt und unstrukturierte Aussagen in ganze Sätze überführt, wobei der Inhalt unverändert bleibt. Da bei der SAP eine Duzen innerhalb und oftmals auch auf den Projekten verbreitet ist, wurden auch die Interviewpartner/Interviewpartnerinnen per "Du" angesprochen. Die Interviewleitfäden befinden sich dabei im Anhang.
+//Interviewleitfäden in den Anhang 
 
-== Interviewleitfäden
-*Interviewleitfaden Berater*
-
-+ Können Sie bitte Ihre berufliche Rolle und Aufgabe beschreiben ?
-
-+ Wie genehmigen Unternehmen typischerweise das Projektbudget ohne ein Projektbudget-Genehmigungstool ?
-
-+ Welche Herausforderungen treten bei der aktuellen Handhabung der Projektbudgets auf ?
-
-+ Welche Relevanz hat ein digitales Projektgenehmigungstool bei Ihren Kunden ? 
-
-+ Welche Anforderungen/Kriterien sehen Sie bei Kunden für die Implementierung eines neuen Budgetgenehmigungsprozesses in SAP S/4HANA?
-
-
-
-*Interviewleitfaden Kunde*
-
-+ Können Sie bitte Ihre berufliche Rolle und Aufgabe beschreiben ?
-
-+ Wie erfolgt aktuell die Genehmigung von Projektbudgets in Ihrem Unternehmen und welche Herausforderungen gibt es dabei ?
-
-+ Welche Relevanz hat ein digitales Projektgenehmigungstool bei Ihnen ? 
-
-+ Welche Anforderungen haben Sie an einen Genehmigungsprozess für Projektbudgets ?
-
-+ Wer wird in Ihrem Unternehmen das Projektbudget genehmigen, welche Stakeholder sind am Genehmigungsprozess beteiligt ?
 
 = Anforderungsanalyse
 Um eine Anforderungsanalyse durchführen zu können ist zunächst relevant zu definieren, was man unter einer Anforderung versteht. Nach #cite(<pohl2015basiswissenRE>, supplement: "Kapitel 1.1.2" ) versteht man unter einer Anforderung "eine Bedingung oder Fähigkeit, die von einem Benutzer (Person oder System) zur Lösung eines Problems oder zur Erreichung eines Ziels benötigt wird". 
@@ -320,7 +273,7 @@ Um die Standarderweiterung wie im User Guide beschrieben implementieren zu könn
 
 #figure(caption: "Anforderungen BTP - In Anlehnung an den Konfigurationsguide", table(
   columns: (auto),
-  inset: 11pt,
+  inset: 10pt,
   align: left,
   text("SAP Application Runtime Service"),
   text("SAP Workflow Management or SAP Build Process Automation"),
@@ -336,18 +289,40 @@ image(width: 15cm,
 "assets/BudgetApproval.png"
 ))
 <budget_approval>
-In diesem Kapitel soll der Prozess der Projektbudgetgenehmigung beschrieben werden. Die Abbildung zeigt die Zielarchitektur für den Genehmigungsprozess (@budget_approval). 
-Dabei wird auf der linken Seite der Abbildung begonnen. Der zentrale Einstiegspunkt für Apps, auf mobilen und Desktop-Geräten in einem SAP-System, stellt das Fiori Launchpad dar @SAP_FLP_Einstiegspunkt. //Quelle 
+In diesem Kapitel soll der Prozess der Projektbudgetgenehmigung genauer erläutert werden. Die Abbildung zeigt die Zielarchitektur für den Genehmigungsprozess (@budget_approval). 
+Dabei wird auf der linken Seite der Abbildung begonnen. Der zentrale Einstiegspunkt für Apps, auf mobilen und Desktop-Geräten in einem SAP-System, stellt das Fiori Launchpad dar @SAP_FLP_Einstiegspunkt (@Einstiegspunkt_FLP_ED). 
+Im Fiori Launchpad stehen dem Enduser verschiedene Apps zur Verfügung. Die App, welche den Einstieg in die Projektbudget-Genehmigungsprozess darstellt, heißt "Import Financial Data, Submit for Approval".
+#figure(caption:
+[Fiori Launchpad Import Financial Data - Budget Approval (Eigene Darstellung)],
+image(width: 15cm,
+"assets/Fiori_Launchpad_Upload_Excel.jpg"
+))
+
+Die Voraussetzung, dass ein Projekt überhaupt budgetiert werden kann, ist die eigentliche Erstellung eines Projektes mit #acr("PSP")-Elementen, wie es im Kapitel 2.2.2 Grundlagen Projektsystem (PS) beschrieben wurde. Nachdem der Enduser die App "Import Financial Data, Submit for Approval" geöffnet hat kann dieser eine Templatedatei downloaden, um diese im Anschluss ausgefüllt hochladen zu können, um den eigentlichen Workflow des Genehmigungsprozesses zu starten. 
+#figure(caption:
+[Download Template - Budget Approval (Eigene Darstellung)],
+image(width: 15cm,
+"assets/Download_Template.jpg"
+))
+In dem Template müssen folgende Daten angegeben werden: 
+
+
+
+
+
+
+
 
 Über den Connectivity Service der #acr("BTP") wird die Verbindung mit dem Business Objekt im S/4HANA Public Cloud System hergestellt (@budget_approval). Dabei wird über #acr("API")s mit dem System kommuniziert um den Datentransfer zu ermöglichen. Der Identity Authentication Service sorgt dabei für eine sichere Verbindung über die Firewall des Systems.
 //Was versteht man unter einer Firewall ??
  Unter einer Firewall versteht man 
 
-Als Einstiegspunkt für den Anwender dient das Fiori Launchpad. 
-//Was versteht man unter dem Fiori Launchpad ?
-Die Voraussetzung für den Projektbudgetgenehmigungsprozess ist das Anlegen eines Projektes im SAP S/4-Systems. Um ein Projekt anlegen zu können müssen folgende Daten angegeben werden. 
-Der erste Schritt in dem Genehmigungsprozess ist der Download eines Excel-Dokuments 
-Auf dem Fiori Launchpad kann der End User in der App "Import Financial Plan Data" 
+
+
+
+
+
+
 
 
  Der Budgetgenehmigungsprozess ermöglicht Kunden Genehmigungen oder Überprüfungen des geplanten Budgets transparent und flexibel zu automatisieren @SAP_Guide. Dabei können mehrere Geschäftsanwender aus unterschiedlichen Organisationen beteiligt sein, bevor das eigentliche Budget im S/4HANA-System gepostet wird @SAP_Guide. 
@@ -360,6 +335,7 @@ Um die Standarderweiterung umzusetzen, werden im folgenden die erforderlichen Sc
 Der erste Schritt des Budgetgenehmigungsprozesses ist der Geschäftsanwender (Antragssteller) welcher eine Budgetvorlage in Excel hoch lädt und die Genehmigung des Budgets beantragt @SAP_Guide.
 //Excel beschreiben -> wie sieht das Template aus 
  Dabei ist der Einstiegspunkt das Fiori Launchpad, welches der zentrale Einsteigspunkt für Apps auf mobilen und Dektop-Geräten darstellt @SAP_Launchpad.
+ 
 
 //Über welche App kann die Excel hochgeladen werden ?? -> Import Financial Data -> App Als CSV Datei hochladen 
 
@@ -390,7 +366,7 @@ Trifft der Fall ein, dass die Anfrage von allen Genehmigungsgruppen oder Genehmi
 
 
 
-= Evaluierung der Ergebnisse 
+= Evaluierung/Auswertung der Ergebnisse 
 
 = Zusammenfassung
 
