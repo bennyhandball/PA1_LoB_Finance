@@ -2,12 +2,20 @@
   //figure(image("assets/Business Process Automation.jpg", width: 80%), caption: [Bildgenerator Aktivierung (Eigene Darstellung)])
   //Bilder im Anhang 
 
-    #figure(image("/PA/assets/Fiori Launchpad_Image.gif", width: 100%), caption: [Einstiegspunkt Fiori-Launchpad (Eigene Darstellung)]) <Einstiegspunkt_FLP_ED>
-    #figure(image("/PA/assets/Project_structured_PSP (1).jpg", width: 110%), caption: [Projektbeispiel mit PSP-Elementen (Eigene Darstellung)]) <Projektsystem_PSP-Elemente>
+    #figure(image("/PA/assets/Fiori Launchpad_Image.gif", width: 110%), caption: [Einstiegspunkt Fiori-Launchpad (Screenshot S/4HANA Public Cloud System)]) <Einstiegspunkt_FLP_ED>
+    #figure(image("/PA/assets/Project_structured_PSP (1).jpg", width: 110%), caption: [Projektbeispiel mit PSP-Elementen (Screenshot S/4HANA Public Cloud System)]) <Projektsystem_PSP-Elemente>
+
+    #figure(image("/PA/assets/Determine_Budget_Approver.jpg", width: 110%), caption: [Entscheidungstabelle-Budget Approval (Screenshot SAP Build Process Automation)]) <Entscheidungstabelle_Budget_Approver>
+
+    #figure(image("/PA/assets/CSV_Template.jpg", width: 110%), caption: [Ausgefülltes Excel-Template (Screenshot Excel Template )]) <CSV_Template>
+
+    #figure(image("/PA/assets/Destination_S4HANA.png", width: 110%), caption: [BTP-S/4HANA Destination (Screenshot BTP Cockpit)]) <BTP_Destination>
+
+    #figure(image("../../assets/SAP_Build_Monitoring.png", width: 110%), caption: [SAP Build Process Automation - Monitoring (Screenshot SAP Build Monitoring)]) <SAP_Build_Monitoring>
 
 #v(1em)
 #figure(
-strong("Interviewleitfaden Berater"), kind: raw,  supplement: "Interviewleitfaden"
+strong("Interviewleitfaden Berater"),  supplement: "Interviewleitfaden"
 )<InterviewLeitfaden_Berater>
 #text("
 •	Können Sie bitte Ihre berufliche Rolle und Aufgabe beschreiben ?
@@ -23,7 +31,7 @@ strong("Interviewleitfaden Berater"), kind: raw,  supplement: "Interviewleitfade
 
 #v(1em)
 #figure(
-strong("Interviewleitfaden Anoymisierter Kunde"), kind: raw,  supplement: "Interviewleitfaden"
+strong("Interviewleitfaden Anoymisierter Kunde"), supplement: "Interviewleitfaden"
 )<InterviewLeitfaden_Kunde>
 #text("
 •  Können Sie bitte Ihre berufliche Rolle und Aufgabe beschreiben ?
@@ -56,7 +64,6 @@ B: Könntest Du bitte Deine berufliche Rolle und Deine Aufgabe einmal beschreibe
 A: Also ich bin Public Cloud Business Process Beraterin und bin hauptsächlich auf Public Cloud Projekten unterwegs. Dabei bin ich im Bereich Controlling und Projektsysteme unterwegs und begleite da den Kunden bei den Implementierungen bis zum letzendlichen Go-Live und der Hypercare-Phase.
 
 B: Wie genehmigen Unternehmen typischerweise ihr Projektbudget ?
-
 
 A: Ja das ist immer sehr abhängig von dem Unternehmen. Manchmal haben Unternehmen bestimmte Genehmigungsprozesse, wo sie Excel Dateien nutzen und sich das per Mail zuweisen oder per Mail genehmigen. Dann gibt es auch Projekte oder Unternehmen die machen, das zum Beispiel mit Lotos Notes. Aber das stößt auch immer wieder an Grenzen beziehungsweise ist immer ineffizient, weil es immer bestimmte Schablonen auszugeben gilt, die manchmal auch umfangreich technisch nicht ausreichen.
 Für eine Genehmigung ist es immer schwierig, eine Dokumentation zu erstellen, die man vielleicht auch einem Wirtschaftsprüfer vorlegen kann, weil es dann auch manchmal Probleme gibt, die Genehmigungsprozesse in den Subsystemen oder manuelle Prozesse zu dokumentieren und auch die entsprechenden Vertreter zu definieren.

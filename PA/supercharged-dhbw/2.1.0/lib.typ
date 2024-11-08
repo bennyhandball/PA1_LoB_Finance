@@ -294,21 +294,7 @@
     }
   }
  
-  context {
-    let elems = query(figure.where(kind: raw), here())
-    let count = elems.len()
  
-    if (show-code-snippets and count > 0) {
-      outline(
-        title: [#heading(level: 3)[#if (language == "de") {
-          [Codeverzeichnis]
-        } else {
-          [Code Snippets]
-        }]],
-        target: figure.where(kind: raw),
-      )
-    }
-  }
   
   if (show-table-of-contents) {
     outline(title: [#if (language == "de") {

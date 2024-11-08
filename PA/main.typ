@@ -89,7 +89,7 @@ Die Arbeit schließt mit einer Zusammenfassung in Kapitel 7 ab. Hier werden nebe
 
 
 == Abgrenzung der Arbeit
-Gegenstand dieser Arbeit ist die Standarderweiterung hinsichtlich der Projektbudgetierung in SAP S/4HANA Public Cloud Version 2408. Darauffolgende Versionen können nicht berücksichtigt werden. Die beschriebenen Funktionaliäten sind bis auf kleinere Einschränkungen auf die SAP S/4HANA Private Cloud übertragbar.
+Gegenstand dieser Arbeit ist die Standarderweiterung hinsichtlich der Projektbudgetierung in SAP S/4HANA Public Cloud Version 2408. Darauffolgende Versionen können nicht berücksichtigt werden. Die beschriebenen Funktionaliäten sind bis auf kleinere Einschränkungen auf die SAP S/4HANA Private Cloud übertragbar. Nach dem User-Guide wird für die Implementierung der Standarderweiterung das Package mit den ready-to-use Komponenten genutzt, weshalb sich diese Arbeit auf dieses Package bezieht. Andere Packages können dabei nicht berücksichtigt werden.
 == Ziel und Gang
 Das Ziel dieser Arbeit ist es den Genehmigungsprozess von Projektbudgets in SAP S/4HANA Public Cloud detailliert zu analysieren und zu evaluieren. Dabei soll beurteilt werden, ob die Standarderweiterung den durch Experteninterviews und eine folgende Anforderungsanalyse erhobenen Anforderungen entspricht. Um die Forschungsfrage, hinsichtlich der Anforderungen, beantworten zu können und eine Handlungsempfehlung abgeben zu können soll nach der Erhebung und Analyse der Anforderungen die Standarderweiterung dann implementiert werden und die Implementierung dokumentiert und dargestellt werden. Das Ergebnis der Arbeit soll der Finance-Beratungsabteilung dazu dienen, eine möglichst optimierte, auf die Kundenbedürfnisse abgestimmte Entscheidungsfindung bereitzustellen und zusätzlich ein Bewusstsein dafür zu schaffen, wie die Standarderweiterung der Projektbudgetgenehmigung bei Public-Cloud Kunden gewinnbringend eingesetzt werden kann.
 
@@ -177,7 +177,7 @@ Der letzte Schritt ist der Projektabschluss @Projektsystem_1NT_Process_Navigator
 == Business Technology Platform (BTP)
 #figure(caption:
 "SAP cloud applications and SAP BTP"
-, image(width: 15cm,
+, image(width: 14cm,
 "assets/BTP001_2406_U2L2_01.png"
 ))
 <sap_portfolio_btp>
@@ -218,16 +218,10 @@ Das Feature ermöglicht die Prozessautomatisierung durch die einfache Erstellung
 Durch die geringe Komplexität werden keine spezialisierten Entwickler benötigt, um Prozesse zu automatisieren, da dies durch die Low-Code/No-Code Entwicklung durch die entsprechenden Fachbereiche entwickelt werden kann (@Business_Process_Automation). Zudem werden vorkonfigurierte Szenarien bereitgestellt, um Standardabläufe automatisieren zu können @SAP_Build.
 
 = Wissenschaftliche Methodiken
-// Inhaltsananalyse nach Myring
-// Inhaltsanalyse nach Kuckartz
-// Wichtig: Warum wurden folgende Methoden gewählt 
-
-// Gibt es eine wissenschaftliche Methode zur Implementierung 
 //*Aufzählung möglicher Methoden 
 
 == Auswahl der Methodiken 
 Zur methodischen Erarbeitung des vorliegenden Themas kommen verschiedene Vorgehensweisen in Betracht.
-//Dazu gehören Experteninterviews, Umfragen, Qualitative Inhaltsanalyse nach Mayring, Anforderungsanalyse, Literaturrecherche und die Evaluierung.
 Ausgewählt wurden dabei die Literaturrecherche, Experteninterviews, die Anforderungsanalyse, die Implementierung und die Evaluierung. 
 
 Die theoretischen Grundlagen der Arbeit wurden anhand von einer systematischen Literaturrecherche ermittelt. Die Literaturrecherche eignet sich im Theorieteil der Arbeit dazu, relevante Grundlagen für die Standarderweiterung zu erarbeiten. Bei der Literaturrecherche unterscheidet man zwischen der unsystematischen Literaturrecherche und der systematischen Literaturrecherche. Bei der unsystematischen Literaturrecherche ist das Ziel, sich einen Überblick über ein Thema zu verschaffen, wenn noch keine konkrete Fragestellung entwickelt wurde @Literaturrecherche. 
@@ -242,7 +236,6 @@ Ausgewählt wurde dabei die Durchführung von Experteninterviews zur Ermittlung 
 
 == Experteninterviews
 
-//Aufbau einer Frage zeigen (Wie werden solche Fragen in einem Interview aufgebaut )
 Experteninterviews lassen sich in drei Typen gliedern: strukturiert, semistrukturiert und unstrukturiert @Experteninterviews_Semistrukturiert. 
 Nach #cite(<Experteninterview_Wassermann>) ist ein semistrukturiertes, also leitfdengestütztes offenes Interview als Erhebungsinstrument zu empfehlen, da die zuvor definierten Fragen beantworten werden können, jedoch die Freiheit und Flexibilität besteht, weitere Nachfragen stellen zu können #cite(<Experteninterview_Wassermann>, supplement: "S.57"). 
 Hieran orientiert sich auch diese wissenschaftliche Arbeit. Dabei wurden Interviewleitfäden zur Orientierung definiert, von denen während des Gesprächs abgewichen werden kann. 
@@ -266,24 +259,27 @@ Um eine Anforderungsanalyse durchführen zu können ist zunächst relevant zu de
 Um im folgenden evaluieren zu können, ob die Standarderweiterung auf der #acr("BTP") den Anforderungen der Kunden und Berater entspricht um dann eine Handlungsempfehlung zu nennen, werden in diesem Kapitel Anforderungen aus den Experteninterviews abgeleitet und nach Relevanz priorisiert.
 
 == Auswertung der Experteninterviews
+Grundsetzlich sehen alle Experten eine hohe Relevanz in der Standarderweiterung durch den Projektbudgetgenehmigungsprozess, da alle Experten den manuellen, zeitaufwendigen Aufwand beschreiben, welcher sowohl für die Berater als auch den Kunden zu Herausforderungen in den Unternehmen führt (siehe @Interview_Aysegül_Sinik, @Interview_Nico_Rubach, @Interview_Kunde_Anonymisiert). 
+Deswegen sind sich alle Experten, sowohl Berater als auch der Kunde, einig, dass an oberster Stelle die Anforderung steht, dass der manuelle Prozess komplett durch den digitalen Prozess im SAP-System abgedeckt werden soll. Dabei sollen keine Nachteile im Zuge der digitalen Umsetzung des Genehmigungsprozesses entstehen und eine Zeitersparniss durch Steigerung der Effizienz und Abschaffung des manuellen Aufwands erreicht werden (siehe @Interview_Aysegül_Sinik, @Interview_Nico_Rubach, @Interview_Kunde_Anonymisiert). 
+//Warum die Nummerierung ?
+Eine weitere Anforderung an die Standarderweiterung ist die 
+Anpassbarkeit und Flexibilität des Projektbudgetgenehmigungsprozesses (siehe @Interview_Aysegül_Sinik, @Interview_Nico_Rubach, @Interview_Kunde_Anonymisiert). Dabei soll der digitale Prozess, nach Nico Rubach (@Interview_Nico_Rubach) an die Bedürfnisse des Kunden anpassbar sein, sodass dieser den eigenen Genehmigungsprozess abbilden kann. Eine weitere Anforderung stellt die Transparenz des Prozesses dar (@Interview_Aysegül_Sinik, @Interview_Nico_Rubach, @Interview_Kunde_Anonymisiert). Auch hierbei sind sich alle Experten einig, dass dies eine zentrale Anforderung darstellt. Durch die Transparenz des Prozesses kann dieser auf der einen Seite dem Kunden veranschaulicht werden, zum anderen kann der Kunde dann den Prozess auch überwachen und mögliche Fehler beheben. Hinsichtlich der Transparenz ist eine weitere Anforderung die Anpassbarkeit der Verantwortlichen Genehmigungsgruppen oder Personen (@Interview_Aysegül_Sinik, @Interview_Nico_Rubach, @Interview_Kunde_Anonymisiert). Dabei soll der Kunde die Verantwortlichen zuordnen können und somit auch einen Überblick über die Verantwortlichen haben. Nach Nico Rubach und Asyegül Sinik stellt die Dokumentation eine weitere Anforderung an die Standarderweiterung dar (@Interview_Nico_Rubach, @Interview_Aysegül_Sinik). Dabei ist laut Nico Rubach eine klare Dokumentation wichtig, um klar zu wissen, welche Systemanforderungen gegeben sein müssen, um die Standarderweiterung implementieren zu können (@Interview_Nico_Rubach). Nach Aysegül Sinik ist die Dokumentation relevant, um dem Kunden eine Anleitung zu bieten, wie der Kunde Genehmigungen erstellen kann und wen man für diesen Prozess benötigt (@Interview_Aysegül_Sinik). Für die Berater Nico Rubach und Aysegül Sinik stellt ein Standartisiertes Tool eine weitere Anforderung dar, da somit nach Nico Rubach die Heterogenität hinsichtlich der Wege der Genehmigung und die Heterogenität der Dateiformate im Genehmigungsprozess verhindert wird und es somit eine zentrale Zugriffsfläche für den Projektbudgetgenehmigungsprozess gibt (@Interview_Nico_Rubach). Für Aysegül Sinik ist ebenfalls die einfach Umsetzung und damit verbunden auch die einfache Benutzung durch beispielsweise Funktionsbausteine eine Anforderung an die Standarderweiterung (@Interview_Aysegül_Sinik) Für den Kunden ist das Umbuchen von einem PSP-Element auf ein anderes PSP-Element ebenfalls eine Anforderung an die Standarderweiterung, um nicht genutzes Budget weiter zu verbuchen (@Interview_Kunde_Anonymisiert). Die letzte Anforderung stellt nach Nico Rubach die Kostentransparenz dar, damit der Kunde eine Kosten-Nutzen Abwägung erstellen kann und somit eine Handlungsempfehlung ableiten kann (@Interview_Nico_Rubach). 
+#figure(caption:
+[Priorisierte Anforderungen - Budget Approval (Eigene Darstellung))],
+image(width: 18cm,
+"assets/Anforderungen_Priorisiert.png"
+))
+<Anforderungen>
+Die Abbildung (@Anforderungen) zeigt die aus den Experteninterviews resultierenden Anforderungen an die Standarderweiterung. Dabei werden vier Anforderungen mit hoher Priorität festgestellt, da diese  durch alle Experten genannt werden. Die Dokumentations-Anforderung wird mit einer mittleren Priorität erhoben, da sich die beiden Berater für diese Anforderung aussprechen. Des weiteren werden vier Anforderungen festgestellt, die von jeweils einem Experten oder einer Expertin genannt werden. 
+
+Die erhobenen Anforderungen sollen durch die Implementierung analysiert werden um anschließend eine Handlungsempfehlung abgeben zu können. 
+
+Da es sich bei der vorliegenden Erweiterung um eine Erweiterung auf dem Business Accelerator Hub handelt, ist diese Erweiterung nicht für die breite Massen an Kunden bestimmt. Aus diesem Grund bestehen für diese Standarderweiterung keine Preise zur Verfügung, weshalb die Anforderung hinsichtlich der Kostentransparenz nicht analysiert werden kann. Dies gilt ebenfalls für die Anforderung der Standardisierung der Erweiterung. 
+
+Die Anforderung "Einfachheit der Benutzung" ist supjektiv und bedarf einer individuellen Beurteilung. Zudem kann diese Anforderung nicht anhand der Implementierung beurteilt werden. 
 
 
 = Implementierung der Standarderweiterung
-Um die Standarderweiterung implementieren zu können, stellt die SAP einen Configuration & User Guide auf dem Business Accelerator Hub zur verfügung @SAP_Guide. 
-In diesem Configuration & User Guide findet man eine Schritt für Schritt Anleitung, um die Standarderweiterung implementieren zu können. 
-
-Um die Standarderweiterung wie im User Guide beschrieben implementieren zu können, ist ein SAP S/4HANA Public Cloud System, sowie ein Subaccount auf der #acr("BTP") nötig. Über das #acr("BTP")-Cockpit kann der Subaccount verwaltet und konfiguriert werden. Um die Standarderweiterung implementieren und nutzen zu können sind folgende Services und Applikationen notwendig: 
-
-#figure(caption: "Anforderungen BTP - In Anlehnung an den Konfigurationsguide", table(
-  columns: (auto),
-  inset: 10pt,
-  align: left,
-  text("SAP Application Runtime Service"),
-  text("SAP Workflow Management or SAP Build Process Automation"),
-  text("SAP Cloud Portal Service / SAP Launchpad Service"),
-  text("SAP Document Management Service, Integration option"),
-  text("SAP Cloud Identity Services - Identity Authentication (optional)"),
-))<btp-voraussetzungen>
 
 == Übersicht SAP S/4HANA Extension - Budget Approval 
 #figure(caption:
@@ -345,52 +341,101 @@ Um die Verbindung zwischen der #acr("BTP") und dem Business Objekt im S/4HANA Pu
 
 
 == Implementierung Budget Approval
+Um die Standarderweiterung implementieren zu können, stellt die SAP einen Configuration & User Guide auf dem Business Accelerator Hub zur verfügung @SAP_Guide. 
+In diesem Configuration & User Guide findet man eine Schritt für Schritt Anleitung, um die Standarderweiterung implementieren zu können. 
+
+Um die Standarderweiterung wie im User Guide beschrieben implementieren zu können, ist ein SAP S/4HANA Public Cloud System, sowie ein Subaccount auf der #acr("BTP") nötig. Über das #acr("BTP")-Cockpit kann der Subaccount verwaltet und konfiguriert werden. Um die Standarderweiterung implementieren und nutzen zu können sind folgende Services und Applikationen notwendig: 
+
+#figure(caption: "Anforderungen BTP - In Anlehnung an den Konfigurationsguide", table(
+  columns: (auto),
+  inset: 10pt,
+  align: left,
+  text("SAP Application Runtime Service"),
+  text("SAP Workflow Management or SAP Build Process Automation"),
+  text("SAP Cloud Portal Service / SAP Launchpad Service"),
+  text("SAP Document Management Service, Integration option"),
+  text("SAP Cloud Identity Services - Identity Authentication (optional)"),
+))<btp-voraussetzungen>
 Basierend auf dem User Guide zur Umsetzung der Projektbudgetgenehmigung, erklärt das folgende Kapitel in verkürzter Form die Implementierung der Standarderweiterung. Der User Guide befindet sich dabei im Anhang der Arbeit. 
 Um die Standarderweiterung umzusetzen, werden im folgenden die erforderlichen Schritte aufgezeigt.Im #acr("BTP")-Cockpit gibt es die Möglichkeit "Destinations" anzulegen. Legt man eine Destination erfolgreich an, so stellt dies die Verbindung zu einem bestimmten Endpunkt dar. Dabei werden die benötigten Informationen und Einstellungen in der "Destination" gespeichert. Um die Standarderweiterung nutzen zu können sind drei grundlegende Destinations notwendig. 
 
 Zunächst muss eine Verbindung zwischen der #acr("BTP") und dem S/4HANA Public Cloud Zielsystem hergestellt werden. Da es sich hierbei um eine Verbindung über das Internet handelt, wird hier das #acr("HTTP")-Protokoll benutzt. 
-Eine beispielhafte Konfiguration einer Destination kann aus (@BTP_Destination) entnommen werden. Für diese Destination ist ein spezieller technischer User zur Authentifizierung mit Name und Passwort nötig. Dafür wurde innerhalb des SAP S/4HANA Public Cloud Systems ein "Communication Arrangement (Kommunikationsvereinbarung)", als Gegenstürck zu dem #acr("BTP")-Endpunkt eingerichtet. Diese Konfigurationseinheit ist für die Kommunikation zwischen Systemen verantwortlich. //Quelle
+Eine beispielhafte Konfiguration einer Destination kann aus (@BTP_Destination) entnommen werden. Für diese Destination ist ein spezieller technischer User zur Authentifizierung mit Name und Passwort nötig. Dafür wurde innerhalb des SAP S/4HANA Public Cloud Systems ein "Communication Arrangement (Kommunikationsvereinbarung)", als Gegenstürck zu dem #acr("BTP")-Endpunkt eingerichtet. Diese Konfigurationseinheit ist für die Kommunikation zwischen Systemen verantwortlich. 
 Das Communication Arrangement ist eine zentrale Stelle, an denen die Einstellungen für den Austausch und Zugriff von Daten zwischen Systemen vorgenommen werden. Dafür steht ein spezielles "Communication Scenario" zur Verfügung, welches die Zigriffsrollen und die Freigabe der Endpunkte steuert und beinhaltet. 
 
 Eine weitere Verbindung muss zu dem SAP Build Process Automation Service aufgebaut werden. Da es sich hierbei um ebenfalls um eine Verbindung über das Internet handelt, wird auch hier das #acr("HTTP") genutzt. Die Verbindung wird dabei zwischen der #acr("BTP") und dem SAP Build Process Automation #acr("API")-Endpunkt aufgebaut.
 
-Die letzte der drei Destinations 
+Die letzte der drei Destinations ist die Business Rules Destination. Dabei werden  
+
+//Destinations beschreiben
 
 
-Wurden alle relevanten Destinations eingerichetet und alle sonstigen Anforderungen aus dem User-Guide erfüllt sind,so kann das Content-Package aus dem SAP Build Process Automation Store heruntergeladen und in SAP Build Process Automation als Projekt angelegt werden werden. Bei dem Package handelt es sich um ein ready-to-use Package, welches einen "Rule-Service" beinhaltet, indem die Projekt Budget-Genehmiger Gruppen festgelegt werden können. Dies erfolgt wie bereits beschreiben in Form einer Entscheidungstabelle (@Entscheidungstabelle_Budget_Approver). Des weiteren beinhaltet das Package den eigentlichen Workflow, der die Prozessautomatisierung ermöglicht,ein Projekt Budget Dashboard, und das Projektbudgetgenehmigungs-UI. Diese Applikation muss anschließend heruntergeladen und entpackt werden, um diese dann in der App "Business Application Studio" zu öffnen und innerhalb der Cloud Foundry Umgebung bereitzustellen. Sobald der Deploy-Prozess abgeschlossen ist, kann der Zugriff über die App Build Workzone hergestellt werden.  
+Wurden alle relevanten Destinations eingerichetet und alle sonstigen Anforderungen aus dem User-Guide erfüllt sind,so kann das Content-Package aus dem SAP Build Process Automation Store heruntergeladen und in SAP Build Process Automation als Projekt angelegt werden. Bei dem Package handelt es sich um ein ready-to-use Package, welches einen "Rule-Service" beinhaltet, indem die Projekt Budget-Genehmiger Gruppen festgelegt werden können. Dies erfolgt wie bereits beschreiben in Form einer Entscheidungstabelle (@Entscheidungstabelle_Budget_Approver). Des weiteren beinhaltet das Package den eigentlichen Workflow, der die Prozessautomatisierung ermöglicht,ein Projekt Budget Dashboard, und das Projektbudgetgenehmigungs-UI @SAP_Guide. Diese Applikation muss anschließend heruntergeladen und entpackt werden, um diese dann in der App "Business Application Studio" zu öffnen und innerhalb der Cloud Foundry Umgebung bereitzustellen. Die Cloud Foundry Umgebung (Laufzeitdienst) ermöglicht dabei die Entwicklung von neuen Geschäftsanwendungen und -services und unterstützt mehrere Laufzeiten, Programmiersprachen, Bibliotheken und Services @Cloud_Foundry_Environment.  Sobald der Deploy-Prozess abgeschlossen ist, kann der Zugriff über die App Build Workzone hergestellt werden.  
+
+= Evaluierung/Auswertung der Ergebnisse
+In diesem Kapitel soll anhand der Impelementierung überprüft werden, ob die Standarderweiterung den erhobenen Anforderungen entspricht oder ob dies nicht der Fall ist. Die auf Grundlage der Implemementierung zu überprüfenden Anforderungen werden im Folgenden einzeln betrachtet und bewertet.
+
+\
+*1.  Vollständige Abdeckung des manuellen Prozesses*
+
+Im Kapitel 5.1. Übersicht SAP S/4HANA Extension - Budget Approval wurde der durch die Standarerweiterung abgedeckte Prozess erläutert. Dabei deckt die Standarderweiterung den Prozess von der Beantragung des Projektbudget durch das Hochladen der Excel bis hin zur eigentlichen Budgetentscheidung und der Freigabe des Budgets im System den kompletten Prozess ab. Dieser Prozess kann jedoch wie im Experteninterview (@Interview_Nico_Rubach) genannt bei Unternehmen spezialisiert sein und anderst aussehen. Deshalb kann gesagt werden, dass dieses Kriterium für den Standardprozess erfüllt ist aber die individualisierten Prozesse der Unternehmen nicht abdecken werde können.
+
+\
+*2. Anpassbarkeit und Flexibilität*
+
+Da sich die vorliegende Arbeit auf das ready-to-use Package bezieht, ist dabei das Template vorgegeben. Im @SAP_Guide wird von der Möglichkeit gesprochen eine neue Prozess-Variante anzulegen, was jedoch mit dem ready-to-use Package nicht möglich ist. Deshalb ist diese Anforderung nicht erfüllt. Der Prozess kann deshalb nicht flexibel angepasst werden. 
+\
+\
+*3. Transparenz des Prozesses*
+
+Der Projektbudgetgenehmigungsprozess kann durch das Visibility Scenario und das Monitoring-Feature über die App SAP Build Process Automation überwacht werden. Dabei wird ein Log-Protokoll dokumentiert, welches alle Schritte dokumentiert und somit den Prozess transparent darstellt. Die (@SAP_Build_Monitoring) zeigt beispielhaft das Monitoring eines Projektbudgetgenehmigungsprozesses.
+Der Prozess ist deshalb transparent abbildbar, wodurch diese Anforderung erfüllt ist.
 
 
+\
+*4. Genehmigungsgruppen Definition*
 
+Die Genehmigungsgruppen können wie in der (@Entscheidungstabelle_Budget_Approver) definiert werden. Dabei können einzelne verantwortliche Personen oder verantwortliche Gruppen definiert werden, die dann dazu berechtigt sind das Projektbudget zu genehmigen oder dieses abzulehnen. Daher können die Genehmigungspersonen oder Genhemigungsgruppen definiert und flexibel angepasst werden, wodurch die Anforderung erfüllt ist.
 
+\
+*5. Dokumentation*
 
+Wie bereits zuvor beschrieben weicht der User-Guide von der eigentlichen Impelementierung ab. Das SAP-Build Process Automation UI wird dabei nicht wie beschrieben vollständig unterstützt, wodurch bei dem eigentlichen Genehmigungs-Ui auf das ältere SAP Workflow Management Tool Ui umgestiegen werden musste. Zudem war die Implementierung nicht komplett aus dem User-Guide übernehmbar, dies spricht für eine veraltete Version des User-Guides, was sich im Nachhinein als richtig darstellt. Die Inhalte zur Implementierung mussten dabei durch eine Literaturrecherche und SAP-Help Seiten ergänzt werden. Daher wird diese Anforderung hinsichtlich der Implementierung nicht erfüllt. Die Dokumentation bei der Kundenimplementierung kann dabei nicht bewertet werden.
 
+\
+*6. Umbuchbarkeit der PSP-Elemente*
 
-
-
-
-
-
-
-
-
-
-//ASXRgrQRAPXlMk>VXTfida9scAoXJtgAunyAvRmc
-//https://my300470.s4hana.ondemand.com
-
-//Vorgaben, die festgelegt wurden (von der Abteilung vorgegeben -> Experiment unter den Rahmenbedingungen (Erweiterbar) bewertet //werden muss und das wird im Laufe des Experiments überprüft"
-
-
-
-= Evaluierung/Auswertung der Ergebnisse 
+Die letzte Anforderung hinsichtlich der Umbuchbarkeit der #acr("PSP")-Elemente kann nicht durch den Umfang der Standarderweiterung mit dem ready-to use Package abgedeckt werden. Deshalb ist diese Anforderung nicht erfüllt.
 
 = Zusammenfassung
 
 == Fazit
-Die vorliegende Arbeit und die Forschungsfrage zeilen darauf ab, eine Handlungsempfehlung zu treffen und zu evaluieren, ob die Anforderungen aus den Experteninterviews durch die Standardeweiterung erfüllt 
+Da eine Projektbudgetgenehmigung im Standardumfang des S/4HANA Public Cloud Systems nicht vorhanden ist, bietet die vorliegende Standarderweiterung eine technische Lösung, um die Funktion einer Projektbudgetgenehmigung in einem S/4HANA Public Cloud System zu implementieren.
+
+Die vorliegende Arbeit ging der Frage nach "Entspricht die Standarderweiterung den durch Experteninterviews erhobenen Anforderungen". Für die Beantwortung wurde eine qualitative Untersuchung mithilfe von Experteninterviews durchgeführt. Aus den Resultaten der Interviews wurden Anforderungen abgeleitet und diese anhand der Impelementierungsergebnisse überprüft. Dadurch kann eine  Handlungsempfehlung getroffen werden.
+
+ Dabei werden drei der vier hoch priorisierten Anforderungen als erfüllt eingestuft. Die Anforderung mit der mittleren Priorität wurde als nicht erfüllt eingestuft. Des weiteren konnten die vier Anforderungen mit einer niedrigen Priorität nicht durch den reinen Implementierungsprozess beurteilt werden. 
+
+Die Ergebnisse lassen schlussfolgern, dass die Erweiterung zum Zeitpunkt dieser Arbeit nicht den Anforderungen der Kunden und Berater gerecht wird. Deshalb sollte die Lösung nicht auf Kundenprojekten eingesetzt werden. Insbesondere das fehlende SAP Build Process Automation UI ist ein weiterer Punkt, der gegen die Nutzung der Standarderweiterung spricht. Jedoch bietet sie ein Konzept das weiterentwickelt werden kann, um weiteren Anforderungen gerecht zu werden und um weitere Funktionen zu integrieren.
+
 
 == Kritische Reflexion der Arbeit 
+Sowohl auf Seiten der Kunden und auf Seiten der Berater besteht ein Bedürfniss nach einem Projektbudgetgenehmigungsprozess (siehe @Interview_Aysegül_Sinik, @Interview_Nico_Rubach, @Interview_Kunde_Anonymisiert). Da die Standarderweiterung in der Beratungsabteilung auf wenig Vorerfahrung stoßt und es zu der Standarderweiterung keine weiteren Quellen (außer den User-Guide) gibt, bestand die Schwierigkeit darin, die Implementierung mit dem User Guide und der SAP-Help Dokumentation durchzuführen. Da der User-Guide nicht auf dem aktuellsten Stand ist, waren die Recherche nach der Umsetzung mit den weiterentwickelten Funktionalitäten aufwendig. 
 
+Zudem bestand die Schwierigkeit darin, ein möglichst repräsentatives Ergebnis der Anforderungsüberprüfung darzustellen und die Anforderungen zu bewerten. Bei der Bewertung der Anforderungen wurde die eigentliche Impelementierung als Bewertungsgrundlage zu hilfe gezogen. Um weitere Anforderungen zu überprüfen, müssten weitere Bewertungsinstrumente genutzt werden, um die Anforderungen detaillierter und umfassender beurteilen zu können. 
 
 == Ausblick
-Da eine Projektbudgetgenehmigung im Standardumfang des S/4HANA Public Cloud Systems nicht vorhanden ist, bietet die vorliegende Standarderweiterung eine technische Lösung, um die Funktion einer Projektbudgetgenehmigung in einem S/4HANA Public Cloud System zu implementieren. Die Standarderweiterung kann jedoch nicht alle Anforderungen der Kunden und Berater erfüllen, jedoch bietet die Standarderweiterung ein Konzept, das genutzt werden kann, um eine Projektbudgetgenehmigung 
+Das Bedürfniss nach einem Projektbudgetgenehmigungsprozess wird auch in Zukunft ein präsantes Thema bleiben. Aktuell bietet SAP mit der der SAP S/4HANA Public Cloud keinen Projektbudgetgenehmigungsprozess im Standardumfang an. Die Standarderweiterung kann aktuell auch nicht auf Kundenprojekten genutzt werden, da diese den Anforderungen der Kunden nicht entspricht. In zukunft wäre eine weiterentwickelte Standarderweiterung von hoher Relevanz. Diese Standarderweiterung könnte dann in den Standardumfang der S/4HANA Public Cloud aufgenommen werden und weitere Anpassungsmöglichkeit ermöglichen. Zudem könnte die Standarderweiterung in weitere Systeme der SAP integriert werden und weitere Anforderungen der Kunden und Berater erfüllen, um einen optimierten Projektbudgetgenehmigungsprozess zu ermöglichen. 
 
+
+//ist alles im Präsens geschrieben ?
+//Sind alle Quellen richtig 
+//Rechtschreibung und Grammatik 
+//Formatierung 
+//Destination beschreiben
+//Plankategorie erklären 
+// Einverständniss Experteninterviews 
+// 
+// 
+// ASXRgrQRAPXlMk>VXTfida9scAoXJtgAunyAvRmc
+//https://my300470.s4hana.ondemand.com
