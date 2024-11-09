@@ -112,8 +112,8 @@
   }
  
   // save heading and body font families in variables
-  let body-font = "Times Roman"
-  let heading-font = "Times Roman"
+  let body-font = "Times New Roman"
+  let heading-font = "Times New Roman"
   
   // customize look of figure
   set figure.caption(separator: [ --- ], position: bottom)
@@ -308,7 +308,7 @@
     print-acronyms(language, acronym-spacing)
   }
  
-  set par(justify: true, leading: 18pt)
+  set par(justify: true, leading: 1.5em)
   show par: set block(spacing: 2em)
  
   if (show-abstract and abstract != none) {
