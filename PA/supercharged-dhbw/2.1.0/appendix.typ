@@ -7,12 +7,13 @@
 
     #figure(image("/PA/assets/Determine_Budget_Approver.jpg", width: 110%), caption: [Entscheidungstabelle-Budget Approval (Screenshot SAP Build Process Automation)]) <Entscheidungstabelle_Budget_Approver>
 
-    #figure(image("/PA/assets/CSV_Template.jpg", width: 110%), caption: [Ausgefülltes Excel-Template (Screenshot Excel Template )]) <CSV_Template>
-
     #figure(image("/PA/assets/Destination_S4HANA.png", width: 110%), caption: [BTP-S/4HANA Destination (Screenshot BTP Cockpit)]) <BTP_Destination>
 
     #figure(image("../../assets/SAP_Build_Monitoring.png", width: 110%), caption: [SAP Build Process Automation - Monitoring (Screenshot SAP Build Monitoring)]) <SAP_Build_Monitoring>
 
+    #figure(image("../../assets/Excel_Download.jpg", width: 13%), caption: [Excel Template - Budget Approval (Screenshot Excel.csv)]) <Excel_Datei>
+
+\
 #v(1em)
 #figure(
 strong("Interviewleitfaden Berater"),  supplement: "Interviewleitfaden"
@@ -44,6 +45,7 @@ strong("Interviewleitfaden Anoymisierter Kunde"), supplement: "Interviewleitfade
 
 •	Wer wird in Ihrem Unternehmen das Projektbudget genehmigen, welche Stakeholder sind am Genehmigungsprozess beteiligt ?
 ")
+#pagebreak()
 
 
 
@@ -91,7 +93,9 @@ A: Also für uns oder für mich in der Umsetzung ist natürlich, dass wir weites
 B: Vielen Dank, dass war es auch schon, vielen Dank für die Einblicke 
 A: Gerne !
 
+
 ")
+#pagebreak()
 #v(1em)
 #figure(
 strong("Experteninterview (Berater Nico Rubach)"), kind: raw,  supplement: "Interview"
@@ -130,6 +134,7 @@ B: Vielen Dank, dass wae es auch schon, vielen Dank für die Einblicke
 N: Sehr gerne. 
 
 ")
+#pagebreak()
 
 #v(1em)
 #figure(
@@ -156,15 +161,11 @@ B: Welche Relevanz hätte ein digitales Genehmigungstool bei euch ?
 K: So ein Tool würde den Prozess natürlich total einfach machen, weil im Endeffekt angenommen wir haben ein globales Projekt, dann kann das Projekt budgetiert werden und laufen die Ist-Kosten dagegen. Das heißt wir müssten eigentlich direkt eine Art Tracking haben, was kaum manuellen Aufwand erfordern würde. Dafür müsseten wir uns auch nicht um die Datenbeschaffung und das Reporting kümmern. Die Analyse und Steuerung der Budgetierung wäre dann auch deutlich einfacher. 
 Also hätte so ein Tool eine große Relevanz meiner Meinung nach.
 
-
-
 B: Welche Herausforderungen habt ihr an einen Genehmigungsprozess für Projektbudgets. 
 
 K: Eine Anforderung wäre, dass man den internen Prozess sauber abbilden kann. Wenn dieses Kriterium erfüllt ist wäre die nächste Anforderung, dass man Budgets hin und her shiften kann, also dass das Budget nicht starr ist und man das Budget von einem PSP-Element auf ein anderes Element transferieren kann. Dafür ist die Transparenz ebenfalls entscheident, dass man sieht wo sich der Prozess gerade befindet. Ein Phasentracking wäre auch eine weitere Anforderung. Das heißt, das Budget sollte von einer Phase zu einer anderen Phase transferierbar sein. 
 
-
 B: Wer ist bei euch im Unternehmen für die Genehmigung des Projektbudgets verantwortlich, sprich welche Stakeholder sind an dem Genehmigungsprozess überhaupt beteiligt ?
-
 
 K: Das ist abhängig davon, wie die Budgethöhe ist, aber letztendlich muss es immer über den C Level gehen, also gerade die große Projekte gehen über den C Level. Sprich Betriebs und Bereichsleiter sind eigentlich immer beteiligt. 
 
