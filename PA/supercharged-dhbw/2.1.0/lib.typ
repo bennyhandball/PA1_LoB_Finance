@@ -242,6 +242,15 @@
       date-format
     )
   }
+
+  set par(justify: true, leading: 1.5em)
+  show par: set block(spacing: 2em)
+ 
+  if (show-abstract and abstract != none) {
+    align(center + horizon, heading(level: 1, numbering: none)[Abstract])
+    text(abstract)
+  }
+
   if (show-gender-equality-notice) {
     gender-equality-notice(
       authors,
@@ -265,18 +274,22 @@
   context {
     let elems = query(figure.where(kind: image), here())
     let count = elems.len()
-    
+  
+
     if (show-list-of-figures and count > 0) {
       outline(
         title: [#heading(level: 3)[#if (language == "de") {
-          [Abbildungsverzeichnis]
+         [Abbildungsverzeichnis]
         } else {
           [List of Figures]
         }]],
         target: figure.where(kind: image),
+  
+      
       )
     }
   }
+  
  
   context {
     let elems = query(figure.where(kind: table), here())
@@ -294,7 +307,8 @@
     }
   }
  
- 
+ set par(justify: true, leading: 1em)
+  show par: set block(spacing: 2em)
   
   if (show-table-of-contents) {
     outline(title: [#if (language == "de") {
@@ -311,10 +325,10 @@
   set par(justify: true, leading: 1.5em)
   show par: set block(spacing: 2em)
  
-  if (show-abstract and abstract != none) {
-    align(center + horizon, heading(level: 1, numbering: none)[Abstract])
-    text(abstract)
-  }
+  // if (show-abstract and abstract != none) {
+  //   align(center + horizon, heading(level: 1, numbering: none)[Abstract])
+  //   text(abstract)
+  // }
   
   
   // reset page numbering and set to arabic numbering

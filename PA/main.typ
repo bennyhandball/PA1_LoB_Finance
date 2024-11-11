@@ -6,6 +6,7 @@
 #import "supercharged-dhbw/2.1.0/titlepage.typ": *
 #import "acronyms.typ": acronyms
 #import "supercharged-dhbw/2.1.0/appendix.typ": appendix
+#import "abstract.typ": abstract
 
 
 #show: supercharged-dhbw.with(
@@ -28,6 +29,7 @@
   at-university: false, // if true the company name on the title page and the confidentiality statement are hidden
   bibliography: bibliography("sources.bib"),
   appendix: appendix,
+  abstract: abstract,
   date: datetime.today(),
   language: "de", // en, de
   supervisor: (
@@ -188,7 +190,7 @@ Innerhalb des Projektmanagements unterscheidet man zwischen fremdfinanzierten (K
 Das #acr("PS") ist ein zentraler Bestandteil des #acr("ERP")-Systems von SAP und spielt eine wesentliche Rolle bei der Verwaltung von Projekten @Projektsystem_SAP_Help. Durch das Projektsystem PS der SAP können die Planung, die Steuerung und die Überwachung von komplexen Geschäftsprojekten erleichtert werden @Projektsystem_SAP_Help. Zudem können Module wie das #acr("FI"), das #acr("CO") und die #acr("MM") integriert werden @Projektsystem_Integration. Ein Projekt in SAP ERP-Systemen besteht aus einer Projektdefinition, einem Projektstrukturplan und Netzplänen #cite(<SAP_ERP-Praxishandbuch_Projektmanagement>, supplement: "S.95"). Dabei bildet die Projektdefinition den allgemeinen organisatorischen Rahmen ab, der Projektstrukturplan bildet den Aufbau des Projekts ab und die Netzpläne den Ablauf ab #cite(<SAP_ERP-Praxishandbuch_Projektmanagement>, supplement: "S.95"). Die Projektdefinition besteht aus keinem, einem oder beliebig vielen Teilprojekten, den sogenannten PSP-Elementen #cite(<SAP_ERP-Praxishandbuch_Projektmanagement>, supplement: "S.95").
 //Abschnitt kontrolliert
 
-Die gerade genannten Strukturen sollen in der Abbildung(@Projektsystem_PSP-Elemente) veranschaulicht werden. Dabei ist ein Projekt mit dem Projektnamen "SAP Implementierung" dargestellt. Dieses Projekt ist in mehrere #acr("PSP")-Elemente untergliedert und strukturiert. Die einzelnen #acr("PSP")-Elemente werden dann budgetiert. Der Ablauf eines Projekts im SAP PS kann in mehrere aufeinander aufbauende Phasen untergliedert werden, die im folgenden Abschnitt erläutert werden.
+Die gerade genannten Strukturen sollen in der Abbildung (@Projektsystem_PSP-Elemente) veranschaulicht werden. Dabei ist ein Projekt mit dem Projektnamen "SAP Implementierung" dargestellt. Dieses Projekt ist in mehrere #acr("PSP")-Elemente untergliedert und strukturiert. Die einzelnen #acr("PSP")-Elemente werden dann budgetiert. Der Ablauf eines Projekts im SAP PS kann in mehrere aufeinander aufbauende Phasen untergliedert werden, die im folgenden Abschnitt erläutert werden.
 
 \
 //Abschnitt kontrolliert
@@ -228,9 +230,9 @@ Der letzte Schritt ist der Projektabschluss @Projektsystem_1NT_Process_Navigator
 
 == Business Technology Platform (BTP)
 #figure(caption:
-"SAP cloud applications and SAP BTP"
+[SAP cloud applications and SAP BTP @BTP_Sonne]
 , image(width: 11cm,
-"assets/Überblick_SAP_Sonne.jpg"
+"assets/Überblick_SAP_Sonne.jpg" 
 ))
 <sap_portfolio_btp>
 
@@ -328,7 +330,7 @@ Anpassbarkeit und Flexibilität des Projektbudgetgenehmigungsprozesses (siehe @I
 
  Die letzte Anforderung stellt nach Nico Rubach die Kostentransparenz dar, damit der Kunde eine Kosten-Nutzen-Abwägung erstellen kann und somit eine Handlungsempfehlung ableiten kann (@Interview_Nico_Rubach). 
 #figure(caption:
-[Priorisierte Anforderungen - Budget Approval (Eigene Darstellung))],
+[Priorisierte Anforderungen - Budget Approval (Eigene Darstellung)],
 image(width: 18cm,
 "assets/Anforderungen_Priorisiert.png"
 ))
@@ -494,22 +496,25 @@ Die Ergebnisse führen zu der Schlussfolgerung, dass die Erweiterung zum Zeitpun
 #pagebreak()
 
 
-== Kritische Reflexion der Arbeit 
-Sowohl auf Seiten der Kunden als auch auf Seiten der Berater besteht ein Bedürfnis nach einem Projektbudgetgenehmigungsprozess (siehe @Interview_Aysegül_Sinik, @Interview_Nico_Rubach, @Interview_Kunde_Anonymisiert). Da die Standarderweiterung in der Beratungsabteilung auf wenig Erfahrung stößt und es zu der Standarderweiterung keine weiteren Quellen (außer dem User-Guide) gibt, war es schwierig, die Implementierung mit dem User Guide und der SAP-Help-Dokumentation durchzuführen. Da der User-Guide nicht auf dem neuesten Stand ist, war die Recherche nach der Umsetzung mit den weiterentwickelten Funktionalitäten aufwendig.
+== Kritische Reflexion der Arbeit
+Die Arbeit zeigt deutlich, dass sowohl bei Kunden als auch bei Beratern ein Bedarf an einem automatisierten Projektbudgetgenehmigungsprozess in SAP S/4HANA besteht (siehe @Interview_Aysegül_Sinik, @Interview_Nico_Rubach, @Interview_Kunde_Anonymisiert). Durch die fehlende Standardfunktionalität in der Public Cloud stellt die erarbeitete Standarderweiterung eine wertvolle Ergänzung dar, um den manuellen Aufwand zu reduzieren und den Prozess zu automatisieren. Die durchgeführte Implementierung weist jedoch einige Schwachstellen auf, insbesondere in Bezug auf Flexibilität und Benutzerfreundlichkeit.
 
-Zudem bestand die Schwierigkeit darin, ein möglichst repräsentatives Ergebnis der Anforderungsüberprüfung darzustellen und die Anforderungen zu bewerten. Bei der Bewertung der Anforderungen wurde die eigentliche Implementierung als Bewertungsgrundlage zur Hilfe gezogen. Um weitere Anforderungen zu überprüfen, müssten weitere Bewertungsinstrumente genutzt werden, um die Anforderungen detaillierter und umfassender beurteilen zu können.
+Eine wesentliche Herausforderung stellte die lückenhafte und veraltete Dokumentation des SAP User Guides dar. Die Implementierung erforderte eine zusätzliche Literaturrecherche und technische Anpassungen, was den Aufwand signifikant erhöhte und zu Verzögerungen führte. Auch die Umstellung auf das ältere SAP Workflow Management UI anstelle des neueren SAP Build Process Automation UI war suboptimal und zeigt, dass das bereitgestellte Package noch nicht vollständig auf die neuesten Technologien abgestimmt ist. Dies beeinflusst die Benutzererfahrung und Wartbarkeit negativ und könnte die Akzeptanz des Tools bei Kunden verringern.
+Die begrenzte Flexibilität des „ready-to-use“ Packages erweist sich ebenfalls als kritisch, da kundenspezifische Anpassungen des Prozesses nur eingeschränkt möglich sind. Dieser Mangel an Anpassbarkeit steht im Widerspruch zu den Anforderungen der befragten Experten und beschränkt die Einsetzbarkeit der Lösung auf Kundenprojekten. Zudem bestand die Schwierigkeit darin, ein möglichst repräsentatives Ergebnis der Anforderungsüberprüfung darzustellen und die Anforderungen zu bewerten. Bei der Bewertung der Anforderungen wurde die eigentliche Implementierung als Bewertungsgrundlage zur Hilfe gezogen. Um weitere Anforderungen zu überprüfen, müssten weitere Bewertungsinstrumente genutzt werden, um die Anforderungen detaillierter und umfassender beurteilen zu können.
+#pagebreak()
+Zusammengefasst liefert die Arbeit einen wichtigen Beitrag zur Automatisierung von Projektbudgetprozessen in SAP S/4HANA, verdeutlicht jedoch, dass die Standarderweiterung in ihrer aktuellen Form nur bedingt die vielseitigen Anforderungen der Nutzer erfüllt. Für eine erfolgreiche Implementierung in der Praxis sind Verbesserungen hinsichtlich der Flexibilität und Dokumentation der Erweiterung notwendig. Auch die Anpassung an das moderne SAP Build Process Automation UI sollte priorisiert werden, um langfristig eine höhere Benutzerfreundlichkeit und Aktualität der Lösung sicherzustellen.
+
+
 
 == Ausblick
-Das Bedürfnis nach einem Projektbudgetgenehmigungsprozess wird auch in Zukunft ein relevantes Thema bleiben. Aktuell bietet SAP mit der SAP S/4HANA Public Cloud keinen Projektbudgetgenehmigungsprozess im Standardumfang an. Die Standarderweiterung kann aktuell auch nicht auf Kundenprojekten genutzt werden, da diese den Anforderungen der Kunden nicht entspricht. In Zukunft, wäre eine weiterentwickelte Standarderweiterung von hoher Relevanz. Diese Standarderweiterung könnte dann in den Standardumfang der S/4HANA Public Cloud aufgenommen werden und weitere Anpassungsmöglichkeiten bieten. Zudem könnte die Standarderweiterung in weitere Systeme der SAP integriert werden und weitere Anforderungen der Kunden und Berater erfüllen, um einen optimierten Projektbudgetgenehmigungsprozess zu ermöglichen.
+Der Bedarf an einer flexiblen und effizienten Projektbudgetgenehmigungsfunktionalität in SAP S/4HANA Public Cloud bleibt auch zukünftig relevant. Die Ergebnisse dieser Arbeit zeigen, dass die aktuelle Standarderweiterung eine solide Grundlage für die Automatisierung des Genehmigungsprozesses bietet, jedoch in Bezug auf Flexibilität, Anpassbarkeit und Benutzerfreundlichkeit weiterentwickelt werden sollte, um eine breite Akzeptanz bei Kunden und Beratern zu erreichen. Ein zukunftsweisender Ansatz könnte darin bestehen, die Erweiterung auf die neuesten Technologien und Benutzeroberflächen der SAP Build Process Automation umzustellen, um die User Experience und den Workflow noch intuitiver und effizienter zu gestalten. Darüber hinaus wäre es sinnvoll, die Erweiterung um Konfigurationsmöglichkeiten zu ergänzen, die Unternehmen eine nahtlose Anpassung an ihre spezifischen Prozesse erlauben, ohne dabei die Systemstabilität oder Wartbarkeit zu beeinträchtigen. Langfristig könnte eine umfassendere Projektbudgetgenehmigungsfunktionalität in den Standardumfang von SAP S/4HANA integriert werden, um den wachsenden Anforderungen der Unternehmen gerecht zu werden. Dies würde nicht nur die Implementierungskosten für Kunden senken, sondern auch die Wettbewerbsfähigkeit der SAP Public Cloud stärken, da eine solche Funktion Unternehmen jeder Größe und Branche dabei unterstützen würde, ihre Finanzprozesse effizienter und transparenter zu gestalten.
 
+
+Die gewonnenen Erkenntnisse und Empfehlungen dieser Arbeit könnten daher als Grundlage für zukünftige Entwicklungen dienen, um einen vollständig integrierten und anwenderfreundlichen Projektbudgetgenehmigungsprozess in SAP S/4HANA zu realisieren, der den hohen Anforderungen moderner Unternehmen entspricht.
 
 //ist alles im Präsens geschrieben ?
-//Sind alle Quellen richtig 
-//Formatierung 
-//Destination beschreiben
-//Plankategorie erklären 
+//Sind alle Quellen richtig  
 // Einverständniss Experteninterviews 
 // Verlinkungen möglich ?
-//Excel oder CSV
 //ASXRgrQRAPXlMk>VXTfida9scAoXJtgAunyAvRmc
 //https://my300470.s4hana.ondemand.com
