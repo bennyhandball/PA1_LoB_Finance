@@ -119,7 +119,7 @@ Das Ganze erfolgt manuell: Wenn die Excel-Datei fertig ist, gibt es einen PDF-Au
 
 B: Welche Herausforderungen treten denn bei der aktuellen Handhabung des Projektbudgets bei den Kunden auf?
 
-N: Die klare Herausforderung ist definitiv, dass viele Leute an dem Genehmigungsprozess beteiligt sind und es dann geklärt werden muss, wer alles in diesem Genehmigungsprozess beteiligt sein muss. Es sollten natürlich nicht zu viele Personen sein, weil es sonst zu zeitlichen Problemen kommen kann, es sollten aber auch nicht zu wenige sein, damit es nicht zu Unstimmigkeiten kommt und niemand sagen kann, das hätte eigentlich nicht genehmigt werden dürfen. Das heißt, es muss klar definiert und dokumentiert werden, wer das Ganze genehmigt. Was ebenfalls eine Herausforderung für die Genehmigung darstellt, ist die Benutzung von verschiedenen Dateiformaten, Plattformen und Kanälen.
+N: Die zentrale Herausforderung besteht darin, dass viele Personen am Genehmigungsprozess beteiligt sind, sodass geklärt werden muss, wer unbedingt eingebunden sein sollte. Es sollten natürlich nicht zu viele Personen sein, weil es sonst zu zeitlichen Problemen kommen kann, es sollten aber auch nicht zu wenige sein, damit es nicht zu Unstimmigkeiten kommt und niemand sagen kann, das hätte eigentlich nicht genehmigt werden dürfen. Das heißt, es muss klar definiert und dokumentiert werden, wer das Ganze genehmigt. Was ebenfalls eine Herausforderung für die Genehmigung darstellt, ist die Benutzung von verschiedenen Dateiformaten, Plattformen und Kanälen.
 
 B: Welche Relevanz hätte so ein digitales Projektgenehmigungstool bei Deinen Kunden und hätten die Kunden da wirkliches Interesse daran?
 
