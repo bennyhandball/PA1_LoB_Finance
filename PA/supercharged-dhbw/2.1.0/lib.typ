@@ -274,19 +274,22 @@
   context {
     let elems = query(figure.where(kind: image), here())
     let count = elems.len()
+
+    heading(numbering: none, "Abbildungsverzeichnis")
   
 
     if (show-list-of-figures and count > 0) {
-      outline(
-        title: [#heading(level: 3)[#if (language == "de") {
-         [Abbildungsverzeichnis]
-        } else {
-          [List of Figures]
-        }]],
-        target: figure.where(kind: image),
+      // outline(
+      //   title: [#heading(level: 3)[#if (language == "de") {
+      //    [Abbildungsverzeichnis]
+      //   } else {
+      //     [List of Figures]
+      //   }]],
+      //   target: figure.where(kind: image),
   
       
-      )
+      // )
+      outline(title: none, target: figure.where(kind: image))
     }
   }
   
@@ -295,19 +298,21 @@
     let elems = query(figure.where(kind: table), here())
     let count = elems.len()
  
+    heading(numbering: none, "Tabellenverzeichnis")
     if (show-list-of-tables and count > 0) {
-      outline(
-        title: [#heading(level: 3)[#if (language == "de") {
-          [Tabellenverzeichnis]
-        } else {
-          [List of Tables]
-        }]],
-        target: figure.where(kind: table),
-      )
+      //outline(
+      //  title: [#heading(level: 3)[#if (language == "de") {
+      //    [Tabellenverzeichnis]
+      //  } else {
+      //    [List of Tables]
+      //  }]],
+      //  target: figure.where(kind: table),
+      //)
+      outline(title: none, target: figure.where(kind: table))
     }
   }
  
- set par(justify: true, leading: 1em)
+ set par(justify: true, leading: 0.8em)
   show par: set block(spacing: 2em)
   
   if (show-table-of-contents) {
