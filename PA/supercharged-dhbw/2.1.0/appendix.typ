@@ -19,15 +19,15 @@
 strong("Interviewleitfaden Berater"),  supplement: "Interviewleitfaden"
 )<InterviewLeitfaden_Berater>
 #text("
-•	Können Sie bitte Ihre berufliche Rolle und Aufgabe beschreiben ?
+• Können Sie bitte Ihre berufliche Rolle und Aufgabe beschreiben ?
 
-•	Wie genehmigen Unternehmen typischerweise das Projektbudget ohne ein Projektbudget-Genehmigungstool ?
+• Wie genehmigen Unternehmen typischerweise das Projektbudget ohne ein Projektbudget-Genehmigungstool ?
 
-•	Welche Herausforderungen treten bei der aktuellen Handhabung der Projektbudgets auf ?
+• Welche Herausforderungen treten bei der aktuellen Handhabung der Projektbudgets auf ?
 
-•	Welche Relevanz hat ein digitales Projektgenehmigungstool für Ihre Kunden ? 
+• Welche Relevanz hat ein digitales Projektgenehmigungstool für Ihre Kunden ? 
 
-•	Welche Anforderungen/Kriterien sehen Sie bei Kunden für die Implementierung eines neuen Budgetgenehmigungsprozesses in SAP S/4HANA ?"
+• Welche Anforderungen/Kriterien sehen Sie bei Kunden für die Implementierung eines neuen Budgetgenehmigungsprozesses in SAP S/4HANA ?"
 )
 
 #v(1em)
