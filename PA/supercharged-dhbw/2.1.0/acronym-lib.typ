@@ -122,7 +122,7 @@
 
 // Print an index of all the acronyms and their definitions.
 #let print-acronyms(language, acronym-spacing) = {
-  heading(level: 1, outlined: false, numbering: none)[#if (language == "de") {
+  heading(level: 1, outlined: true, numbering: none)[#if (language == "de") {
     [Abkürzungsverzeichnis]
   } else {
     [List of Acronyms]

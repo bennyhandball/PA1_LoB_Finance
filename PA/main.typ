@@ -39,8 +39,9 @@
       phone-number: "+496227750273"), 
     university: (
       name: "Jens Bohrmann",
-      mail-address: "bohrmann@zew.de",
-      phone-number: "T.B.A")
+      mail-address: "jens.bohrmann@zew.de",
+      phone-number: "T.B.A"
+      )
     ),
   
   university: "Duale Hochschule Baden-Württemberg",
@@ -134,9 +135,7 @@ Vergleicht man die Definitionen, so fällt auf, dass in beiden Definitionen ein 
 //Absatz kontrolliert
 
 \
-In der Praxis stellt sich die Frage, wie Projekte und die damit verbundenen finanziellen Ressourcen innerhalb eines Unternehmens organisiert und abgerechnet werden. In diesem Kontext ist die Unterscheidung zwischen einem Projekt und einer Kostenstelle von großer Bedeutung.
-
-Während Projekte durch ihre zeitliche Befristung und den fest definierten Kostenrahmen klare Anfangs- und Endpunkte haben, folgt die Kostenstellenrechnung einem anderen Ansatz. Dabei geht es nicht um einmalige Vorhaben, sondern um die kontinuierliche Erfassung und Kontrolle von Kosten, die dauerhaft innerhalb bestimmter Unternehmensbereiche oder Abteilungen anfallen #cite(<Schnelleinstieg_Controlling>, supplement: "S.58"). Diese Unterscheidung verdeutlicht, wie Kosten in der Unternehmensstruktur sowohl projektbezogen als auch über langfristige, laufende Kostenstellen abgebildet werden können. 
+In der Praxis stellt sich die Frage, wie Projekte und die damit verbundenen finanziellen Ressourcen innerhalb eines Unternehmens organisiert und abgerechnet werden. In diesem Kontext ist die Unterscheidung zwischen einem Projekt und einer Kostenstelle von großer Bedeutung. Während Projekte durch ihre zeitliche Befristung und den fest definierten Kostenrahmen klare Anfangs- und Endpunkte haben, folgt die Kostenstellenrechnung einem anderen Ansatz. Dabei geht es nicht um einmalige Vorhaben, sondern um die kontinuierliche Erfassung und Kontrolle von Kosten, die dauerhaft innerhalb bestimmter Unternehmensbereiche oder Abteilungen anfallen #cite(<Schnelleinstieg_Controlling>, supplement: "S.58"). Diese Unterscheidung verdeutlicht, wie Kosten in der Unternehmensstruktur sowohl projektbezogen als auch über langfristige, laufende Kostenstellen abgebildet werden können. 
 //Absatz kontrolliert
 
 \
@@ -163,9 +162,7 @@ Die SAP SE ist ein 1972 gegründetes deutsches Unternehmen mit Hauptsitz in Wall
 Mit der Einführung von S/4HANA im Jahr 2015 hat SAP einen bedeutenden Schritt in der Entwicklung von #acr("ERP")-Systemen gemacht @SAP_1972. SAP S/4HANA ist ein ERP-System, das zur Planung von Unternehmensressourcen dient und sämtliche Abläufe funktionsübergreifend unterstützt #cite(<ERP_System_Brugger>,supplement: "S.96"). S/4HANA steht für die Bezeichnung "High-Performance Analytic Appliance (HANA) @HANA_Abkürzung_Informationen. Als Nachfolger der SAP Business Suite aus dem Jahr 2004 und als Ablösung von SAP R/3, das erstmals eine Client-Server-Technologie einsetzte, bietet S/4HANA eine Reihe von Innovationen @SAP_1972. Das Herzstück eines S/4HANA-Systems ist die HANA-Datenbank, eine spaltenbasierte In-Memory Datenbank, die im Vergleich zu herkömmlichen Datenbanken einen schnelleren Datenzugriff und bessere Analysezeiten ermöglicht @HANA_Abkürzung_Informationen. Durch diese Eigenschaft können Echtzeitanalysen und Berechnungen zur Laufzeit realisiert werden @HANA_Abkürzung_Informationen. Dies ist insbesondere bei der Verarbeitung von Big-Data-Analysen von großer Bedeutung @S4HANA_Overview. S/4HANA bietet ebenfalls eine neue veränderte Benutzeroberfläche, genannt SAP Fiori, die die bisherigen SAP-GUI-Oberflächen ablöst @SAP_Fiori_Informationen. SAP Fiori ist dabei browserbasiert, was bedeutet, dass keine spezielle Software lokal auf dem Gerät installiert werden muss @SAP_Fiori_Informationen. Nutzer können SAP Fiori plattformunabhängig und flexibel über gängige Browser wie Google Chrome, Mozilla Firefox oder Safari aufrufen @SAP_Fiori_Informationen. Durch die Nutzung von SAP-Fiori-Werkzeugen und -Vorlagen können Apps schnell entwickelt und eine konsistente Benutzererfahrung bereitgestellt werden @SAP_Fiori_Overview.
 
 \
-Grundsätzlich haben Unternehmen bei SAP S/4HANA verschiedene Bereitstellungsoptionen @SAP_Deployment_Options : On-Premise, Private Cloud oder Public Cloud.
-
-Die SAP S/4HANA Public Cloud ist die #acr("SaaS")-Edition des SAP S/4HANA #acr("ERP")-Systems, wobei es sich um eine öffentliche Cloud handelt, die von SAP gehostet und betrieben wird @SAP_Deployment_Options. Bei diesem Modell  wird die Software-Instanz mit anderen Kunden geteilt und über ein Abonnementsystem zur Verfügung gestellt @SAP_Deployment_Options. Erweiterungen der SAP S/4HANA Cloud werden durch die SAP #acr("BTP")-Extension Suite mit von SAP freigegebenen und verwalteten Application Programming Interfaces ("whitelisted APIs") ermöglicht @SAP_Deployment_Options. Die SAP S/4HANA Private Cloud ermöglicht den Kunden, ihre Deployment-Option genau auf ihre Bedürfnisse abzustimmen.  Diese Option basiert auf dem S/4-On-Premise-Solution- Stack, der in der Private Cloud gehostet und von Hyperscalern verwaltet wird @SAP_Deployment_Options. Bei der On-Premise Lösung hosten Unternehmen die Software auf eigenen Servern, während bei der Private-Cloud Lösung die Software auf Servern von Drittanbietern (Hyperscalern) als Single-Tenant betrieben wird @SAP_Deployment_Options. "Single-Tentant" beschreibt in diesem Kontext, eine dedizierte, isolierte Cloud-Umgebung, die nur für den spezifischen Kunden bereitgestellt wird @Multi_Single_Tenant. Im Gegensatz zu einer Multi-Tenant-Umgebung, in der mehrere Kunden (Mandanten) die gleiche Software-Instanz teilen, hat der Kunde in einer Single-Tenant-Lösung seine eigene Instanz der SAP-Software @Multi_Single_Tenant. 
+Grundsätzlich haben Unternehmen bei SAP S/4HANA verschiedene Bereitstellungsoptionen @SAP_Deployment_Options : On-Premise, Private Cloud oder Public Cloud. Die SAP S/4HANA Public Cloud ist die #acr("SaaS")-Edition des SAP S/4HANA #acr("ERP")-Systems, wobei es sich um eine öffentliche Cloud handelt, die von SAP gehostet und betrieben wird @SAP_Deployment_Options. Bei diesem Modell  wird die Software-Instanz mit anderen Kunden geteilt und über ein Abonnementsystem zur Verfügung gestellt @SAP_Deployment_Options. Erweiterungen der SAP S/4HANA Cloud werden durch die SAP #acr("BTP")-Extension Suite mit von SAP freigegebenen und verwalteten Application Programming Interfaces ("whitelisted APIs") ermöglicht @SAP_Deployment_Options. Die SAP S/4HANA Private Cloud ermöglicht den Kunden, ihre Deployment-Option genau auf ihre Bedürfnisse abzustimmen.  Diese Option basiert auf dem S/4-On-Premise-Solution- Stack, der in der Private Cloud gehostet und von Hyperscalern verwaltet wird @SAP_Deployment_Options. Bei der On-Premise Lösung hosten Unternehmen die Software auf eigenen Servern, während bei der Private-Cloud Lösung die Software auf Servern von Drittanbietern (Hyperscalern) als Single-Tenant betrieben wird @SAP_Deployment_Options. "Single-Tentant" beschreibt in diesem Kontext, eine dedizierte, isolierte Cloud-Umgebung, die nur für den spezifischen Kunden bereitgestellt wird @Multi_Single_Tenant. Im Gegensatz zu einer Multi-Tenant-Umgebung, in der mehrere Kunden (Mandanten) die gleiche Software-Instanz teilen, hat der Kunde in einer Single-Tenant-Lösung seine eigene Instanz der SAP-Software @Multi_Single_Tenant. 
 
 \
 Die beiden eben beschriebenen Varianten bieten eine hohe Flexibilität für Unternehmen, um die Software an ihre individuellen Anforderungen und Geschäftsprozesse anzupassen @SAP_Private_Cloud. 
@@ -174,7 +171,7 @@ Im Gegensatz dazu müssen sich Unternehmen bei der Public-Cloud-Lösung weitgehe
 \
 SAP hat diese Problematik erkannt und bietet mit der Clean-Core-Strategie eine Lösung, die sowohl die Vorteile der Standardisierung berücksichtigt, als auch Flexibilität hinsichtlich der individuellen Anpassungen ermöglicht @ERP_Clean_Core. 
 
-
+\
 Die Clean-Core-Strategie von SAP verfolgt das Ziel, die Stabilität, Wartbarkeit und Updatesicherheit von SAP-Systemen zu verbessern @ERP_Clean_Core. Bei der Clean-Core-Strategie geht es darum, den Kern (Core) des SAP-Systems standardisiert und unverändert zu erhalten @ERP_Clean_Core. Kundenspezifische Anpassungen und Erweiterungen sollen außerhalb des Kernsystems in separaten Erweiterungsumgebungen, beispielsweise der #acr("BTP") durchgeführt werden @ERP_Clean_Core. Durch die Verwendung von definierten Schnittstellen, Erweiterungspunkten und #acr("API")s können Unternehmen ihre SAP-Systeme flexibel an Geschäftsanforderungen anpassen, ohne den Kern zu verändern @ERP_Clean_Core. Dies ermöglicht eine bessere Wartbarkeit und schnellere Updates, da die Integrität des SAP-Cores erhalten bleibt @ERP_Clean_Core.
 #pagebreak()
 //Abschnitt kontrolliert
@@ -246,6 +243,7 @@ Dabei stellt die #acr("BTP") eine Schnittstelle zwischen bestehenden Systemen un
 Die #acr("BTP") stellt das SAP Build Tool bereit, das mit Hilfe von KI die Entwicklung und Automatisierung von Anwendungen beschleunigt @SAP_Build. Zudem bietet die #acr("BTP") vorkonfigurierte Datenmodelle, Integrationen von Workflows, #acr("API")s und #acr("KI") Services @SAP_BTP. Durch diese Dienste können neue Anwendungen bereitgestellt werden, Prozesse integriert, Aufgaben automatisiert, Anwendungen mit Chatbots versehen und Daten und deren Auswirkungen für das gesamte Unternehmen analysiert werden @SAP_BTP. Dadurch können Unternehmen ihre Prozesse optimieren, Innovationen vorantreiben und Wettbewerbsvorteile erlangen, da diese flexibel auf sich ändernde Marktanforderungen reagieren können @SAP_BTP.
 //Abschnitt kontrolliert
 
+\
 Die #acr("BTP") basiert auf einem modularen Konzept und umfasst folgende Hauptbereiche in einer zentralen Umgebung: Das Datenbank-/Datenmanagement darunter auch die Echtzeitsichten von Daten, die Analytik, die Anwendungsentwicklung und Automatisierung, die Integration und Künstliche Intelligenz (@sap_portfolio_btp)@SAP_BTP. 
 //Abschnitt kontrolliert
 
@@ -264,6 +262,7 @@ Da im gerade beschriebenen Abschnitt auf die Grundlagen und Herausforderungen de
 Der Begriff "Workflow" wird von der SAP wie folgt definiert:
 Unter einem Workflow versteht man die "Abfolge von miteinander verbundenen Aktivitäten oder Aufgaben, die ausgeführt werden, um ein bestimmtes Ergebnis zu erzielen" @SAP_Workflow. Aufeinanderfolgende zu bearbeitende Prozessschritte werden sobald die Workflow-Instanz aufgerufen wird, abgearbeitet @SAP_Workflow. Betrachtet man den Begriff Workflow-Management, so wird dieser als der Prozess der Digitalisierung einzelner Prozesse und die Verwaltung der Ergebnisse definiert @SAP_Workflow. 
 
+\
 Durch das SAP Build Process Automation Tool auf der #acr("BTP") können Workflows erstellt werden @SAP_Build_Workflow. Dabei können Formulare verwaltet, eine Entscheidungslogik verwaltet und Prozessabläufe erstellt, angepasst und organisiert werden @SAP_Build_Workflow. Da sich diese Arbeit auf das im User Guide beschriebene "ready-to-use" Package bezieht, können dabei die Prozessabläufe nur bedingt angepasst und organisiert werden @SAP_Guide.
 //Abschnitt kontrolliert
 
@@ -298,6 +297,7 @@ Vor den Interviews wurden die Experten via E-Mail kontaktiert und nach ihrem Int
 
 //Abschnitt kontrolliert
 Experten zeichnen sich dabei durch ein detailliertes und spezialisiertes Sonderwissen in bestimmten Wissensgebieten und einzelnen Realitätsausschnitten aus #cite(<Experteninterview_Wassermann>, supplement: "S.16"). Deshalb kann gesagt werden, dass es sich bei den befragten Personen um Experten handelt, da diese über ein detailliertes und spezialisiertes Sonderwissen im Bereich Finance und Controlling verfügen.
+#pagebreak()
 //Abschnitt kontrolliert
 
 Zur besseren Lesbarkeit der Interviewtexte wurden Füllwörter entfernt und unstrukturierte Aussagen in ganze Sätze überführt, wobei der Inhalt unverändert bleibt. Da bei der SAP das "Duzen" innerhalb und oftmals auch auf den Projekten verbreitet ist, wurden auch die Interviewpartner/Interviewpartnerinnen per "Du" angesprochen. Die Interviewleitfäden befinden sich dabei im Anhang.

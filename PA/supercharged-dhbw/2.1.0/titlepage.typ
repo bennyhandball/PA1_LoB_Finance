@@ -245,7 +245,7 @@
             supervisor.university.phone-number != none and
             supervisor.university.phone-number != ""
             ) {
-            university-supervisor+= text([\ #supervisor.university.phone-number])
+            
           } else {
             panic("Author '" + author.name + "' is missing the city of the company. Add the 'city' attribute to the company object.")
           }
