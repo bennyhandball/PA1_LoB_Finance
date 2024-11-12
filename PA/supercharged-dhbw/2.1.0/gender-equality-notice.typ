@@ -20,7 +20,7 @@
     par(justify: true, leading: 18pt,[
       wird aus Gründen der besseren Lesbarkeit auf die gleichzeitige Verwendung der Sprachformen männlich, weiblich und divers (m/w/d) verzichtet und das generische Maskulinum verwendet. Weibliche und andersweitige Geschlechteridentitäten werden dabei ausdrücklich mitgemeint, soweit es für die Aussage erforderlich ist.
       
-      Abbildungen,die den Lesefluss stören, befinden sich im Anhang. Ist dies der Fall, wird im Text zusätzlich auf den Anhang verwiesen.
+      Abbildungen, die den Lesefluss stören, befinden sich im Anhang. Ist dies der Fall, wird im Text zusätzlich auf den Anhang verwiesen.
       
      Ein Teil der Literatur, die für die Anfertigung dieser Arbeit genutzt wird, ist nur über die E-Book-Plattform o'Reilly abrufbar. Bei diesen Ressourcen existieren keine Seitennummern, es wird bei Verweisen stattdessen der Abschnitt mit zugehörger Kapitelnummer angegeben.
  

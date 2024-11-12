@@ -185,7 +185,7 @@ Innerhalb des Projektmanagements unterscheidet man zwischen fremdfinanzierten (K
 Das #acr("PS") ist ein zentraler Bestandteil des #acr("ERP")-Systems von SAP und spielt eine wesentliche Rolle bei der Verwaltung von Projekten @Projektsystem_SAP_Help. Durch das Projektsystem PS der SAP können die Planung, die Steuerung und die Überwachung von komplexen Geschäftsprojekten erleichtert werden @Projektsystem_SAP_Help. Zudem können Module wie das #acr("FI"), das #acr("CO") und die #acr("MM") integriert werden @Projektsystem_Integration. Ein Projekt in SAP ERP-Systemen besteht aus einer Projektdefinition, einem Projektstrukturplan und Netzplänen #cite(<SAP_ERP-Praxishandbuch_Projektmanagement>, supplement: "S.95"). Dabei bildet die Projektdefinition den allgemeinen organisatorischen Rahmen ab, der Projektstrukturplan bildet den Aufbau des Projekts ab und die Netzpläne den Ablauf ab #cite(<SAP_ERP-Praxishandbuch_Projektmanagement>, supplement: "S.95"). Die Projektdefinition besteht aus keinem, einem oder beliebig vielen Teilprojekten, den sogenannten PSP-Elementen #cite(<SAP_ERP-Praxishandbuch_Projektmanagement>, supplement: "S.95").
 //Abschnitt kontrolliert
 
-Die gerade genannten Strukturen sollen in der Abbildung (@Projektsystem_PSP-Elemente) veranschaulicht werden. Dabei ist ein Projekt mit dem Projektnamen "SAP Implementierung" dargestellt. Dieses Projekt ist in mehrere #acr("PSP")-Elemente untergliedert und strukturiert. Die einzelnen #acr("PSP")-Elemente werden dann budgetiert. Der Ablauf eines Projekts im SAP PS kann in mehrere aufeinander aufbauende Phasen untergliedert werden, die im folgenden Abschnitt erläutert werden.
+Die gerade genannten Strukturen sollen in der @Projektsystem_PSP-Elemente veranschaulicht werden. Dabei ist ein Projekt mit dem Projektnamen "SAP Implementierung" dargestellt. Dieses Projekt ist in mehrere #acr("PSP")-Elemente untergliedert und strukturiert. Die einzelnen #acr("PSP")-Elemente werden dann budgetiert. Der Ablauf eines Projekts im SAP PS kann in mehrere aufeinander aufbauende Phasen untergliedert werden, die im folgenden Abschnitt erläutert werden.
 
 \
 //Abschnitt kontrolliert
@@ -394,7 +394,7 @@ Falls die Anfrage von allen Genehmigungsgruppen oder Genehmigungspersonen akzept
 //Abschnitt kontrolliert
 
 #figure(caption:
-[Inbox - Budget Approval (Screenshot aus dem SAP S/4HANA Public Cloud System)],
+[Inbox Dashboard - Budget Approval (Screenshot aus dem SAP S/4HANA Public Cloud System)],
 image(width: 15cm,
 "assets/Overview_Budget_Approval_Accept (1).jpg"
 ))
