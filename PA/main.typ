@@ -10,7 +10,7 @@
 
 
 #show: supercharged-dhbw.with(
-  title: "Projektbudget in SAP S/4HANA: Implementierung und Analyse eines Genehmigungsprozesses mithilfe des SAP Build Process Automation Tool auf der Business Technology Platform",
+  title: "Projektbudget in SAP S/4HANA: Implementierung und Analyse eines Genehmigungsprozesses mithilfe des SAP Build Process Automation Tools auf der Business Technology Platform",
   short-title: "Projektbudget-Genehmigung in SAP S/4HANA ",
   type-of-degree-specification: "Sales & Consulting",
   time-of-thesis: "29.07.2024 - 18.11.2024",

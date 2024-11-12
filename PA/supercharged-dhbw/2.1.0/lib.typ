@@ -170,7 +170,7 @@
       bottom: 2cm,
       left: 2cm,
       right: 4cm),
-    header: {
+  /*  header: {
         
         grid(
           columns: (auto, 1fr, auto),
@@ -206,7 +206,7 @@
         line(length: 100%)
         
       }
-    
+    */
   )
  
   // set page numbering to roman numbering
